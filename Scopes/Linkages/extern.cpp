@@ -5,6 +5,7 @@ external variables. To make a global variable external we can
 use the extern keyword to do so:*/
 
 // non-constant globals are external by default
+// don't use extern to define uninitilized non const global variable 
 int g_x { 2 }; 
 
 // const globals can be defined as extern, making them external
