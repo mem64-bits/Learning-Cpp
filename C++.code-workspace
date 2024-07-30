@@ -77,6 +77,6 @@
 			"text_encoding": "cpp",
 			"valarray": "cpp"
 		},
-		"gitdoc.enabled": true
+		"gitdoc.enabled": false
 	}
 }

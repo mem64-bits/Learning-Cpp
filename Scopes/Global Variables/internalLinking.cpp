@@ -9,7 +9,7 @@ is not accessible from other translation units*/
 static int g_x{5};
 
 // consts are internally linked by default
-const int g_y{1}  
+const int g_y{1};
 
 // constexprs are internally linked by default
 constexpr int g_z{2};
