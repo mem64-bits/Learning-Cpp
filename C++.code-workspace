@@ -76,6 +76,7 @@
 			"stdfloat": "cpp",
 			"text_encoding": "cpp",
 			"valarray": "cpp"
-		}
+		},
+		"gitdoc.enabled": true
 	}
 }
