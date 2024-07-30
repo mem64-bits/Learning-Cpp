@@ -1,0 +1,13 @@
+ If your program is exhibiting erroneous behavior, one way to reduce the amount of code you have to search through is to comment some code out and see if the issue persists. If the issue remains unchanged, the commented out code probably wasn’t responsible.
+
+Consider the following code:
+
+int main()
+{
+    getNames(); // ask user to enter a bunch of names
+    doMaintenance(); // do some random stuff
+    sortNames(); // sort them in alphabetical order
+    printNames(); // print the sorted list of names
+
+    return 0;
+}

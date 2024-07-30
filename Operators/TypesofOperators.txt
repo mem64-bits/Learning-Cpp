@@ -1,0 +1,10 @@
+Unary operators: act on one operand
+
+Binary operators act on two operands 
+(often called left and right,)
+e.g 4+3 producing value of 7 
+
+Ternary operators act on three operands (conditional operator)
+e.g if 
+
+Nullary operators act on zero operands throw operator)
