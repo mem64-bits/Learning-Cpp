@@ -1,8 +1,8 @@
 #include <iostream>
 
 /*An identifier with internal linkage can be seen 
-and used within a single translation unit, but it 
-is not accessible from other translation units*/
+and used within a single file it's defined in, but it 
+*/
 
 // All variables are externally linked by default
 // the static keyword makes variables internally linked 
