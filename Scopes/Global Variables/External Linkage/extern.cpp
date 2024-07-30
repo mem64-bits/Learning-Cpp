@@ -11,5 +11,5 @@ int g_x { 2 };
 extern const int g_y { 3 }; // can be used in other files
 
 // Don't use extern on constexpt
-extern constexpr int g_z { 3 };
+//sextern constexpr int g_z { 3 };
 
