@@ -17,9 +17,6 @@ int calculate(int x, char oper, int y ){
             return x/y;
         default:
             std::cout<<"Error: Invalid Operator";
-            return;
-
-
     }
 
 }
