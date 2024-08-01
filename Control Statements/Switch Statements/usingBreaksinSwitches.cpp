@@ -3,10 +3,7 @@
 /* The downside to using return to stop the execution of 
 switches is that it exits put of the whole function 
 instead of just exiting the switch statement*/
-
-
-int main(){
-    #include <iostream>
+    
 
 void printDigitName(int x)
 {
@@ -27,7 +24,7 @@ void printDigitName(int x)
     }
 
     // execution continues here
-    std::cout << "Didn't exit the function after the switch statement !\n";
+    std::cout << "\nDidn't exit the function after the switch statement";
 }
 
 int main()
