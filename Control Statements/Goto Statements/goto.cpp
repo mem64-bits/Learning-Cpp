@@ -8,13 +8,16 @@ int main(){
 double num{};
 // This is a statement label
 tryAgain:    
-    std::cout<<"Enter a non negetive number: ";
+    std::cout<<"Enter a non negative number: ";
 
 std::cin>>num;
 
-if (num < 0.0){
+if (num < 0.0)
 // jumps back to execute code in TryAgain label
     goto tryAgain; 
-}
+
+else
+    std::cout<<"You entered "<<num<<", a positive number";
+
     return 0;
 }
