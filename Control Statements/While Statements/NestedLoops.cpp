@@ -14,7 +14,7 @@ int main(){
             std::cout << inner << ' ';
             ++inner;
         }
-./
+
         // print a newline at the end of each row
         std::cout << '\n';
         ++outer;
