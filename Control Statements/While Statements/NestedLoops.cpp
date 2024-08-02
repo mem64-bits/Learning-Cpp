@@ -3,7 +3,7 @@
 int main(){
       // outer loops between 1 and 5
     int outer{ 1 };
-    while (outer <= 5)
+    while (outer <= 6)
     {
         // For each iteration of the outer loop, the code in the body of the loop executes once
 
@@ -14,7 +14,7 @@ int main(){
             std::cout << inner << ' ';
             ++inner;
         }
-
+./
         // print a newline at the end of each row
         std::cout << '\n';
         ++outer;
