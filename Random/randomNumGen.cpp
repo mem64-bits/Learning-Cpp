@@ -9,11 +9,10 @@ is to use the mersenne twister*/
 
 std::mt19937 rand_num_32{};
 int main(){
-    
     for(int i{0}; i < 40; ++i){
         std::cout<<(rand_num_32)<<'\t';
         
-        if(i % 5==0){
+        if(i % 3 == 0){
             std::cout<<'\n';
         }
     }
