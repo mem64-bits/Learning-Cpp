@@ -14,5 +14,11 @@ void fizz_buzz(int end_range){
         else {
             std::cout<<i<<'\n';
         }
-    }
+    }   
+}
+
+
+int main(){
+    fizz_buzz(15);
+    return 0;
 }
