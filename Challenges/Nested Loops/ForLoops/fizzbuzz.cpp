@@ -3,7 +3,12 @@
 
 void fizz_buzz(int end_range){
     for (int i{0}; i <= end_range; ++i){
-        if (i % 3 ==0){
+
+        if(i%3 == 0  && i%5 == 0){
+            std::cout<<"fizzbuzz\n";
+        }
+
+        else if (i % 3 ==0){
             std::cout<<"fizz\n";
         }
 
@@ -11,9 +16,6 @@ void fizz_buzz(int end_range){
             std::cout<<"buzz\n";
         }
 
-        else if((i%3 == 0 ) && (i%5 == 0)){
-            std::cout<<"fizzbuzz\n";
-        }
 
         else {
             std::cout<<i<<'\n';
