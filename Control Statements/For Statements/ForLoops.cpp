@@ -3,7 +3,7 @@
 
 void repeatMsg(std::string_view msg, int echo, char end){
     
-    for(int i{0}; i<echo; ++i){
+    for(int i{1}; i<= echo; ++i){
         std::cout<<msg<<end;
     }
     
