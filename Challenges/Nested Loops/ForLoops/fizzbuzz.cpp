@@ -62,16 +62,24 @@ void fizz_buzz_v2(int end_range){
         
 int main(){
     using namespace std::chrono;
-    auto start = high_resolution_clock::now();
+    auto start_1= high_resolution_clock::now();
     fizz_buzz(15);
 
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop - start);
+    auto stop_1 = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop_1 - start_1);
     
     std::cout << "Time taken by function: "
          << duration.count() << " microseconds" << std::endl;
  
     std::cout<<'\n';
+
+    auto start_2= high_resolution_clock::now();
     fizz_buzz_v2(150);
+    auto stop_2 = high_resolution_clock::now();
+    duration = duration_cast<microseconds>(stop_2 - start_2);
+    
+    std::cout << "Time taken by function: "
+        << duration.count() << " microseconds" << std::endl;
+ 
     return 0;
 }
