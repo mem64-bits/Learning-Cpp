@@ -74,7 +74,8 @@ int main(){
     std::cout<<'\n';
 
     auto start_2= high_resolution_clock::now();
-    fizz_buzz_v2(150);
+    fizz_buzz_v2(15);
+
     auto stop_2 = high_resolution_clock::now();
     duration = duration_cast<microseconds>(stop_2 - start_2);
     
