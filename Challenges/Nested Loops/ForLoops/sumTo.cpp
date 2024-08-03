@@ -3,12 +3,13 @@
 
 int sumTo(int value){
     int result{};
-    for (value; value > 0;){
+
+    for (value; value > 0;)
+    {
         result = value + (value-1);
-    return result;
     }
-
-
+    
+    return result;
 }
  
 int main(){
