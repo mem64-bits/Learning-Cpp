@@ -7,7 +7,7 @@ int main(){
         std::cout<<i;
 
         for (char chr{'a'}; chr < 'j'; ++chr){
-            std::cout<<'('<<chr<<')';<<'\n';
+            std::cout<< '('<<chr<< ')' <<'\n';
         }
 
     }
