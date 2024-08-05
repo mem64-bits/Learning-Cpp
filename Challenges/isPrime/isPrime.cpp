@@ -2,24 +2,25 @@
 #undef NDEBUG
 
 #include <cassert> // for assert
-#include <iostream>
+#include <iostream> 
 
 bool isPrime(int x)
-{
-    for (int divisor{1}; divisor <= x; ++divisor){
-
-        if (!(x % 1 == 0 and x%x == 0 and x % divisor == 0)){
+{   
+    bool isPrime{false};
+    for (int divisor{1}; divisor <= x; ++divisor)
+    {
+        x % divisor;
+        if(x % divisor == 0 && divisor != 1 || divisor != x ){
             return true;
-        }   
+        }
 
         else{
             return false;
         }
-
-      
     }
-    return;
+
 }
+    
 
 int main()
 {
