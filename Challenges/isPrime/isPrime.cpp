@@ -19,10 +19,8 @@ bool isPrime(int x)
         else{
             num_is_prime = false;
         }
-
-        return num_is_prime;
     }
-
+    return num_is_prime;    
 }
     
 
