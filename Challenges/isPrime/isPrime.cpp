@@ -7,16 +7,20 @@
 bool isPrime(int x)
 {   
     bool isPrime{false};
+
+    bool num_is_prime{};
     for (int divisor{1}; divisor <= x; ++divisor)
     {
         x % divisor;
         if(x % divisor == 0 && divisor != 1 || divisor != x ){
-            return true;
+            num_is_prime = true;
         }
 
         else{
-            return false;
+            num_is_prime = false;
         }
+
+        return num_is_prime;
     }
 
 }
