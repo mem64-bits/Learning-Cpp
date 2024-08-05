@@ -8,7 +8,7 @@ want to randomize mubers within a  certain range */
 
 
 int main()
-{
+{	// create variable to store random numbers
 	std::mt19937 mt{};
 
 	// Create a reusable random number generator that generates uniform numbers between 1 and 6
