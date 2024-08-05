@@ -12,7 +12,6 @@ double getTowerHeight()
 int main()
 {
 	double towerHeight{ getTowerHeight() };
-    
     for(int secs{1}; secs <= towerHeight; ++secs){
         Ball::calculateAndPrintBallHeight(towerHeight, secs);
     }

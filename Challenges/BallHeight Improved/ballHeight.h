@@ -31,8 +31,4 @@ namespace Ball{
     }
 }
 
-
-
-
-
 #endif
