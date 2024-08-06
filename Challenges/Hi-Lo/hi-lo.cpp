@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Random.h"
 
-void hiLo(int min_guesses, int max_guesses){
+void hiLo(int min_guesses, int max_guesses)
+{
     int rand_num{Random::get(1,100)};
     std::cout<<"Let's play a game. ";
     std::cout<<"I'm thinking of a number between 1 and 100. ";
@@ -16,37 +17,27 @@ void hiLo(int min_guesses, int max_guesses){
         std::cin>>guess;
         std::cout<<'\n';
 
-        if(guess>rand_num){
+        if(guess>rand_num)
+        {
             std::cout<<"Your guess was too high.\n";
             ++guess_count;
         }
 
-        else if(guess<rand_num){
+        else if(guess<rand_num)
+        {
             std::cout<<"Your guess was too low.\n";
             ++guess_count;
         }
 
-        else if(guess==rand_num){
+        else if(guess==rand_num)
+        {
             std::cout<<"Correct! you win!\n";
         }
 
-        if(guess_count == max_guesses){
-            std::cout<<"Sorry you lose. The correct number was "<<rand_num<<'\n';
-        } 
-
-        if(guess_count == 0 && min_guesses < 2 ){
-            std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guess\n";
-        }
-
-        if(guess == 0)
+        if(guess_count == max_guesses)
         {
-            std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guesses\n";
-        }
-        
-        
-        char play_options{};
+            std::cout<<"Sorry you lose. The correct number was "<<rand_num<<'\n';
+             char play_options{};
 
             while(!(play_options == 'y'|| play_options == 'n'))
             {
@@ -65,10 +56,23 @@ void hiLo(int min_guesses, int max_guesses){
                     guess_count = 0;
                     continue;
                 }
+        } 
 
+        if(guess_count == 0 && min_guesses < 2 )
+        {
+            std::cout<<"You need to input a minimum of "<<min_guesses
+            <<"guess\n";
+        }
+
+        else if(guess == 0)
+        {
+            std::cout<<"You need to input a minimum of "<<min_guesses
+            <<"guesses\n";
+        }
                 
-            }
+            
     }
+}
 }
 
 
