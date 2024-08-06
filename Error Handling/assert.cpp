@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cassert> //contains assert()
-
+// you can disable assert by using NDEBUG MACRO
 
 /*An assertion is an expression that will be 
 true unless there is a bug in the program. 
@@ -20,13 +20,13 @@ int getUserAge(){
 }
 
 void ageValidater(int age){
-    assert(age > 0);
+    assert(age > 0 &&  "Age cannot be a negative number"); // stops program if age is < 0
 
     if(age < 18){
         std::cout<<"You are not old enough to drink";
     }
-}
 
+}
 
 int main(){
     int age{getUserAge()};
