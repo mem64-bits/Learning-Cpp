@@ -8,7 +8,7 @@ void hiLo(int min_guesses, int max_guesses)
     std::cout<<"I'm thinking of a number between 1 and 100. ";
     std::cout<<"You have 7 tries to guess what it is.\n";
     
-    int guess{0};
+    int guess{};
     int guess_count{1};
     
     while(!(guess_count >= max_guesses))
@@ -17,7 +17,11 @@ void hiLo(int min_guesses, int max_guesses)
         std::cin>>guess;
         std::cout<<'\n';
 
-        if(guess>rand_num)
+        if(guess == 0 || guess_count > 0){
+            std::cout<<"You need to input all least "<<min_guesses<<"guess/guesses";
+        }
+
+        else if(guess>rand_num)
         {
             std::cout<<"Your guess was too high.\n";
             ++guess_count;
@@ -32,6 +36,7 @@ void hiLo(int min_guesses, int max_guesses)
         else if(guess==rand_num)
         {
             std::cout<<"Correct! you win!\n";
+            break;
         }
 
         if(guess_count == max_guesses)
@@ -54,32 +59,18 @@ void hiLo(int min_guesses, int max_guesses)
                 else if(play_options == 'y')
                 {
                     guess_count = 0;
+                    rand_num = Random::get(1,100);
                     continue;
                 }
         } 
-
-        if(guess_count == 0 && min_guesses < 2 )
-        {
-            std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guess\n";
-        }
-
-        else if(guess == 0)
-        {
-            std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guesses\n";
-        }
                 
             
     }
 }
+
 }
 
 
-
-        
-
-    
 
 
 
