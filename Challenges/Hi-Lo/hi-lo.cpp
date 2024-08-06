@@ -12,9 +12,9 @@ void hiLo(int min_guesses, int max_guesses){
     int guess{};
     int guess_count{1};
     
-    while(!(guess >= max_guesses))
+    while(!(guess_count >= max_guesses))
     {
-        std::cout<<"Guess #"<<guess_count<<": ";
+        std::cout<<"\nGuess #"<<guess_count<<": ";
         std::cin>>guess;
         std::cout<<'\n';
 
@@ -38,13 +38,13 @@ void hiLo(int min_guesses, int max_guesses){
 
         if(guess_count == 0 && min_guesses < 2 ){
             std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guess";
+            <<"guess\n";
         }
 
-        else
+        if(guess == 0)
         {
             std::cout<<"You need to input a minimum of "<<min_guesses
-            <<"guesses";
+            <<"guesses\n";
         }
         
         
@@ -59,7 +59,7 @@ void hiLo(int min_guesses, int max_guesses){
                 if(play_options == 'n')
                 {
                     std::cout<<"Thank you for playing";
-                    break;
+                    return;
                 }
 
                 else if(play_options == 'y')
