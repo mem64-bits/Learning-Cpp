@@ -1,15 +1,13 @@
 #include <iostream>
 #include "Random.h"
 
-
 void hiLo(int min_guesses, int max_guesses){
     int rand_num{Random::get(1,100)};
-
     std::cout<<"Let's play a game. ";
     std::cout<<"I'm thinking of a number between 1 and 100. ";
     std::cout<<"You have 7 tries to guess what it is.\n";
-
-    int guess{};
+    
+    int guess{0};
     int guess_count{1};
     
     while(!(guess_count >= max_guesses))
