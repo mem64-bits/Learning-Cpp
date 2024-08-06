@@ -20,13 +20,13 @@ int getUserAge(){
 }
 
 int ageValidater(int age){
-    assert(age > 0);
+    
 
     if(age < 18){
         std::cout<<"You are not old enough to drink";
     }
-
 }
+
 
 int main(){
     int age{getUserAge()};
