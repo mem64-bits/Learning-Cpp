@@ -18,6 +18,7 @@ int getUserAge(){
     std::cin>>age;
     return age;
 }
+
 int ageValidater(int age){
     assert(age > 0);
 
