@@ -11,8 +11,10 @@ int x {5}; // normal int variable
 
 /*makes a reference 
 that can be used as an alias to variable x*/
-
+int main(){
 int& ref {x};
 
 std::cout<<x<<'\n';
 std::cout<<ref<<'\n';
+return 0;
+}
