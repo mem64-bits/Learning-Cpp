@@ -5,7 +5,6 @@
 // write your mult function template here
 template <typename T>
 T mult( T x, int y){
-    mult (char x, char y) = delete;
     return x * y;
 }
 
