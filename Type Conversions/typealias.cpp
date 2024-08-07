@@ -10,7 +10,7 @@ int main(){
     Distance mile{1.60};
     Distance kmToMeters{1000.00};
 
-    std::cout<<"one mile is "<<mile<<" kilometers\n";
+    std::cout<<"One mile is "<<mile<<" kilometers\n";
     std::cout<<"One kilometer is "<<kmToMeters<<" meters\n";
     return 0;
 }
