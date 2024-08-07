@@ -8,7 +8,7 @@ multiple functions with the same name,
  so long as each identically named 
 function has different parameter types */
 
-double add(double x, int y){
+double add(double x, double y){
     return x+y;
 }
 
