@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+// const references can be used with things other then lvalues
 void printRef(const int& y) // y is a const reference
 {
     std::cout << y << '\n';
