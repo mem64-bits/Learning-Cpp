@@ -9,8 +9,11 @@ int main(){
     int y {6};
     ptr = &y;
     std::cout<<*ptr<<'\n';
-    
-    *ptr = 6;
+
+/*changes the value stored in the mem address
+the pointer is holding*/
+
+    *ptr = 7; 
     std::cout<<*ptr<<'\n';
     
     return 0;
