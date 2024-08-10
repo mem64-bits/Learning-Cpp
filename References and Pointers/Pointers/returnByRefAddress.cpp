@@ -10,7 +10,7 @@ std::string& returnByRef(std::string text)
 }
 
 std::string* returnByAddress(const std::string text){
-    return text
+    return text;
 }
 int main()
 {
