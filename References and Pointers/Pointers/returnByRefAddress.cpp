@@ -14,7 +14,7 @@ std::string* returnByAddress(const std::string text){
 }
 int main()
 {
-    std::string text{"Hello, World!\n"};
+    const std::string text{"Hello, World!\n"};
 
     std::cout<<returnByValue(text);
     std::cout<<returnByRef(text);
