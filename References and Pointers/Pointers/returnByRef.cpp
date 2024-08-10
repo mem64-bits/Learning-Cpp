@@ -1,23 +1,20 @@
 #include <iostream>
+#include <string>
 
-std::string returnByValue(std::string text) // expensive
-{
-    return text;
-}
-std::string& returnByRef(std::string text)
-{
-    return text;
+const std::string& getProgramName() // returns a const reference
+
+{  
+/*static needs to used to allow the variable to continue being referenced 
+outside the function without being destroyed to avoid hanging references
+*/
+    static const std::string s_programName { "Calculator" }; // has static duration, destroyed at end of program
+
+    return s_programName;
 }
 
-std::string* returnByAddress(std::string text){
-    return *text;
-}
 int main()
 {
-     std::string text{"Hello, World!\n"};
+    std::cout << "This program is named " << getProgramName();
 
-    std::cout<<returnByValue(text);
-    std::cout<<returnByRef(text);
-    std::cout<<returnByAddress(text);
     return 0;
 }
