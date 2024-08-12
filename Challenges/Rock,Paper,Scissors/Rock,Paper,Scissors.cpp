@@ -23,8 +23,10 @@ int main(){
             user_choice= "Scissors";
             break;
         default
-            std::cout<<"Invalid choice, 
-            Please choose either 'Rock', 'Paper', or 'Scissors";
+            std::cout<<"
+            Invalid choice,Please choose either 'Rock', 'Paper',
+             or 'Scissors
+            ";
     }
 
     return 0;
