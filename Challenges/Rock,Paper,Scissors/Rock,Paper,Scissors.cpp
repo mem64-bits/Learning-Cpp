@@ -18,7 +18,7 @@ int main(){
             break;
 
         case "Paper":
-            user_choice= "Paper":
+            user_choice= "Paper";
             break;
 
         case "Scissors":
