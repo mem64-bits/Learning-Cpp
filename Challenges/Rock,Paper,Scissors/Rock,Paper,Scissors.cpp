@@ -13,20 +13,20 @@ int main(){
     std::cin>>user_choice;
 
     switch(user_choice)
-    {   case "Rock";
+    {   case "Rock":
             user_choice= "Rock";
             break;
-        case "Paper";
-            user_choice= "Paper";
+
+        case "Paper":
+            user_choice= "Paper":
             break;
-        case "Scissors";
+
+        case "Scissors":
             user_choice= "Scissors";
             break;
-        default
-            std::cout<<"
-            Invalid choice,Please choose either 'Rock', 'Paper',
-             or 'Scissors
-            ";
+
+        default:
+            std::cout<<"Invalid choice,Please choose either 'Rock', 'Paper', or 'Scissors";
     }
 
     return 0;
