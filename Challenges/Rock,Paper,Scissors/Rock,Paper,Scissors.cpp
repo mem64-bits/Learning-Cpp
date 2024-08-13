@@ -20,7 +20,7 @@ int main(){
         user_choice= "paper";
 
     else if(user_choice == "scissors")
-        user_choice= "scissors"
+        user_choice= "scissors";
 
     else
         std::cout<<"Invalid choice please enter in Rock, Paper or Scissors\n";
