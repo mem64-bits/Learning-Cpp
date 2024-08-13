@@ -5,7 +5,7 @@
 int main(){
     std::cout<<"Welcome to Rock, Paper, Scissors!\n\n";
   
-    std::string_view user_choice{};
+    std::string user_choice{};
     bool end_game{};
 
     while(!(user_choice == "Rock" || user_choice == "Paper" || user_choice == "Scissors" || end_game ))
