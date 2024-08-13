@@ -9,7 +9,7 @@ namespace Random{
 	std::mt19937 mt{ ss }; 
     
     std::mt19937 randomSelection(int min_range int max_range){
-        mt = std::uniform_int_distribution{min_range,max_range};
+        Random::mt = std::uniform_int_distribution{min_range,max_range};
         return mt;
     }
 }
