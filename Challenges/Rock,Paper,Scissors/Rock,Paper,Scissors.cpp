@@ -5,29 +5,25 @@
 int main(){
     std::cout<<"Welcome to Rock, Paper, Scissors!\n\n";
   
-    std::string& user_choice{};
+    std::string_view user_choice{};
+    bool end_game{};
 
-    while(!(user_choice == "Rock" || user_choice == "Paper" || user_choice == "Scissors" ))
+    while(!(user_choice == "Rock" || user_choice == "Paper" || user_choice == "Scissors" || end_game ))
     
     std::cout<<"Enter in Rock Paper or Scissors: ";
     std::cin>>user_choice;
 
-    switch(user_choice)
-    {   case "Rock":
-            user_choice= "Rock";
-            break;
+    if(user_choice == "rock")
+        user_choice = "rock";
 
-        case "Paper":
-            user_choice= "Paper";
-            break;
+    else if(user_choice == "paper")
+        user_choice= "paper";
 
-        case "Scissors":
-            user_choice= "Scissors";
-            break;
+    else if(user_choice == "scissors")
+        user_choice= "scissors"
 
-        default:
-            std::cout<<"Invalid choice,Please choose either 'Rock', 'Paper', or 'Scissors";
-    }
+    else
+        std::cout<<"Invalid choice please enter in Rock, Paper or Scissors\n";
 
     return 0;
 }
