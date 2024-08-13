@@ -8,7 +8,7 @@ namespace Random{
 	std::seed_seq ss{ rd(), rd(), rd(), rd(), rd(), rd(), rd(), rd() }; 
 	std::mt19937 mt{ ss }; 
     
-    std::mt19937 randomSelection(double min_range=1 double max_range=6 ){
+    std::mt19937 randomSelection(int min_range=1 int max_range=6 ){
     mt = std::uniform_int_distribution{min_range,max_range};
     return mt;
     }
