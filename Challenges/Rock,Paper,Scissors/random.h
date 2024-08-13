@@ -10,7 +10,7 @@ namespace Random{
     
     double randomSelection(double min_range=1 double max_range=6 ){
     mt = std::uniform_int_distribution{min_range,max_range};
-    return mt
+    return mt;
     }
 }
 
