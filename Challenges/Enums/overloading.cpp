@@ -23,7 +23,7 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
             case petrol : return "petrol";
             case diesel: return "diesel";
             case electric: return "electric";
-            case hydrogen: return "hydrogen";
+            case Cars::hydrogen: return "hydrogen";
             default: return "????";
         }
     };
