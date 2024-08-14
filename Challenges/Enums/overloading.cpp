@@ -11,12 +11,16 @@ namespace Cars
         hydrogen,
     };
 }
+
+using petrol = Cars::CarFuelTypes::petrol;
+using diesel = Carrs
  
 constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 
+    using namespace Cars::CarFuelTypes;
     switch(fueltype)
     {
-        case petrol: return "petrol";
+        case petrol : return "petrol";
         case diesel: return "diesel";
         case electric: return "electric";
         case hydrogen: return "hydrogen";
