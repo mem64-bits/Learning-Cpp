@@ -25,14 +25,29 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
             case diesel: return "diesel";
             case electric: return "electric";
             case hydrogen: return "hydrogen";
-            default: return "????";
+            default: return "???";
         }
     }
 }
 
-constexpr std::optional<Cars> getFuelTypeFromString(std::string_view sv){
+constexpr std::optional<Cars> getFuelTypeFromString(std::string_view sv)
+{
+    if(sv == "petrol") return "petrol";
+    if(sv == "diesel'") return "diesel";
+    if(sv == "electric") return "electric";
+    if(sv == "hydrogen") return "hydrogen";
 
+    return {};
 }
+
+std::istream& operator>>(std::istream& operator>> in, Cars::CarFuelTypes fueltype)
+{
+    
+}
+
+
+
+
 
 std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
     out<<getCarFuelType(fueltype);
