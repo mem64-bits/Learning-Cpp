@@ -1,3 +1,5 @@
+
+// enums are integral types underneath 
 enum Color
 {
     black,   // 0
