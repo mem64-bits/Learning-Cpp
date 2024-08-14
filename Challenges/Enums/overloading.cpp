@@ -34,11 +34,9 @@ std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
 
 
 int main(){
-
-    std::cout<<Cars::CarFuelTypes::<<\n;
-    std::cout<<Cars::CarFuelTypes::diesel<<\n;
-    std::cout<<Cars::CarFuelTypes::petrol<<\n;
-    std::cout<<Cars::CarFuelTypes::petrol<<\n;
-
+    std::cout<<Cars::CarFuelTypes::petrol<<'\n';
+    std::cout<<Cars::CarFuelTypes::diesel<<'\n';
+    std::cout<<Cars::CarFuelTypes::electric<<'\n';
+    std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
     return 0;
 }
