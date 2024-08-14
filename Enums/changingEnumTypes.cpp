@@ -11,6 +11,5 @@ enum Color : std::int8_t{
 int main(){
     Color c{ black };
     std::cout << sizeof(c) << '\n'; // prints 1 (byte)
-
     return 0;
 }
