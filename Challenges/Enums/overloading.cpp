@@ -16,15 +16,17 @@ namespace Cars
  
 constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 
-    using namespace Cars::CarFuelTypes;
-    switch(fueltype)
+    using namespace Cars::CarFuelTypes
     {
-        case petrol : return "petrol";
-        case diesel: return "diesel";
-        case electric: return "electric";
-        case hydrogen: return "hydrogen";
-        default: return "????";
-    }
+        switch(fueltype)
+        {
+            case petrol : return "petrol";
+            case diesel: return "diesel";
+            case electric: return "electric";
+            case hydrogen: return "hydrogen";
+            default: return "????";
+        }
+    };
 }
 
 std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
