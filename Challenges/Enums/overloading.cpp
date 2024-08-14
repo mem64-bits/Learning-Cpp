@@ -11,8 +11,6 @@ namespace Cars
         hydrogen,
     };
 }
-
-
  
 constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 
@@ -23,7 +21,7 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
             case petrol : return "petrol";
             case diesel: return "diesel";
             case electric: return "electric";
-            case Cars::hydrogen: return "hydrogen";
+            case hydrogen: return "hydrogen";
             default: return "????";
         }
     }
@@ -37,7 +35,10 @@ std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
 
 int main(){
 
-    std::cout<<Cars::CarFuelTypes::diesel;
+    std::cout<<Cars::CarFuelTypes::<<\n;
+    std::cout<<Cars::CarFuelTypes::diesel<<\n;
+    std::cout<<Cars::CarFuelTypes::petrol<<\n;
+    std::cout<<Cars::CarFuelTypes::petrol<<\n;
 
     return 0;
 }
