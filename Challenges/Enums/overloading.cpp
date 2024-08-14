@@ -42,11 +42,19 @@ constexpr std::optional<Cars> getFuelTypeFromString(std::string_view sv)
 
 std::istream& operator>>(std::istream& operator>> in, Cars::CarFuelTypes fueltype)
 {
-    
+    std::string s{}
+    in>>s;
+    std::optional<Cars> match{getFuelTypeFromString(s)};
+
+     if (match) // if we found a match
+    {
+        fueltype = *match; // dereference std::optional to get matching enumerator
+        return in;
+    }
+
+    in.setstate(std::ios_base::failbit);
+    return in;
 }
-
-
-
 
 
 std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
@@ -63,7 +71,18 @@ int main(){
     std::cout<<Cars::CarFuelTypes::electric<<'\n';
     std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
 
-    std::string car_type{};
+    Cars::CarFuelTypes car_type{};
+    std::cout<<"Enter the car fuel type you have: "
+    std::cin>>car_type; 
+
+    if(car_type  == Cars::CarFuelTypes::electric)
+    {
+        std::cout<<"You must like Teslas, Gay!!!\n";
+    }
+
+    else{
+        std::cout<<"Nice Choice :)\n";
+    }
 
     return 0;
 }
