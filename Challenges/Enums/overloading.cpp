@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string_view>
+#include <string>
+#include <optional>
+#include <limits>
 
 namespace Cars
 {
@@ -27,10 +30,16 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
     }
 }
 
+constexpr std::optional<Cars> getFuelTypeFromString(std::string_view sv){
+
+}
+
 std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
     out<<getCarFuelType(fueltype);
     return out;
 }
+
+
 
 
 int main(){
@@ -38,5 +47,8 @@ int main(){
     std::cout<<Cars::CarFuelTypes::diesel<<'\n';
     std::cout<<Cars::CarFuelTypes::electric<<'\n';
     std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
+
+    std::string car_type{};
+
     return 0;
 }
