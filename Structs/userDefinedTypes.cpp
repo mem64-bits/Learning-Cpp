@@ -15,6 +15,5 @@ Fraction f{3,4};
 // makes an object of the type Fraction
 
 std::cout<<f;
-
     return 0;
 }
