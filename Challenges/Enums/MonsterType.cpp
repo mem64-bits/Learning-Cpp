@@ -1,5 +1,3 @@
-#include <iostream>
-
 namespace Monster
 {
     enum MonsterType
@@ -15,6 +13,5 @@ namespace Monster
 
 int main(){
     Monster::MonsterType monster{Monster::goblin};
-    std::cout<<monster;
     return 0;
 }
