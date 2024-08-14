@@ -25,7 +25,7 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 }
 
 std::ostream& operator<<(std::ostream& out, Cars::CarFuelTypes fueltype ){
-    out<<getCarFuelType(out);
+    out<<getCarFuelType(fueltype);
     return out;
 }
 
