@@ -8,6 +8,8 @@ enum Color
     blue,
 };
 
+
+// Function converts integrals into a 
 constexpr std::string_view getColorName(Color color)
 {
     switch (color)
