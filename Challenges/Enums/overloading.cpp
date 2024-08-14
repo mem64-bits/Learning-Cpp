@@ -12,8 +12,7 @@ namespace Cars
     };
 }
 
-using petrol = Cars::CarFuelTypes::petrol;
-using diesel = Carrs
+
  
 constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 
