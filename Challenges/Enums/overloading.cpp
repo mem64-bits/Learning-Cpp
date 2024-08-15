@@ -77,8 +77,9 @@ int main(){
     Cars::CarFuelTypes car_type{};
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
+    car_type = getCarFuelType(car_type);
 
-    if(car_type  == Cars::electric)
+    if(car_type  == "electric" )
     {
         std::cout<<"You must like Teslas, Gay!!!\n";
     }
