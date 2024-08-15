@@ -40,7 +40,7 @@ constexpr std::optional<Cars> getFuelTypeFromString(std::string_view sv)
     return {};
 }
 
-std::istream& operator>>(std::istream& operator>> in, Cars::CarFuelTypes fueltype)
+std::istream& operator>>(std::istream& in, Cars::CarFuelTypes fueltype)
 {
     std::string s{}
     in>>s;
@@ -71,6 +71,18 @@ int main(){
     std::cout<<Cars::CarFuelTypes::electric<<'\n';
     std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
 
-    
+    Cars::CarFuelTypes car_type{};
+    std::cout<<"Enter the car fuel type you have: ";
+    std::cin>>car_type; 
+
+    if(car_type  == Cars::CarFuelTypes::electric)
+    {
+        std::cout<<"You must like Teslas, Gay!!!\n";
+    }
+
+    else{
+        std::cout<<"Nice Choice :)\n";
+    }
+
     return 0;
 }
