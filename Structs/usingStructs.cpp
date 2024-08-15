@@ -12,13 +12,17 @@ struct Employee
     int id {};
     int age {};
     double wage {};
-    
-    void printHello(){
-        std::cout<<"Hello, World!\n";
-    }
 }
 
+// Defining Structs
 int main(){
-    Employee.printHello();
+
+// creates employee struct for john
+// refers to whole struct
+    Employee john{};
+
+// To refer to particular objects in a struct use the (.) operator
+    john.age = 32
+    std::cout<<john.age;
     return 0;
 }
