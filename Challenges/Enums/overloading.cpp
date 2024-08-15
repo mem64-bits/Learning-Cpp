@@ -39,7 +39,7 @@ constexpr std::optional<Cars::CarFuelTypes> getFuelTypeFromString(std::string_vi
         if(sv == "electric") return electric;
         if(sv == "hydrogen") return hydrogen;
     }
-    
+
     return {};
 }
 
@@ -78,7 +78,7 @@ int main(){
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
 
-    if(car_type  == Cars::CarFuelTypes::electric)
+    if(car_type  == "electric")
     {
         std::cout<<"You must like Teslas, Gay!!!\n";
     }
