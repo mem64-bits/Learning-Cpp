@@ -32,11 +32,14 @@ constexpr std::string_view getCarFuelType(Cars::CarFuelTypes fueltype){
 
 constexpr std::optional<Cars::CarFuelTypes> getFuelTypeFromString(std::string_view sv)
 {
-    if(sv == "petrol") return petrol;
-    if(sv == "diesel'") return diesel;
-    if(sv == "electric") return electric;
-    if(sv == "hydrogen") return hydrogen;
-
+    using namespace Cars;
+    {
+        if(sv == "petrol") return petrol;
+        if(sv == "diesel'") return diesel;
+        if(sv == "electric") return electric;
+        if(sv == "hydrogen") return hydrogen;
+    }
+    
     return {};
 }
 
