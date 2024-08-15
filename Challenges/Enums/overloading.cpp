@@ -14,5 +14,6 @@ int main(){
     Cars::CarFuelTypes car_type{};
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
+    std::cout<<"Your car fueltype is "<<car_type;
     return 0;
 }
