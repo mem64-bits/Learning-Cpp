@@ -78,7 +78,7 @@ int main(){
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
 
-    if(car_type  == "electric")
+    if(car_type  == Cars::electric)
     {
         std::cout<<"You must like Teslas, Gay!!!\n";
     }
