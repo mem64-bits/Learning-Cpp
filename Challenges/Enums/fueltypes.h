@@ -41,6 +41,8 @@ inline constexpr std::optional<Cars::CarFuelTypes> getFuelTypeFromString(std::st
         if(sv == "diesel'") return diesel;
         if(sv == "electric") return electric;
         if(sv == "hydrogen") return hydrogen;
+        else 
+            return "????";
     }
 
     return {};
