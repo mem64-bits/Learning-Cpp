@@ -9,7 +9,7 @@ enum class Animal
     cat,// 3
     dog,// 4
     duck,// 5
-} 
+};
 
 constexpr std::string_view getAnimalName(Animal animal)
 {   
