@@ -71,7 +71,7 @@ int main(){
     std::cout<<Cars::CarFuelTypes::electric<<'\n';
     std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
 
-    Cars::CarFuelTypes car_type{};
+    std::string car_type{};
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
 
