@@ -32,34 +32,37 @@ void printNumberOfLegs(Animal animal)
 {
     using enum Animal;
     {
+
+        std::cout << "A " << getAnimalName(animal) << " has ";
+
         switch(animal)
         {
             case pig: 
-                std::cout<<"A pig has 4 legs.\n";
+                std::cout<< 4 ;
                 break;
 
             case chicken: 
-                std::cout<<"A chicken has 2 legs.\n";
+                std::cout<<2;
                 break;
 
             case goat: 
-                std::cout<<"A goat has 4 legs.\n";
+                std::cout<< 4;
                 break;
 
             case cat: 
-                std::cout<<"A cat has 4 legs.\n";
+                std::cout<< 4 ;
                 break;
 
             case dog: 
-                std::cout<<"A dog has 4 legs.\n";
+                std::cout<< 4 ;
                 break;
 
             case duck: 
-                   std::cout<<"A duck has 2 legs.\n";
+                   std::cout<< 2;
                    break;
 
             default: 
-                std::cout<<"Undefined enum animal\n";
+                std::cout<<"???";
                 break;
         }
     }
