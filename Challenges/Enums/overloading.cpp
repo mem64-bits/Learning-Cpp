@@ -75,9 +75,10 @@ int main(){
     std::cout<<Cars::CarFuelTypes::hydrogen<<'\n';
 
     Cars::CarFuelTypes car_type{};
+    car_type = getCarFuelType(car_type);
     std::cout<<"Enter the car fuel type you have: ";
     std::cin>>car_type; 
-    car_type = getCarFuelType(car_type);
+    
 
     if(car_type  == "electric" )
     {
