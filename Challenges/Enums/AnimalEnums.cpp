@@ -13,7 +13,7 @@ enum class Animal
 
 constexpr std::string_view getAnimalName(Animal animal)
 {   
-    using Animal;
+    using enum Animal;
     {
         switch(animal)
         {
@@ -30,7 +30,7 @@ constexpr std::string_view getAnimalName(Animal animal)
 
 void printNumberOfLegs(Animal animal)
 {
-    using Animal;
+    using enum Animal;
     {
         switch(animal)
         {
