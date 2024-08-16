@@ -22,6 +22,7 @@ int main(){
     Employee frank {15,28,18.27};
 
 //  Print Joe's information
+    std::cout<<"Pass by Reference\n";
     printEmployee(joe);
     std::cout<<'\n';
 
@@ -33,9 +34,10 @@ int main(){
     std::cout<<'\n';
 
 // Print Joe's infomation
+    std::cout<<"Temporary Values";
     printEmployee(Employee { 14, 32, 24.15 });
     std::cout<<'\n';
-    
+
     printEmployee(Employee{15, 28, 18.27 });
     return 0;
 }
