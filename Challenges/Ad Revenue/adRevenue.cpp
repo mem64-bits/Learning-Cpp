@@ -19,7 +19,7 @@ adRevenue getUserRevenue()
     std::cout<<"\nEnter in the pecentage of ads the user has clicked: ";
     std::cin>>ad_info.ads_clicked_percent;
 
-    std::cout<<"Enter in the average earnings of the ads: ";
+    std::cout<<"\nEnter in the average earnings of the ads: ";
     std::cin>>ad_info.ads_av_earnings;
     std::cout<<'\n';
 
@@ -32,9 +32,9 @@ adRevenue printAdRevenue(const adRevenue& ad){
     std::cout<<ad.ads_clicked_percent<<'\n';
     std::cout<<ad.ads_av_earnings<<'\n';
 
-    double total_daily_earnings{ad.ads_watched*ad.ads_clicked_percent*ad.ads_av_earnings};
+    double total_daily_earnings{ad.ads_watched*(ad.ads_clicked_percent/100)*ad.ads_av_earnings};
     std::setprecision(2);
-    std::cout<<"The total daily adrevenue is: "<<total_daily_earnings;
+    std::cout<<"The total daily ad revenue is: "<<total_daily_earnings;
 
     return {};
 }
