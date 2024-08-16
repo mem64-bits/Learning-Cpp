@@ -5,7 +5,7 @@ struct Employee
     int id {};
     int age {};
     int wage{};
-}
+};
 
 
 std::ostream& operator<<(std::ostream& out, const Employee& e )
