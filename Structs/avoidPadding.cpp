@@ -4,7 +4,7 @@ struct PaddedStruct
 {
     short a{};
     int b{};
-    short b{};
+    short c{};
 };
 
 struct UnpaddedStruct
@@ -16,7 +16,7 @@ struct UnpaddedStruct
 
 
 int main()
-{
+{   
     std::cout<<sizeof(PaddedStruct)<<'\n';
     std::cout<<sizeof(UnpaddedStruct)<<'\n';
     return 0;
