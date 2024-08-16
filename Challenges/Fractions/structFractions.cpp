@@ -4,7 +4,6 @@
 struct Fraction
 {
     int numerator {};
-    char seperator{'/'};
     int denominator {};
 };
 
@@ -28,12 +27,12 @@ Fraction fractMultiply(const Fraction& fraction_1, const Fraction& fraction_2)
 
 std::ostream& operator<<(std::ostream& out, const Fraction& fraction)
 {
-    out<<fraction.numerator<<fraction.seperator<<fraction.denominator;
+    out<<fraction.numerator<<fraction.denominator;
     return out;
 }
 
 int main(){
     Fraction result {fractMultiply(getUserFraction(),getUserFraction())};
-    std::cout<<"Your fractions multiplied together: "<<result;
+    std::cout<<"Your fractions multiplied together: "<<result.numerator<<"/"<<result.denominator;
     return 0;
 }
