@@ -8,9 +8,9 @@ struct Employee
 }
 
 
-std::ostream& operator<< (std::ostream& out, const Employee& e )
+std::ostream& operator<<(std::ostream& out, const Employee& e )
 {
-    out<<"id: "<< e.id<<" age: " <<e.age<< " wage: " <<e.wage;
+    out<< "id: "<< e.id<<" age: " <<e.age<< " wage: " <<e.wage;
     return out;
 }
 
