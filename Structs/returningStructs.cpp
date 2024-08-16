@@ -11,6 +11,8 @@ Point3d getZeroPoint()
 {
 // We can create a variable and return the variable 
     return Point3d { 0.0, 0.0, 0.0 };   
+//  return {0.0, 0.0, 0.0}; we don't need to specify the type 
+//  because the type is deduced in the declaration of the function
 }
 
 int main()
