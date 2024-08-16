@@ -17,14 +17,14 @@ void printEmployeee(const Employee& employee)
     std::cout<< "Wage: "<< employee.wage<<'\n';
 }
 
-int main{
+int main(){
     Employee joe{14,32,24.15};
     Employee frank {15,28,18.27};
 
 //  Print Joe's information
     printEmployeee(joe);
     std::cout<<'\n';
-    
+
 // Print Frank's information
     printEmployeee(frank);
     return 0;
