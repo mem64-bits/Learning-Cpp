@@ -9,8 +9,8 @@ struct Something
 
 std::ostream& operator<<(std::ostream& out, Something& const s)
 {
-    out<<s;
-    return s;
+    out<<"x: "<<s.x<<" y: "<<s.y<<"z: "<<s.z;
+    return out;
 }
 
 int main()
