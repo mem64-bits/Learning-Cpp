@@ -25,7 +25,7 @@ int main()
     std::cout<<s1.z;
 
 // Defaults can be overwritten
-    Something s1{1,2,3};
+    Something s1 = 1,2,3;
 // Prints new value
     std::cout<<s1;
     return 0;
