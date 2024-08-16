@@ -22,7 +22,7 @@ int main()
 //  Prints values of struct
     std::cout<<s1;
 // Prints default value of struct object z
-    std::cout<<s1.z
+    std::cout<<s1.z;
 
 // Defaults can be overwritten
     Something s1{1,2,3};
