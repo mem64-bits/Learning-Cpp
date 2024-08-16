@@ -2,7 +2,9 @@
 
 struct Something
 {
-    int x;       // no initialization value (bad)
+//  int x;       // no initialization value (bad)
+
+    int x{};
     int y {};    // value-initialized by default
     int z { 2 }; // explicit default value
 };
