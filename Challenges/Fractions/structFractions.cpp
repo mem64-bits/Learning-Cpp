@@ -3,20 +3,20 @@
 
 struct Fraction
 {
-    int numerator {};
-    int denominator {};
+    int numerator {0};
+    int denominator {1};
 };
 
 Fraction getUserFraction()
 {   
-    Fraction fraction{};
+    Fraction temp{};
     std::cout<<"Enter a value for the numerator: ";
-    std::cin>>fraction.numerator;
+    std::cin>>temp.numerator;
 
     std::cout<<"\nEnter a value for the denominator: ";
-    std::cin>>fraction.denominator;
-    std::cout<<'\n'<<'\n';
-    return fraction;
+    std::cin>>temp.denominator;
+    std::cout<<'\n';
+    return temp;
 }
 
 Fraction fractMultiply(const Fraction& fraction_1, const Fraction& fraction_2)
@@ -25,14 +25,15 @@ Fraction fractMultiply(const Fraction& fraction_1, const Fraction& fraction_2)
     return result;
 }
 
-std::ostream& operator<<(std::ostream& out, const Fraction& fraction)
+void printFraction(const Fraction& f)
 {
-    out<<fraction.numerator<<fraction.denominator;
-    return out;
+     std::cout<<f.numerator<<"/"<<f.denominator;
 }
 
 int main(){
-    Fraction result {fractMultiply(getUserFraction(),getUserFraction())};
-    std::cout<<"Your fractions multiplied together: "<<result.numerator<<"/"<<result.denominator;
+    Fraction f1{getUserFraction()};
+    Fraction f2{getUserFraction()};
+    std::cout << "Your fractions multiplied together: ";
+    printFraction(fractMultiply(f1,f2));
     return 0;
 }
