@@ -10,7 +10,7 @@ struct Employee
 
 
 // We can pass in structs by reference
-void printEmployeee(const Employee& employee)
+void printEmployee(const Employee& employee)
 {
     std::cout<< "ID: "<< employee.id<<'\n';
     std::cout<< "Age: "<< employee.age<<'\n';
@@ -22,10 +22,20 @@ int main(){
     Employee frank {15,28,18.27};
 
 //  Print Joe's information
-    printEmployeee(joe);
+    printEmployee(joe);
     std::cout<<'\n';
 
 // Print Frank's information
-    printEmployeee(frank);
+    printEmployee(frank);
+
+// Sometimes its better to use a temporary value to save time
+// space and reduce complexity
+    std::cout<<'\n';
+
+// Print Joe's infomation
+    printEmployee(Employee { 14, 32, 24.15 });
+    std::cout<<'\n';
+    
+    printEmployee(Employee{15, 28, 18.27 });
     return 0;
 }
