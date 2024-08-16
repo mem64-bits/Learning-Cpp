@@ -18,6 +18,15 @@ std::ostream& operator<<(std::ostream& out, const Something&  s)
 int main()
 {
     Something s1; // s1.x is uninitialized, s1.y is 0, and s1.z is 2
+    
+//  Prints values of struct
+    std::cout<<s1;
+// Prints default value of struct object z
+    std::cout<<s1.z
+
+// Defaults can be overwritten
+    Something s1{1,2,3};
+// Prints new value
     std::cout<<s1;
     return 0;
 }
