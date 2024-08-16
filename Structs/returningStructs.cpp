@@ -9,9 +9,8 @@ struct Point3d
 
 Point3d getZeroPoint()
 {
-    // We can create a variable and return the variable 
-    Point3d temp { 0.0, 0.0, 0.0 };
-    return temp;
+// We can create a variable and return the variable 
+    return Point3d { 0.0, 0.0, 0.0 };   
 }
 
 int main()
