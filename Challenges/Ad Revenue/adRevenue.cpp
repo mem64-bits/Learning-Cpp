@@ -35,6 +35,8 @@ adRevenue printAdRevenue(const adRevenue& ad){
     double total_daily_earnings{ad.ads_watched*ad.ads_clicked_percent*ad.ads_av_earnings};
     std::setprecision(2);
     std::cout<<"The total daily adrevenue is: "<<total_daily_earnings;
+
+    return {};
 }
 
 
