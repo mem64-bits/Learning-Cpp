@@ -4,7 +4,9 @@
 
 struct Vec3
 {
-    float x,y,z;
+    float x {};
+    float y {};
+    float z {};
 };
 
 struct Connection
