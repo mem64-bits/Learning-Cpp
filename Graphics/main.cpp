@@ -26,8 +26,9 @@ int main()
         screen.pixel(rand()%640,rand()%480);
     }
 
-    line(screen, 0, 0, 300, 300);
-    
+    line(screen, 100, 100, 200, 100);
+    line(screen )
+
     while(true)
     {
         screen.show();
