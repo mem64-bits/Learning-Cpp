@@ -28,6 +28,8 @@ int main()
 
     line(screen, 100, 100, 200, 100);
     line(screen, 200, 100, 200, 200);
+    line(screen, 200, 200, 100, 200);
+    line(screen, 100, 200, 100, 100);
 
     while(true)
     {
