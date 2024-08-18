@@ -27,7 +27,7 @@ int main()
     }
 
     line(screen, 100, 100, 200, 100);
-    line(screen )
+    line(screen, 200, 100, 200, 200);
 
     while(true)
     {
