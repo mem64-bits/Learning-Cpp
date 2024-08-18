@@ -100,10 +100,12 @@ int main()
             screen.pixel(p.x,p.y);
         }
 
-        for(auto& p : points)
+        for(auto& conn : connections)
         {
-            screen.pixel(p.x,p.y);
-        }
+            line(screen, points[conn.a].x,
+                         points[conn.a].y,
+                         points[conn.b].x,
+                         points[conn.b].y);
         screen.show();
         screen.clear();
         screen.input();
