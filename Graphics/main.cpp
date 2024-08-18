@@ -48,12 +48,37 @@ int main()
 {
     Screen screen;
 
-    
+    std::vector<Vec3> points {
+
+        {100,100,100},
+        {200,100,100},
+        {200,200,100},
+        {100,200,100},
+        
+        {100,100,200},
+        {200,100,200},
+        {200,200,200},
+        {100,200,200}
+
+
+
+    };
 
     while(true)
-    {
+    {   
+        for(auto& p : points)
+        {
+            rotate(p,0.002,0.001,0.004);
+        }
+
+        for(auto& p : points)
+        {
+            screen.pixel(p.x,p.y);
+        }
         screen.show();
+        screen.clear();
         screen.input();
+        SDL_Delay(30);
     }
 
     return 0;
