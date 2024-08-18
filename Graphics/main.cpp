@@ -7,6 +7,11 @@ struct Vec3
     float x,y,z;
 };
 
+struct connection
+{
+    int a,b;
+};
+
 void rotate(Vec3& point, float x=1, float y=1, float z=1)
 {
     float rad{0};
