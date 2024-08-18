@@ -64,7 +64,7 @@ int main()
 
     };
 
-    Vec3 c;
+    Vec3 c{0,0,0};
     for(auto& p : points)
     {
         c.x += p.x;
@@ -83,7 +83,7 @@ int main()
             p.x -= c.x;
             p.y -= c.y;
             p.z -= c.z;
-            
+
             rotate(p,0.002,0.001,0.004);
 
             p.x += c.x;
