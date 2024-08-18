@@ -23,6 +23,11 @@ class Screen
         points.emplace_back(x,y);
     }
 
+    void clear()
+    {
+        points.clear();
+    }
+    
     void show()
     {
         SDL_SetRenderDrawColor(renderer,0,0,0,255);
