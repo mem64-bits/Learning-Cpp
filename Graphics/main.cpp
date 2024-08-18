@@ -106,6 +106,7 @@ int main()
                          points[conn.a].y,
                          points[conn.b].x,
                          points[conn.b].y);
+        }
         screen.show();
         screen.clear();
         screen.input();
