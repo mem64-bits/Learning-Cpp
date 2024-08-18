@@ -7,7 +7,7 @@ struct Vec3
     float x,y,z;
 };
 
-struct connection
+struct Connection
 {
     int a,b;
 };
@@ -64,9 +64,14 @@ int main()
         {200,100,200},
         {200,200,200},
         {100,200,200}
+    };
 
-
-
+    std::vector<Connection> connections
+    {
+        {0,4},
+        {1,5},
+        {2,6},
+        {3,7},
     };
 
     Vec3 c{0,0,0};
