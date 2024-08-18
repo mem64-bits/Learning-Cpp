@@ -72,11 +72,23 @@ int main()
         c.z += p.z;
     };
 
+    c.x /= points.size();  
+    c.y/= points.size();
+    c.z /= points.size();
+
     while(true)
     {   
         for(auto& p : points)
         {
+            p.x -= c.x;
+            p.y -= c.y;
+            p.z -= c.z;
+            
             rotate(p,0.002,0.001,0.004);
+
+            p.x += c.x;
+            p.y += c.y;
+            p.z += c.z;
         }
 
         for(auto& p : points)
