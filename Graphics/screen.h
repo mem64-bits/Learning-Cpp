@@ -14,7 +14,7 @@ class Screen
     {
         SDL_Init(SDL_INIT_VIDEO);
         SDL_CreateWindowAndRenderer(
-            640*2,480*2,0,&window,&renderer);
+            400*2,300*2,0,&window,&renderer);
         SDL_RenderSetScale(renderer,2,2);    
     }
 
