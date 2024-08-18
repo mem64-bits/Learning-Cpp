@@ -1,10 +1,10 @@
 #include "screen.h"
+#include <random>
 
 
 int main()
 {
     Screen screen;
-
     for(int i = 0; i < 100; i++)
     {
         screen.pixel(rand()%640,rand()%480);
