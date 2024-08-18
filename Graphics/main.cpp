@@ -64,6 +64,14 @@ int main()
 
     };
 
+    Vec3 c;
+    for(auto& p : points)
+    {
+        c.x += p.x;
+        c.y += p.y;
+        c.z += p.z;
+    };
+
     while(true)
     {   
         for(auto& p : points)
