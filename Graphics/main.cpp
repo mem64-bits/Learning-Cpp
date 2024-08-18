@@ -47,15 +47,8 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
 int main()
 {
     Screen screen;
-    for(int i = 0; i < 100; i++)
-    {
-        screen.pixel(rand()%640,rand()%480);
-    }
 
-    line(screen, 100, 100, 200, 100);
-    line(screen, 200, 100, 200, 200);
-    line(screen, 200, 200, 100, 200);
-    line(screen, 100, 200, 100, 100);
+    
 
     while(true)
     {
