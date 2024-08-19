@@ -78,6 +78,16 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
 int main()
 {
 
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
+        return -1;
+    }
+
+    if (TTF_Init() == -1) {
+        std::cerr << "Failed to initialize SDL_ttf: " << TTF_GetError() << std::endl;
+        return -1;
+    }
+
     // Create and initialize the music player
     MusicPlayer musicPlayer;
 
@@ -87,15 +97,6 @@ int main()
         return -1;
     }
 
-     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
-        std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
-        return -1;
-    }
-
-    if (TTF_Init() == -1) {
-        std::cerr << "Failed to initialize SDL_ttf: " << TTF_GetError() << std::endl;
-        return -1;
-    }
 
     Screen screen;
 
