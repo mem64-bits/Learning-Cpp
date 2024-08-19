@@ -173,8 +173,18 @@ int main()
             }
 
             screen.drawFilledPolygon(polygon, faceColors[i]);
+
+            // Draw black outline
+            for (size_t j = 0; j < polygon.size(); ++j)
+            
+            {
+            size_t next = (j + 1) % polygon.size();
+            screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
+            }
+
         }
 
+        
         screen.show();
         screen.clear();
         screen.input();
