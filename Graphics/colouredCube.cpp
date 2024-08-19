@@ -101,12 +101,12 @@ int main()
     };
 
     std::vector<Face> faces {
-        {{0, 1, 2, 3}, {255, 0, 0, 255}},   // Front face - Red
-        {{4, 5, 6, 7}, {0, 255, 0, 255}},   // Back face - Green
+        {{0, 1, 2, 3}, {0, 0, 255, 255}},   // Front face - Red
+        {{4, 5, 6, 7}, {0, 0, 255, 255}},   // Back face - Green
         {{0, 1, 5, 4}, {0, 0, 255, 255}},   // Bottom face - Blue
-        {{2, 3, 7, 6}, {255, 255, 0, 255}}, // Top face - Yellow
-        {{0, 3, 7, 4}, {255, 0, 255, 255}}, // Left face - Magenta
-        {{1, 2, 6, 5}, {0, 255, 255, 255}}  // Right face - Cyan
+        {{2, 3, 7, 6}, {0, 0, 255, 255}}, // Top face - Yellow
+        {{0, 3, 7, 4}, {0, 0, 255, 255}}, // Left face - Magenta
+        {{1, 2, 6, 5}, {0, 0, 255, 255}},  // Right face - Cyan
     };
 
     Vec3 c{0, 0, 0};
