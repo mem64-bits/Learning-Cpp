@@ -195,10 +195,12 @@ int main() {
                 size_t next = (j + 1) % polygon.size();
                 screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
             }
+
+            SDL_RenderPresent(renderer);
+            SDL_Delay(30);
         }
 
-        SDL_RenderPresent(renderer);
-        SDL_Delay(30);
+        
     }
 
     // Cleanup
