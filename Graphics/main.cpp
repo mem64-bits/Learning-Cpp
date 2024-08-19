@@ -103,7 +103,9 @@ int main()
             p.x -= c.x;
             p.y -= c.y;
             p.z -= c.z;
+
             rotate(p,0.02,0.01,0.04);
+            
             p.x += c.x;
             p.y += c.y;
             p.z += c.z;
