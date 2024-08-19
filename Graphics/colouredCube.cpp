@@ -106,6 +106,7 @@ int main()
 
     loadMusic();
     SDL_Surface* dirt = IMG_Load("textures/dirt.png");
+    
     loadImage();
     SDL_Texture* dirt_texture = SDL_CreateTextureFromSurface(renderer, dirt);
     SDL_FreeSurface(dirt);
@@ -124,7 +125,7 @@ int main()
     };
 
     std::vector<Face> faces {
-        {{0, 1, 2, 3}, {255, 0, 0, 255}},   // Front face - Red
+        {{0, 1, 2, 3}, {255, 0, 0, 255},},   // Front face - Red
         {{4, 5, 6, 7}, {0, 255, 0, 255}},   // Back face - Green
         {{0, 1, 5, 4}, {0, 0, 255, 255}},   // Bottom face - Blue
         {{2, 3, 7, 6}, {255, 255, 0, 255}}, // Top face - Yellow
