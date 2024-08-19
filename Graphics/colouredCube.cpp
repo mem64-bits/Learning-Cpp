@@ -4,7 +4,7 @@
 #include <cmath>
 #include "musicPlayer.h"
 #include <iostream>
-#include <SDL2/SDL_mixer.h>
+
 
 struct Vec3
 {
