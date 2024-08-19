@@ -134,74 +134,74 @@ int main() {
     center.y /= points.size();
     center.z /= points.size();
 
-    // Main loop
-    bool running = true;
-    while (running) {
-        SDL_Event event;
-        while (SDL_PollEvent(&event)) {
-            if (event.type == SDL_QUIT) {
-                running = false;
-            }
-        }
+   while (true)
+{
+    // Clear the renderer for a new frame
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
 
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Set the clear color to black
-        SDL_RenderClear(renderer);                      // Clear the renderer
+    // Rotate points
+    for (auto& p : points)
+    {
+        p.x -= c.x;
+        p.y -= c.y;
+        p.z -= c.z;
 
+        p.rotate(0.02, 0.01, 0.04);
 
-        // Rotate points around the center
-        for (auto& p : points) {
-            p.x -= center.x;
-            p.y -= center.y;
-            p.z -= center.z;
-
-            p.rotate(0.02f, 0.01f, 0.04f);
-
-            p.x += center.x;
-            p.y += center.y;
-            p.z += center.z;
-        }
-
-        // Calculate depth for each face
-        for (auto& face : faces) {
-            face.calculateDepth(points);
-        }
-
-        // Sort faces by depth (far to near)
-        std::sort(faces.begin(), faces.end(), [](const Face& a, const Face& b) {
-            return a.depth > b.depth;
-        });
-
-        // Draw faces with texture and outlines
-        for (const auto& face : faces) {
-            std::vector<SDL_FPoint> polygon;
-            for (const int index : face.indices) {
-                polygon.push_back({points[index].x, points[index].y});
-            }
-
-            if (face.texture) {
-                SDL_Rect dstRect = {
-                    static_cast<int>(polygon[0].x),
-                    static_cast<int>(polygon[0].y),
-                    std::abs(static_cast<int>(polygon[1].x - polygon[0].x)),
-                    std::abs(static_cast<int>(polygon[2].y - polygon[0].y))
-                };
-                SDL_RenderCopy(renderer, face.texture, NULL, &dstRect);
-            } else {
-                screen.drawFilledPolygon(polygon, face.color);
-            }
-
-            // Draw outlines
-            for (size_t j = 0; j < polygon.size(); ++j) {
-                size_t next = (j + 1) % polygon.size();
-                screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
-            }
-
-            SDL_RenderPresent(renderer);
-            SDL_Delay(30);
-        }
-
-        
+        p.x += c.x;
+        p.y += c.y;
+        p.z += c.z;
     }
+
+    // Calculate depth for each face
+    for (auto& face : faces) {
+        face.calculateDepth(points);
+    }
+
+    // Sort faces by depth (far to near)
+    std::sort(faces.begin(), faces.end(), [](const Face& a, const Face& b) {
+        return a.depth > b.depth;
+    });
+
+    // Draw faces with color and black outlines
+    for (const auto& face : faces)
+    {
+        std::vector<SDL_FPoint> polygon;
+        for (const int index : face.indices)
+        {
+            polygon.push_back({points[index].x, points[index].y});
+        }
+
+        if (face.texture) {
+            SDL_Rect dstRect;
+            dstRect.x = polygon[0].x;
+            dstRect.y = polygon[0].y;
+            dstRect.w = std::abs(polygon[1].x - polygon[0].x);
+            dstRect.h = std::abs(polygon[2].y - polygon[0].y);
+
+            SDL_RenderCopy(renderer, face.texture, NULL, &dstRect);
+        } else {
+            screen.drawFilledPolygon(polygon, face.color);
+        }
+
+        // Draw black outline (optional)
+        for (size_t j = 0; j < polygon.size(); ++j) {
+            size_t next = (j + 1) % polygon.size();
+            screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
+        }
+    }
+
+    // Present the final frame
+    SDL_RenderPresent(renderer);
+
+    // Handle input and exit conditions
+    screen.input();
+
+    // Delay to control frame rate
+    SDL_Delay(30);
+}
+
 
     // Cleanup
     SDL_DestroyTexture(dirt_texture);
