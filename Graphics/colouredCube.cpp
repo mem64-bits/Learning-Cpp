@@ -101,9 +101,15 @@ int loadMusic()
 int main()
 {
 
+    SDL_Window* window = SDL_CreateWindow("Textured Cube", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, SDL_WINDOW_SHOWN);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
     loadMusic();
+    SDL_Surface* dirt = IMG_Load("textures/dirt.png");
     loadImage();
-    IMG_Load("textures/dirt.png");
+    SDL_Texture* dirt_texture = SDL_CreateTextureFromSurface(renderer, dirt);
+    SDL_FreeSurface(dirt);
+
     Screen screen;
 
     std::vector<Vec3> points {
@@ -194,6 +200,9 @@ int main()
         SDL_Delay(30);
     }
 
+    SDL_DestroyTexture(dirt_texture);
+    IMG_Quit();
+    SDL_Quit();
 
     return 0;
 }
