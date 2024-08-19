@@ -2,9 +2,12 @@
 #define SCREEN_COLOUR_H
 
 #include <SDL2/SDL.h>
-
+#include <SDL2/SDL_ttf.h>
 #include <vector>
 #include <algorithm>
+
+// Forward declare SDL_FPoint for use in `drawFilledPolygon`
+struct SDL_FPoint;
 
 class Screen
 {
