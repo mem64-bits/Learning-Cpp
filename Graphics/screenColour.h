@@ -49,6 +49,8 @@ public:
         }
     }
 
+    
+
     void drawLine(float x1, float y1, float x2, float y2, SDL_Color color)
     {
         SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
