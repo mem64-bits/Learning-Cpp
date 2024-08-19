@@ -97,7 +97,9 @@ int main()
         {7,4}
     };
 
-     std::vector<std::vector<int>> faces {
+     std::vector<std::vector<int>> faces 
+    
+    {
         {0, 1, 2, 3}, // Front face
         {4, 5, 6, 7}, // Back face
         {0, 1, 5, 4}, // Bottom face
@@ -106,7 +108,9 @@ int main()
         {1, 2, 6, 5}  // Right face
     };
 
-    std::vector<SDL_Color> faceColors {
+    std::vector<SDL_Color> faceColors 
+    
+    {
         {255, 0, 0, 255},   // Red
         {0, 255, 0, 255},   // Green
         {0, 0, 255, 255},   // Blue
