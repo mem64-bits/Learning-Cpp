@@ -81,7 +81,7 @@ int main()
     MusicPlayer musicPlayer;
 
     // Play music file in a loop
-    if (!musicPlayer.playMusic("gamecube_startup.mp3")) {
+    if (!musicPlayer.playMusic("ps2_start_up.mp3")) {
         std::cerr << "Failed to play music." << std::endl;
         return -1;
     }
