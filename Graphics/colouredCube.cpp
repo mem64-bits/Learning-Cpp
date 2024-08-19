@@ -4,8 +4,6 @@
 #include <cmath>
 #include "musicPlayer.h"
 #include <iostream>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_ttf.h>
 #include <string>
 
 
@@ -76,53 +74,9 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
     }
 }
 
-// Function to render text at the top center of the screen
-void renderTextCentered(SDL_Renderer* renderer, TTF_Font* font, const std::string& text, SDL_Color color, int screenWidth, int screenHeight) {
-    // Create a surface from the text
-    SDL_Surface* textSurface = TTF_RenderText_Blended(font, text.c_str(), color);
-    if (!textSurface) {
-        std::cerr << "Failed to create text surface: " << TTF_GetError() << std::endl;
-        return;
-    }
-
-    // Create a texture from the surface
-    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-    SDL_FreeSurface(textSurface);
-    if (!textTexture) {
-        std::cerr << "Failed to create text texture: " << SDL_GetError() << std::endl;
-        return;
-    }
-
-    // Get the width and height of the text texture
-    int textWidth, textHeight;
-    SDL_QueryTexture(textTexture, NULL, NULL, &textWidth, &textHeight);
-
-    // Calculate the position to render the text at the top center
-    SDL_Rect textRect;
-    textRect.x = (screenWidth - textWidth) / 2;
-    textRect.y = 10; // 10 pixels from the top
-    textRect.w = textWidth;
-    textRect.h = textHeight;
-
-    // Render the text
-    SDL_RenderCopy(renderer, textTexture, NULL, &textRect);
-    SDL_DestroyTexture(textTexture);
-}
 
 int main()
 {
-
-    
-    // Load the font
-    TTF_Font* font = TTF_OpenFont("MGS1.TTF", 24);
-    if (!font) {
-        std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
-        TTF_Quit();
-        SDL_Quit();
-        return -1;
-    }
-
-    SDL_Color white = {255, 255, 255, 255};
 
     // Create and initialize the music player
     MusicPlayer musicPlayer;
