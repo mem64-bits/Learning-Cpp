@@ -17,6 +17,11 @@ public:
         SDL_RenderSetScale(renderer, 2, 2);
     }
 
+    void pixel(float x, float y)
+    {
+        points.emplace_back(x,y);
+    }
+
     void clear()
     {
         SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
