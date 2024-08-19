@@ -26,7 +26,7 @@ void rotate(Vec3& point, float x=1, float y=1, float z=1)
 
     rad = z;
     point.x = std::cos(rad) * point.x - std::sin(rad) * point.y;
-    point.z = std::sin(rad) * point.x + std::cos(rad) * point.y;
+    point.y = std::sin(rad) * point.x + std::cos(rad) * point.y;
     
 
 
