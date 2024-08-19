@@ -75,7 +75,16 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
     }
 }
 
-int main()
+int loadImage(){
+    
+    if (IMG_Init(IMG_INIT_PNG | IMG_INIT_JPG) == 0) 
+    {
+        std::cerr << "Failed to initialize SDL_image: " << IMG_GetError() << std::endl;
+        return -1;
+    }
+}
+
+int initMusic()
 {
 
     // Create and initialize the music player
@@ -86,6 +95,12 @@ int main()
         std::cerr << "Failed to play music." << std::endl;
         return -1;
     }
+}
+
+
+int main()
+{
+
 
 
     Screen screen;
