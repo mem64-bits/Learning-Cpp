@@ -22,7 +22,7 @@ void rotate(Vec3& point, float x=1, float y=1, float z=1)
 
     rad = y;
     point.x = std::cos(rad) * point.x + std::sin(rad) * point.z;
-    point.y = -std::sin(rad) * point.x + std::cos(rad) * point.z;
+    point.z = -std::sin(rad) * point.x + std::cos(rad) * point.z;
 
     rad = z;
     point.x = std::cos(rad) * point.x - std::sin(rad) * point.y;
@@ -85,7 +85,7 @@ int main()
     };
 
     Vec3 c{0,0,0};
-    
+
     for(auto& p : points)
     {
         c.x += p.x;
