@@ -193,7 +193,7 @@ int main()
 
         // Render the text at the top center
         renderTextCentered(renderer, font, "Wow it's a Spinning Cube!", white, 800, 600);
-        
+
         for (auto& p : points)
         {
             p.x -= c.x;
@@ -236,7 +236,10 @@ int main()
                 size_t next = (j + 1) % polygon.size();
                 screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
             }
+            
         }
+
+        SDL_RenderPresent(renderer);
 
         screen.show();
         screen.clear();
