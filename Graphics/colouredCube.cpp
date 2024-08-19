@@ -192,7 +192,8 @@ int main()
         SDL_RenderClear(renderer);
 
         // Render the text at the top center
-        renderTextCentered(renderer, font, "Your Text Here", white, 800, 600);
+        renderTextCentered(renderer, font, "Wow it's a Spinning Cube!", white, 800, 600);
+        
         for (auto& p : points)
         {
             p.x -= c.x;
