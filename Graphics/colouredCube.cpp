@@ -82,6 +82,11 @@ int loadImage(){
         std::cerr << "Failed to initialize SDL_image: " << IMG_GetError() << std::endl;
         return -1;
     }
+
+    else
+    {
+        SDL_Surface dirt_block_ = IMG_Load("");
+    }
 }
 
 int loadMusic()
