@@ -112,21 +112,7 @@ void renderTextCentered(SDL_Renderer* renderer, TTF_Font* font, const std::strin
 int main()
 {
 
-      // Initialize SDL and create a window and renderer
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) != 0) {
-        std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
-        return -1;
-    }
-
-    if (TTF_Init() != 0) {
-        std::cerr << "Failed to initialize SDL_ttf: " << TTF_GetError() << std::endl;
-        SDL_Quit();
-        return -1;
-    }
-
-    SDL_Window* window = SDL_CreateWindow("Coloured Cube", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600, SDL_WINDOW_SHOWN);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
+    
     // Load the font
     TTF_Font* font = TTF_OpenFont("MGS1.TTF", 24);
     if (!font) {
@@ -187,13 +173,6 @@ int main()
     {
 
         screen.clear();
-
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderClear(renderer);
-
-        // Render the text at the top center
-        renderTextCentered(renderer, font, "Wow it's a Spinning Cube!", white, 800, 600);
-
         for (auto& p : points)
         {
             p.x -= c.x;
@@ -239,21 +218,10 @@ int main()
             
         }
 
-        SDL_RenderPresent(renderer);
-
         screen.show();
         screen.clear();
         screen.input();
         SDL_Delay(30);
-    }
-
-    // Clean up
-    TTF_CloseFont(font);
-    TTF_Quit();
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
-    SDL_Quit();
-
 
     return 0;
 }
