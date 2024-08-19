@@ -4,7 +4,7 @@
 #include <cmath>
 #include "musicPlayer.h"
 #include <iostream>
-#include <string>
+#include <SDL2/SDL.h>
 
 
 struct Vec3
@@ -74,7 +74,6 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
     }
 }
 
-
 int main()
 {
 
@@ -127,6 +126,7 @@ int main()
     {
 
         screen.clear();
+
         for (auto& p : points)
         {
             p.x -= c.x;
@@ -169,14 +169,14 @@ int main()
                 size_t next = (j + 1) % polygon.size();
                 screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
             }
-            
         }
 
         screen.show();
         screen.clear();
         screen.input();
         SDL_Delay(30);
+    }
+
 
     return 0;
-}
 }
