@@ -35,8 +35,8 @@ void rotate(Vec3& point, float x=1, float y=1, float z=1)
 
 void line(Screen& screen, float x1, float y1, float x2, float y2)
 {
-    float dx = x2 -x1;
-    float dy = y2-y1;
+    float dx = x2 - x1;
+    float dy = y2 - y1;
     float length = std::sqrt(dx * dx + dy * dy);
     float angle = std::atan2(dy,dx);
 
