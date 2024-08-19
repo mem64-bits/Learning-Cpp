@@ -1,9 +1,8 @@
-
-
 #ifndef SCREEN_COLOUR_H
 #define SCREEN_COLOUR_H
 
 #include <SDL2/SDL.h>
+
 #include <vector>
 #include <algorithm>
 
