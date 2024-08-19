@@ -4,8 +4,8 @@
 #include <cmath>
 #include "musicPlayer.h"
 #include <iostream>
-#include <SDL2/SDL_ttf.h>
-
+#include "textRenderer.h"
+#include <SDL2/SDL.h>
 
 
 struct Vec3
@@ -84,6 +84,16 @@ int main()
     // Play music file in a loop
     if (!musicPlayer.playMusic("gamecube_startup.mp3")) {
         std::cerr << "Failed to play music." << std::endl;
+        return -1;
+    }
+
+     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
+        std::cerr << "Failed to initialize SDL: " << SDL_GetError() << std::endl;
+        return -1;
+    }
+
+    if (TTF_Init() == -1) {
+        std::cerr << "Failed to initialize SDL_ttf: " << TTF_GetError() << std::endl;
         return -1;
     }
 
@@ -166,10 +176,6 @@ int main()
                 size_t next = (j + 1) % polygon.size();
                 screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
             }
-
-             // Draw some text
-            SDL_Color textColor = {255, 255, 255, 255}; // White
-            screen.drawText("Hello, SDL2!", 100, 100, textColor);
         }
 
         screen.show();
