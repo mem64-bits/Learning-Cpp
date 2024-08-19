@@ -144,7 +144,9 @@ int main() {
             }
         }
 
-        screen.clear();
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // Set the clear color to black
+        SDL_RenderClear(renderer);                      // Clear the renderer
+
 
         // Rotate points around the center
         for (auto& p : points) {
