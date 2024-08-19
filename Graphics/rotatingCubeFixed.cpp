@@ -120,7 +120,7 @@ int main()
             p.z -= c.z;
 
             // Rotate the points
-            p.rotate(0.3, 0.0, 0.00);
+            p.rotate(0.03, 0.0, 0.00);
 
             // Translate points back to original position
             p.x += c.x;
