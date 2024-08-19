@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <cmath>
 #include "musicPlayer.h"
+#include <iostream>
 
 struct Vec3
 {
@@ -73,6 +74,16 @@ void line(Screen& screen, float x1, float y1, float x2, float y2)
 
 int main()
 {
+
+    // Create and initialize the music player
+    MusicPlayer musicPlayer;
+
+    // Play music file in a loop
+    if (!musicPlayer.playMusic("")) {
+        std::cerr << "Failed to play music." << std::endl;
+        return -1;
+    }
+
     Screen screen;
 
     std::vector<Vec3> points {
