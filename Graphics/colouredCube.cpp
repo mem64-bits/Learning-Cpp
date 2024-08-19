@@ -128,7 +128,7 @@ int main()
     SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     // Load the font
-    TTF_Font* font = TTF_OpenFont("path/to/your/font.ttf", 24);
+    TTF_Font* font = TTF_OpenFont("MGS1.TTF", 24);
     if (!font) {
         std::cerr << "Failed to load font: " << TTF_GetError() << std::endl;
         TTF_Quit();
@@ -188,6 +188,11 @@ int main()
 
         screen.clear();
 
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+        SDL_RenderClear(renderer);
+
+        // Render the text at the top center
+        renderTextCentered(renderer, font, "Your Text Here", white, 800, 600);
         for (auto& p : points)
         {
             p.x -= c.x;
