@@ -1,10 +1,11 @@
-#include "screenColour.h"
+#include "headers/screenColour.h"
+#include "headers/musicPlayer.h"
+#include <SDL2/SDL.h>
 #include <vector>
 #include <algorithm>
 #include <cmath>
-#include "musicPlayer.h"
 #include <iostream>
-#include <SDL2/SDL.h>
+
 
 
 struct Vec3
