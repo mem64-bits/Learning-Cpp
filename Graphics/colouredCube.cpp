@@ -247,6 +247,13 @@ int main()
         SDL_Delay(30);
     }
 
+    // Clean up
+    TTF_CloseFont(font);
+    TTF_Quit();
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+
 
     return 0;
 }
