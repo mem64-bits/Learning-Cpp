@@ -4,9 +4,7 @@
 
 struct Vec3
 {
-    float x {};
-    float y {};
-    float z {};
+    float x,y,z;
 };
 
 struct Connection
@@ -16,7 +14,7 @@ struct Connection
 
 void rotate(Vec3& point, float x=1, float y=1, float z=1)
 {
-    float rad{0};
+    float rad = 0;
 
     rad = x;
     point.y = std::cos(rad) * point.y - std::sin(rad) * point.z;
@@ -37,10 +35,10 @@ void rotate(Vec3& point, float x=1, float y=1, float z=1)
 
 void line(Screen& screen, float x1, float y1, float x2, float y2)
 {
-    float dx {x2 -x1};
-    float dy {y2-y1};
-    float length {std::sqrt(dx * dx + dy * dy)};
-    float angle {std::atan2(dy,dx)};
+    float dx = x2 -x1;
+    float dy = y2-y1;
+    float length = std::sqrt(dx * dx + dy * dy);
+    float angle = std::atan2(dy,dx);
 
     for(float i = 0; i < length; i++ )
     {
