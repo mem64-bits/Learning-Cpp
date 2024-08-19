@@ -84,7 +84,7 @@ int loadImage(){
     }
 }
 
-int initMusic()
+int loadMusic()
 {
 
     // Create and initialize the music player
@@ -102,7 +102,8 @@ int main()
 {
 
 
-
+    loadMusic();
+    loadImage();
     Screen screen;
 
     std::vector<Vec3> points {
