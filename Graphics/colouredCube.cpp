@@ -166,6 +166,10 @@ int main()
                 size_t next = (j + 1) % polygon.size();
                 screen.drawLine(polygon[j].x, polygon[j].y, polygon[next].x, polygon[next].y, {0, 0, 0, 255});
             }
+
+             // Draw some text
+            SDL_Color textColor = {255, 255, 255, 255}; // White
+            screen.drawText("Hello, SDL2!", 100, 100, textColor);
         }
 
         screen.show();
