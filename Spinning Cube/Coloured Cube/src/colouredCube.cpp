@@ -1,5 +1,5 @@
-#include "headers/screenColour.h"
-#include "headers/musicPlayer.h"
+#include "screenColour.h"
+#include "musicPlayer.h"
 #include <SDL2/SDL.h>
 #include <vector>
 #include <algorithm>
