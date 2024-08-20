@@ -38,7 +38,7 @@ constexpr double max(Pair p)
 int main()
 {
     Pair p1{ 5, 6 };
-    Pair p2 {5.0f,6.0f};
+    Pair p2 {5.0,6.0};
 
     std::cout << max(p1) << " is larger\n";
     std::cout<<max(p2) << " is larger\n";
