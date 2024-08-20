@@ -8,7 +8,7 @@ enum Colour
     red,
     blue,
     green,
-}
+};
 
 
 int main(){
@@ -20,5 +20,5 @@ int main(){
 // This will produce an error
 // as pink isn't a part of colour
 
-Colour shirt{pink;}
+// Colour shirt{pink};
 }
