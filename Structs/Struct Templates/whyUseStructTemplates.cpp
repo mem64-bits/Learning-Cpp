@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 // defines a struct
 struct Pair
 {
@@ -38,6 +39,10 @@ constexpr double max(Pair p)
 int main()
 {
     Pair p1{ 5, 6 };
+
+    // changing the type of struct to double
+    // doesn't work
+
     Pair p2 {5.0,6.0};
 
     std::cout << max(p1) << " is larger\n";
