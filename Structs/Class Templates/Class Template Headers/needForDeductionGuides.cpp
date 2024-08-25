@@ -13,6 +13,7 @@ int main()
     Pair<int,int> p1{1,2};
 
     // does not compile in C++17 (compiles in C++20)
+    // C++ 17 error: class template argument deduction failed:
     Pair p2{1,2};
     return 0;
 
