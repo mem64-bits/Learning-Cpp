@@ -15,8 +15,8 @@ int main()
 
 // CTAD automatically gets the type of class template 
     std::pair p2{1,2};
-    
-    std::cout<<"Type of p1: " << typeid(p1).name()<<'\n';
-    std::cout<<"Type of p2: "<< typeid(p2).name()<<'\n';
+
+    std::cout<<"Type of p1: " << typeid(p1).name()<<std::endl;
+    std::cout<<"Type of p2: "<< typeid(p2).name()<<std::endl;
     return 0;
 }
