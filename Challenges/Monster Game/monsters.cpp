@@ -20,7 +20,7 @@ struct Monster
 
 void printMonster(Monster m)
 {   
-    std::string monster_type {};
+    std::string_view monster_type {};
     
     using enum MonsterType;
     {
@@ -47,8 +47,8 @@ void printMonster(Monster m)
         } 
     }
     
-    std::cout<<"This "<<&monster_type<<" is named "<<m.monster_name<<
-    "and has "<<m.monster_health<< "health.\n";
+    std::cout<<"This "<<monster_type<<" is named "<<m.monster_name<<
+    " and has "<<m.monster_health<< " health.\n";
 }
 
 int main()
