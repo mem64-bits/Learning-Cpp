@@ -14,6 +14,7 @@ struct Monster
     slime,
     };
 
+  
     Type type {};
     std::string_view monster_name {};
     int monster_health {};
