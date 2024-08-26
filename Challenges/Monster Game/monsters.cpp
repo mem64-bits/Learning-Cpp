@@ -36,9 +36,6 @@ constexpr std::string_view monsterTypeToString(Monster::Type type)
 
 void printMonster(Monster& m)
 {   
-    
-    
-    
     std::cout<<"This "<<monsterTypeToString(m.type)<<" is named "<<m.monster_name<<
     " and has "<<m.monster_health<< " health.\n";
 }
