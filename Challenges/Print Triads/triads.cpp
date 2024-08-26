@@ -11,7 +11,7 @@ struct Triad
 template <typename T>
 void print(Triad<T> t)
 {
-    std::cout<<'['<<t.first<<', '<<t.second<<', '<<t.third<<"] ";
+    std::cout<<"["<<t.first<<", " <<t.second<<", "<<t.third<<"]";
 }
 
 template <typename T>
