@@ -1,8 +1,7 @@
 #include <string_view>
 #include<iostream>
 
-
-enum class MonsterType
+enum MonsterType
 {
     Orge,
     Dragon,
@@ -10,6 +9,7 @@ enum class MonsterType
     Giant_Spider,
     Slime,
 };
+
 
 struct Monster
 {
@@ -53,8 +53,10 @@ void printMonster(Monster m)
 
 int main()
 {
-    Monster pokemon{MonsterType::Dragon,"Dragonite",150};
-    printMonster(pokemon);
+    Monster mon_1 {MonsterType::Orge,"Torg",145};
+    Monster mon_2 {MonsterType::Slime,"Blurp",23};
+    printMonster(mon_1);
+    printMonster(mon_2);
     return 0;
 
 }
