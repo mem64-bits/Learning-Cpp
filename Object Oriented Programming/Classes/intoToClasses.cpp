@@ -20,7 +20,7 @@ class Date
 
 void printDate(Date& date)
 {
-    std::cout<<date.m_day<<'/'<<date.m_month<<date.m_year;
+    std::cout<<date.m_day<<'/'<<date.m_month<<'/'<<date.m_year;
 }
 
 int main()
