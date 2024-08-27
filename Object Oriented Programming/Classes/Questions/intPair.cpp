@@ -7,7 +7,7 @@ struct IntPair
 
     void print()
     {
-        std::cout<<"Pair"<<'('<<first<<", "<<second<<')'<<'\n';
+        std::cout<<"Pair("<<first<<", "<<second<<"\n";
     }
 };
 
