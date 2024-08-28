@@ -18,9 +18,9 @@ struct Something
 int main()
 {
     Something s1 {};
-    s1.print()// calls print()
+    s1.print();// calls print()
 
-    Const Something s2 {};
+    const Something s2 {};
     s2.print(); // Calls print() const
     return 0;
 }
