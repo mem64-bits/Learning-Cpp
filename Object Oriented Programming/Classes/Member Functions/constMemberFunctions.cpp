@@ -27,7 +27,9 @@ struct Date
 int main()
 {
     const Date today {2001,1,1}; // sets Struct to const (can't be changed)
-    const Date& tomorrow {today.year,today.month,today.day+1};// error can't modify a const struct
+    Date tomorrow {2001,1,2};
+    
+// error can't modify a const struct
 #if 0
     today.increaseDay();
 #endif
@@ -37,9 +39,10 @@ int main()
     today.print();
     #endif
 
-// Const member function works with const struct
+// const member functions can be used with const structs
     today.printConst();
+
+// const member functions can be used with non const functions
     tomorrow.printConst();
     return 0;
-
 }
