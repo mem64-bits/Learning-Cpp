@@ -1,5 +1,6 @@
 #include <iostream>
 
+//Structs should avoid using access specifersR
 class Date
 {
 // Any members defined here would default to private
