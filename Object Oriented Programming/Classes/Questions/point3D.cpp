@@ -22,7 +22,7 @@ public:
 
     bool isEqual(Point3D& point)
     {
-        return (m_x || m_y || m_z == point.m_x || point.m_y || point.m_z ? true:false);
+        return (m_x == point.m_x || m_y == point.m_y || m_z == point.m_z ? true:false);
     }
 
 };
