@@ -10,7 +10,7 @@ private:
 public:
     void print()
     {
-        std::cout<<'<'<<m_x<<','<<m_y<<','<<m_z<<'>';
+        std::cout<<'<'<<m_x<<", "<<m_y<<", "<<m_z<<'>';
     }
 
     void setValues(int x,int y,int z)
