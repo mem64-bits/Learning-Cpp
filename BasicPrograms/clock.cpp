@@ -15,7 +15,6 @@ namespace Input
 }
 
 
-
 class Date
 {
 private:
@@ -24,6 +23,7 @@ private:
     int m_year  {};
 
 public:
+
     void printDate()
     {
         if( (m_day < 10 ) && (m_month < 10) )
@@ -114,10 +114,7 @@ private:
         PM,
     };
 
-public:
-
-
-   std::string_view timeOfDaytoStr(TimeOfDay time_of_day)
+     std::string_view timeOfDaytoStr(TimeOfDay time_of_day)
    {
         switch(time_of_day)
         {
@@ -126,6 +123,11 @@ public:
         }
    }
 
+
+public:
+
+
+  
     void showTime(TimeFormat time_format=hr_24)
     {
         TimeOfDay time_of_day {};
