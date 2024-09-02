@@ -187,7 +187,7 @@ public:
             else
             {
                 time_of_day = AM;
-                std::cout<<m_hours<<":"<<m_minutes<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
+                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
             }
             
         }
