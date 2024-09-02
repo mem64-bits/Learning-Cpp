@@ -102,12 +102,7 @@ private:
     int m_minutes {};
     int m_secs {};
 
-    enum TimeFormat
-    {
-        hr_12,
-        hr_24,
-    };
-
+    
     enum TimeOfDay
     {
         AM,
@@ -128,6 +123,12 @@ private:
 
 
 public:
+
+    enum TimeFormat
+    {
+        hr_12,
+        hr_24,
+    };
 
 
   
@@ -210,7 +211,7 @@ int main()
 
     Time time {};
     time.setTime(2,10);
-    time.showTime();
+    time.showTime(Time::hr_12);
     return 0;    
 
 }
