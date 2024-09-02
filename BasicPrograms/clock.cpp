@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <string_view>
 #include <chrono>
 #include <thread>
 #include <limits>
@@ -61,6 +62,7 @@ public:
 
     void setDate(int day,  int month, int year) 
     {
+
         m_day = day;
         m_month = month;
         m_year = year;
@@ -89,6 +91,59 @@ public:
     }
 
     
+};
+
+
+class Time
+{
+
+private:
+    int m_hours {};
+    int m_minutes {};
+    int m_secs {};
+
+    enum TimeFormat
+    {
+        hr_12,
+        hr_24,
+    };
+
+    enum TimeOfDay
+    {
+        AM,
+        PM,
+    };
+
+public:
+
+
+   std::string_view timeOfDaytoStr(TimeOfDay time_of_day)
+   {
+        switch(time_of_day)
+        {
+            case TimeOfDay::AM : return "AM";
+            case TimeOfDay::PM : return "PM";
+        }
+   }
+
+    void showTime(TimeFormat time_format=hr_24)
+    {
+        TimeOfDay time_of_day {};
+        if (time_format == TimeFormat::hr_24)
+        {
+            std::cout<<m_hours<<":"<<m_minutes<<m_secs;
+        }
+
+      else  if (time_format ==  TimeFormat::hr_12)
+        {   
+            if(m_hours < 12)
+            {
+                time_of_day = PM;
+                std::cout<<m_hours<<":"<<m_minutes<<timeOfDaytoStr(time_of_day);
+            }
+            
+        }
+    }
 };
 
 
