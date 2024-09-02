@@ -4,214 +4,123 @@
 #include <chrono>
 #include <thread>
 #include <limits>
+#include <iomanip> // For std::setw and std::setfill
 
 namespace Input
 {
     void ignoreLine()
     {
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
-
 }
-
 
 class Date
 {
 private:
-    int m_day   {};
-    int m_month {};
-    int m_year  {};
+    int m_day{};
+    int m_month{};
+    int m_year{};
 
 public:
-
-    void printDate()
+    void printDate() const
     {
-        if( (m_day < 10 ) && (m_month < 10) )
-            std::cout<<0<<m_day<<'/'<<0<<m_month<<'/'<<m_year<<'\n';
-        
-        else if(m_day < 10)
-            std::cout<<0<<m_day<<'/'<<m_month<<'/'<<m_year<<'\n';
-        
-        else if(m_month < 10)
-            std::cout<<m_day<<'/'<<0<<m_month<<'/'<<m_year<<'\n';
-        
-        else
-            std::cout<<m_day<<'/'<<m_month<<'/'<<m_year<<'\n';
+        std::cout << std::setw(2) << std::setfill('0') << m_day << '/'
+                  << std::setw(2) << std::setfill('0') << m_month << '/'
+                  << m_year << '\n';
     }
 
+    int getDay() const { return m_day; }
+    int getMonth() const { return m_month; }
+    int getYear() const { return m_year; }
 
-    const int getDay() 
+    void setDate(int day, int month, int year)
     {
-        return  m_day;  
-    }
-
-    const int getMonth() 
-    {
-        return  m_month;  
-    }
-
-    const int getYear() 
-    {
-        return  m_year;  
-    }
-
-    const Date& getDate(const Date& date)
-    {
-        return date;
-    }
-
-    void setDate(int day,  int month, int year) 
-    {
-
         m_day = day;
         m_month = month;
         m_year = year;
     }
 
-     const Date& getDateInput() 
+    void getDateInput()
     {
-       static Date date{};
-          
-        std::cout<<"Enter in a day: ";
-        std::cin>>m_day;
-        Input::ignoreLine();
-            
-        std::cout<<"\nEnter in a month: ";
-        std::cin>>m_month;
-        Input::ignoreLine();
-           
-
-        std::cout<<"\nEnter in a year: ";
-        std::cin>>m_year;
+        std::cout << "Enter a day: ";
+        std::cin >> m_day;
         Input::ignoreLine();
 
-        date.setDate(m_day, m_month, m_year);
-        return date;
+        std::cout << "Enter a month: ";
+        std::cin >> m_month;
+        Input::ignoreLine();
 
+        std::cout << "Enter a year: ";
+        std::cin >> m_year;
+        Input::ignoreLine();
     }
-
-    
 };
-
 
 class Time
 {
-
 private:
-    int m_hours {};
-    int m_minutes {};
-    int m_secs {};
+    int m_hours{};
+    int m_minutes{};
+    int m_secs{};
 
-    
-    enum TimeOfDay
+    enum class TimeOfDay
     {
         AM,
-        PM,
+        PM
     };
 
-     std::string_view timeOfDaytoStr(TimeOfDay m_time_of_day)
-   {
-        switch(m_time_of_day)
-        {
-            case TimeOfDay::AM : return "AM";
-            case TimeOfDay::PM : return "PM";
-            default:    return "???";
-            return {};
-
-        }
-   }
-
-
-public:
-
-    enum TimeFormat
+    std::string_view timeOfDaytoStr(TimeOfDay time_of_day) const
     {
-        hr_12,
-        hr_24,
-    };
-
-
-  
-    void showTime(TimeFormat time_format=hr_24)
-    {
-        TimeOfDay time_of_day {};
-        if (time_format == TimeFormat::hr_24)
-        {
-
-            if( (m_hours < 10) && (m_minutes < 10) && (m_secs < 10)) 
-            {
-               std::cout<<0<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
-            } 
-
-
-            else if(m_hours < 10)
-            {
-                std::cout<<0<<m_hours<<":"<<m_minutes<<":"<<m_secs;
-            }
-
-            else if(m_minutes < 10)
-            {
-                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<m_secs;
-            }
-
-            else if(m_secs < 10)
-            {
-                std::cout<<m_hours<<":"<<m_minutes<<":"<<0<<m_secs;
-            }
-
-            else if ( (m_minutes < 10) && (m_secs))
-            {
-                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
-            }
-
-            else if ( (m_hours < 10) && (m_secs < 10))
-            {
-                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
-            }
- 
-            else
-            {
-                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs;
-            }
-            
-        }
-
-      else  if (time_format ==  TimeFormat::hr_12)
-        {   
-            if(m_hours > 12)
-            {
-                time_of_day = PM;
-                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
-            }
-
-            else
-            {
-                time_of_day = AM;
-                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
-            }
-            
-        }
-
+        return (time_of_day == TimeOfDay::AM) ? "AM" : "PM";
     }
 
-    void setTime(int hours, int minutes, int secs=0)
+public:
+    enum class TimeFormat
+    {
+        hr_12,
+        hr_24
+    };
+
+    void showTime(TimeFormat time_format = TimeFormat::hr_24) const
+    {
+        if (time_format == TimeFormat::hr_24)
+        {
+            std::cout << std::setw(2) << std::setfill('0') << m_hours << ":"
+                      << std::setw(2) << std::setfill('0') << m_minutes << ":"
+                      << std::setw(2) << std::setfill('0') << m_secs << '\n';
+        }
+        else if (time_format == TimeFormat::hr_12)
+        {
+            TimeOfDay time_of_day = (m_hours >= 12) ? TimeOfDay::PM : TimeOfDay::AM;
+            int display_hours = m_hours % 12;
+            if (display_hours == 0)
+                display_hours = 12; // Handle 12 AM/PM correctly
+
+            std::cout << std::setw(2) << std::setfill('0') << display_hours << ":"
+                      << std::setw(2) << std::setfill('0') << m_minutes << ":"
+                      << std::setw(2) << std::setfill('0') << m_secs << ' '
+                      << timeOfDaytoStr(time_of_day) << '\n';
+        }
+    }
+
+    void setTime(int hours, int minutes, int secs = 0)
     {
         m_hours = hours;
-        m_minutes =  minutes;
+        m_minutes = minutes;
         m_secs = secs;
     }
 };
 
-
 int main()
 {
-    Date date{};
+    Date date;
     date.getDateInput();
     date.printDate();
 
-    Time time {};
-    time.setTime(2,10);
-    time.showTime(Time::hr_12);
-    return 0;    
+    Time time;
+    time.setTime(13, 5, 9);
+    time.showTime(Time::TimeFormat::hr_24);
+    time.showTime(Time::TimeFormat::hr_12);
 
+    return 0;
 }
