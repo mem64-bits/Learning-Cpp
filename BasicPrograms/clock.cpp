@@ -11,16 +11,6 @@ namespace Input
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     }
 
-    void failedInputReset()
-    {
-        if (!std::cin) 
-        {
-            std::cin.clear(); 
-            ignoreLine();
-        }
-            
-    }
-
 }
 
 
@@ -77,27 +67,18 @@ public:
             std::cout<<"Enter in a day: ";
             std::cin>>m_day;
 
-            Input::failedInputReset();
-            continue;
-
             Input::ignoreLine();
             return m_day;
 
             std::cout<<"\nEnter in a month: ";
             std::cin>>m_month;
 
-            Input::failedInputReset();
-            continue;
-
             Input::ignoreLine();
             return m_month;
 
             std::cout<<"\nEnter in a year: ";
             std::cin>>m_year;
-            
-            Input::failedInputReset();
-            continue;
-
+         
             Input::ignoreLine();
             return m_year;
         }
