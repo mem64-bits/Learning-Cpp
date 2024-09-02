@@ -124,7 +124,7 @@ public:
 
     }
 
-     void displayCurrentTime(TimeFormat time_format = TimeFormat::hr_24, Time& time)
+     void displayCurrentTime(Time& time)
     {
         while(true)
         {
@@ -148,7 +148,7 @@ int main()
     Time time{};
     //time.printTime(Time::TimeFormat::hr_24);
     //time.printTime(Time::TimeFormat::hr_12); */
-    time.displayCurrentTime(Time::TimeFormat::hr_24, time);
+    time.displayCurrentTime(time);
 
     return 0;
 }
