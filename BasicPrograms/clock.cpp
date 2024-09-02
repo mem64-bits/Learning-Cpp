@@ -58,5 +58,7 @@ int main()
     Date today{};
     today.setDate(01,04,2002);
     today.printDate();
+    Date date{date.getDate(today)};
+    date.printDate();
 
 }
