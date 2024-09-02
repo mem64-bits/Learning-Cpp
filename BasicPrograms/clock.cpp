@@ -70,7 +70,7 @@ public:
         m_year = year;
     }
 
-     Date getDateInput()
+     int getDateInput()
     {
         while (true)
         {
@@ -79,21 +79,27 @@ public:
 
             Input::failedInputReset();
             continue;
+
             Input::ignoreLine();
+            return m_day;
 
             std::cout<<"\nEnter in a month: ";
             std::cin>>m_month;
 
             Input::failedInputReset();
             continue;
+
             Input::ignoreLine();
+            return m_month;
 
             std::cout<<"\nEnter in a year: ";
             std::cin>>m_year;
             
             Input::failedInputReset();
             continue;
+
             Input::ignoreLine();
+            return m_year;
         }
         
 
@@ -106,6 +112,9 @@ public:
 
 int main()
 {
-    
+    Date date{};
+    date.getDateInput();
+    date.printDate();
+    return 0;    
 
 }
