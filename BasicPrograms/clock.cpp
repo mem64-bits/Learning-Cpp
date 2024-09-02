@@ -2,7 +2,7 @@
 #include <string>
 #include <string_view>
 #include <chrono>
-#include <thread>
+#include <ctime>
 #include <limits>
 #include <iomanip> // For std::setw and std::setfill
 
@@ -69,7 +69,7 @@ private:
         PM
     };
 
-    std::string_view timeOfDaytoStr(TimeOfDay time_of_day) const
+    constexpr std::string_view timeOfDaytoStr(TimeOfDay time_of_day) const
     {
         return (time_of_day == TimeOfDay::AM) ? "AM" : "PM";
     }
@@ -81,7 +81,7 @@ public:
         hr_24
     };
 
-    void showTime(TimeFormat time_format = TimeFormat::hr_24) const
+    void printTime(TimeFormat time_format = TimeFormat::hr_24) const
     {
         if (time_format == TimeFormat::hr_24)
         {
@@ -109,7 +109,35 @@ public:
         m_minutes = minutes;
         m_secs = secs;
     }
+
+    void getCurrentTime()
+    {
+   
+    auto now = std::chrono::system_clock::now();
+    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+    std::tm localTime = *std::localtime(&currentTime);
+
+
+    int m_hours = localTime.tm_hour;
+    int m_minutes = localTime.tm_min;
+    int m_secs = localTime.tm_sec;
+
+    }
+
+     void displayCurrentTime(TimeFormat time_format = TimeFormat::hr_24)
+    {
+        while(true)
+        {
+           getCurrentTime();
+           printTime();
+        }
+    }
+
+
 };
+
+
+
 
 int main()
 {
@@ -117,10 +145,11 @@ int main()
     date.getDateInput();
     date.printDate();
 
-    Time time;
-    time.setTime(13, 5, 9);
-    time.showTime(Time::TimeFormat::hr_24);
-    time.showTime(Time::TimeFormat::hr_12);
+    Time time{};
+   /*  time.setTime(13, 5, 9);
+    time.printTime(Time::TimeFormat::hr_24);
+    time.printTime(Time::TimeFormat::hr_12); */
+    time.displayCurrentTime();
 
     return 0;
 }
