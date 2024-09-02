@@ -2,6 +2,27 @@
 #include <string>
 #include <chrono>
 #include <thread>
+#include <limits>
+
+namespace Input
+{
+    void ignoreLine()
+    {
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+    }
+
+    void failedInputReset()
+    {
+        if (!std::cin) 
+        {
+            std::cin.clear(); 
+            ignoreLine();
+        }
+            
+    }
+
+}
+
 
 
 class Date
@@ -42,23 +63,49 @@ public:
         return date;
     }
 
-    
     void setDate(int day,  int month, int year) 
     {
         m_day = day;
         m_month = month;
         m_year = year;
     }
+
+     Date getDateInput()
+    {
+        while (true)
+        {
+            std::cout<<"Enter in a day: ";
+            std::cin>>m_day;
+
+            Input::failedInputReset();
+            continue;
+            Input::ignoreLine();
+
+            std::cout<<"\nEnter in a month: ";
+            std::cin>>m_month;
+
+            Input::failedInputReset();
+            continue;
+            Input::ignoreLine();
+
+            std::cout<<"\nEnter in a year: ";
+            std::cin>>m_year;
+            
+            Input::failedInputReset();
+            continue;
+            Input::ignoreLine();
+        }
+        
+
+
+    }
+
     
 };
 
 
 int main()
 {
-    Date today{};
-    today.setDate(01,04,2002);
-    today.printDate();
-    Date date{date.getDate(today)};
-    date.printDate();
+    
 
 }
