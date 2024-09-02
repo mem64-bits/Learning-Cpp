@@ -62,7 +62,7 @@ public:
 
      const Date& getDateInput() 
     {
-       Date date{};
+       static Date date{};
           
         std::cout<<"Enter in a day: ";
         std::cin>>m_day;
