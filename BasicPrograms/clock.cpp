@@ -137,9 +137,9 @@ public:
         if (time_format == TimeFormat::hr_24)
         {
 
-            if( (m_hours < 10) && (m_minutes < 10)) 
+            if( (m_hours < 10) && (m_minutes < 10) && (m_secs < 10)) 
             {
-               std::cout<<0<<m_hours<<":"<<0<<m_minutes<<":"<<m_secs;
+               std::cout<<0<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
             } 
 
 
@@ -153,6 +153,21 @@ public:
                 std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<m_secs;
             }
 
+            else if(m_secs < 10)
+            {
+                std::cout<<m_hours<<":"<<m_minutes<<":"<<0<<m_secs;
+            }
+
+            else if ( (m_minutes < 10) && (m_secs))
+            {
+                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
+            }
+
+            else if ( (m_hours < 10) && (m_secs < 10))
+            {
+                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<0<<m_secs;
+            }
+ 
             else
             {
                 std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs;
