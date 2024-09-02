@@ -121,6 +121,8 @@ private:
             case TimeOfDay::AM : return "AM";
             case TimeOfDay::PM : return "PM";
         }
+
+        return;
    }
 
 
