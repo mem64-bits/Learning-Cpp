@@ -124,12 +124,12 @@ public:
 
     }
 
-     void displayCurrentTime(TimeFormat time_format = TimeFormat::hr_24)
+     void displayCurrentTime(TimeFormat time_format = TimeFormat::hr_24, Time& time)
     {
         while(true)
         {
-           getCurrentTime();
-           printTime();
+           time.getCurrentTime();
+           time.printTime();
         }
     }
 
@@ -146,10 +146,9 @@ int main()
     date.printDate();
 
     Time time{};
-   /*  time.setTime(13, 5, 9);
-    time.printTime(Time::TimeFormat::hr_24);
-    time.printTime(Time::TimeFormat::hr_12); */
-    time.displayCurrentTime();
+    //time.printTime(Time::TimeFormat::hr_24);
+    //time.printTime(Time::TimeFormat::hr_12); */
+    time.displayCurrentTime(Time::TimeFormat::hr_24, time);
 
     return 0;
 }
