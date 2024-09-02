@@ -16,13 +16,13 @@ public:
     void setValues(int x,int y,int z)
     {
         m_x = x;
-        m_y  = y;
+        m_y = y;
         m_z = z;
     }
 
     bool isEqual(Point3D& point)
     {
-        return (m_x == point.m_x || m_y == point.m_y || m_z == point.m_z ? true:false);
+        return (m_x == point.m_x) || (m_y == point.m_y) || (m_z == point.m_z) 
     }
 
 };
