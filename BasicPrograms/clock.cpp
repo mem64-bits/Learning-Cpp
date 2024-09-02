@@ -62,24 +62,20 @@ public:
 
      Date getDateInput()
     {
-        while (true)
-        {
-            std::cout<<"Enter in a day: ";
-            std::cin>>m_day;
-            Input::ignoreLine();
+       
+          
+      std::cout<<"Enter in a day: ";
+        std::cin>>m_day;
+        Input::ignoreLine();
             
-            std::cout<<"\nEnter in a month: ";
-            std::cin>>m_month;
-            Input::ignoreLine();
+        std::cout<<"\nEnter in a month: ";
+        std::cin>>m_month;
+        Input::ignoreLine();
            
 
-            std::cout<<"\nEnter in a year: ";
-            std::cin>>m_year;
-            Input::ignoreLine();
-            
-        }
-        
-
+        std::cout<<"\nEnter in a year: ";
+        std::cin>>m_year;
+        Input::ignoreLine();
 
     }
 
