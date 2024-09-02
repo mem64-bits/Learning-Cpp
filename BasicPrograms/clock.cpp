@@ -114,9 +114,9 @@ private:
         PM,
     };
 
-     std::string_view timeOfDaytoStr(TimeOfDay time_of_day)
+     std::string_view timeOfDaytoStr(TimeOfDay m_time_of_day)
    {
-        switch(time_of_day)
+        switch(m_time_of_day)
         {
             case TimeOfDay::AM : return "AM";
             case TimeOfDay::PM : return "PM";
@@ -133,7 +133,28 @@ public:
         TimeOfDay time_of_day {};
         if (time_format == TimeFormat::hr_24)
         {
-            std::cout<<m_hours<<":"<<m_minutes<<m_secs;
+
+            if( (m_hours < 10) && (m_minutes < 10)) 
+            {
+               std::cout<<0<<m_hours<<":"<<0<<m_minutes<<":"<<m_secs;
+            } 
+
+
+            else if(m_hours < 10)
+            {
+                std::cout<<0<<m_hours<<":"<<m_minutes<<":"<<m_secs;
+            }
+
+            else if(m_minutes < 10)
+            {
+                std::cout<<m_hours<<":"<<0<<m_minutes<<":"<<m_secs;
+            }
+
+            else
+            {
+                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs;
+            }
+            
         }
 
       else  if (time_format ==  TimeFormat::hr_12)
@@ -141,10 +162,24 @@ public:
             if(m_hours < 12)
             {
                 time_of_day = PM;
-                std::cout<<m_hours<<":"<<m_minutes<<timeOfDaytoStr(time_of_day);
+                std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
+            }
+
+            else
+            {
+                time_of_day = AM;
+                std::cout<<m_hours<<":"<<m_minutes<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
             }
             
         }
+
+    }
+
+    void setTime(int hours, int minutes, int secs=0)
+    {
+        m_hours = hours;
+        m_minutes =  minutes;
+        m_secs = secs;
     }
 };
 
@@ -154,6 +189,10 @@ int main()
     Date date{};
     date.getDateInput();
     date.printDate();
+
+    Time time {};
+    time.setTime(12,0);
+    time.showTime();
     return 0;    
 
 }
