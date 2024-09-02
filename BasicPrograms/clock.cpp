@@ -60,27 +60,23 @@ public:
         m_year = year;
     }
 
-     int getDateInput()
+     Date getDateInput()
     {
         while (true)
         {
             std::cout<<"Enter in a day: ";
             std::cin>>m_day;
-
             Input::ignoreLine();
-            return m_day;
-
+            
             std::cout<<"\nEnter in a month: ";
             std::cin>>m_month;
-
             Input::ignoreLine();
-            return m_month;
+           
 
             std::cout<<"\nEnter in a year: ";
             std::cin>>m_year;
-         
             Input::ignoreLine();
-            return m_year;
+            
         }
         
 
