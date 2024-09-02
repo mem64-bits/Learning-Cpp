@@ -194,7 +194,7 @@ int main()
     date.printDate();
 
     Time time {};
-    time.setTime(12,0);
+    time.setTime(2,0);
     time.showTime();
     return 0;    
 
