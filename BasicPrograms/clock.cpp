@@ -5,6 +5,7 @@
 #include <ctime>
 #include <limits>
 #include <iomanip> // For std::setw and std::setfill
+#include <thread>  // For std::this_thread::sleep_for
 
 namespace Input
 {
@@ -112,32 +113,27 @@ public:
 
     void getCurrentTime()
     {
-   
-    auto now = std::chrono::system_clock::now();
-    std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
-    std::tm localTime = *std::localtime(&currentTime);
+        auto now = std::chrono::system_clock::now();
+        std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+        std::tm localTime = *std::localtime(&currentTime);
 
-
-    int m_hours = localTime.tm_hour;
-    int m_minutes = localTime.tm_min;
-    int m_secs = localTime.tm_sec;
-
+        m_hours = localTime.tm_hour;
+        m_minutes = localTime.tm_min;
+        m_secs = localTime.tm_sec;
     }
 
-     void displayCurrentTime(Time& time)
+    void displayCurrentTime(TimeFormat format = TimeFormat::hr_24)
     {
-        while(true)
+        while (true)
         {
-           time.getCurrentTime();
-           time.printTime();
+            getCurrentTime();
+            std::cout << "\r"; // Carriage return to go back to the start of the line
+            printTime(format);
+            std::cout.flush(); // Ensure the output is written immediately
+            std::this_thread::sleep_for(std::chrono::seconds(1)); // Sleep for 1 second
         }
     }
-
-
 };
-
-
-
 
 int main()
 {
@@ -145,10 +141,8 @@ int main()
     date.getDateInput();
     date.printDate();
 
-    Time time{};
-    //time.printTime(Time::TimeFormat::hr_24);
-    //time.printTime(Time::TimeFormat::hr_12); */
-    time.displayCurrentTime(time);
+    Time time;
+    time.displayCurrentTime(Time::TimeFormat::hr_24);
 
     return 0;
 }
