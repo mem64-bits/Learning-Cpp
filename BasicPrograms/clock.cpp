@@ -178,7 +178,7 @@ public:
 
       else  if (time_format ==  TimeFormat::hr_12)
         {   
-            if(m_hours < 12)
+            if(m_hours > 12)
             {
                 time_of_day = PM;
                 std::cout<<m_hours<<":"<<m_minutes<<":"<<m_secs<<' '<<timeOfDaytoStr(time_of_day);
