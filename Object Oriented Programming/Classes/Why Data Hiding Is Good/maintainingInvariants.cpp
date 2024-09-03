@@ -11,12 +11,12 @@ struct Employee // members are public by default
 
 {
     std::string name {"John"};
-    char firstInitial{name[0]};
+    char firstInitial{'J'};
 
     void print() const
     {
         std::cout<<"Employee "<<name << 
-        " has first inital " << firstInitial<< '\n';
+        " has first initial " << firstInitial<< '\n';
     }
 
 };
