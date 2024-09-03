@@ -34,3 +34,8 @@ int main()
 
 	return 0;
 }
+
+/*Prefer to use the return value of a member function 
+that returns by reference immediately, to avoid issues 
+with dangling references when the implicit object is an 
+rvalue.*/
