@@ -111,7 +111,7 @@ public:
         m_secs = secs;
     }
 
-    void getCurrentTime()
+    void setCurrentTime()
     {
         auto now = std::chrono::system_clock::now();
         std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
@@ -126,16 +126,17 @@ public:
     {
         while (true)
         {
-            getCurrentTime();
+            setCurrentTime();
             std::cout << "\r"; // Carriage return to go back to the start of the line
             
         if (time_format == TimeFormat::hr_24)
         {
-            std::cout << "\r"; // Carriage return to go back to the start of the line
+           
             std::cout << std::setw(2) << std::setfill('0') << m_hours << ":"
                       << std::setw(2) << std::setfill('0') << m_minutes << ":"
                       << std::setw(2) << std::setfill('0') << m_secs << '\n';
                       std::cout.flush(); // Ensure the output is written immediately
+                      std::cout << "\r"; // Carriage return to go back to the start of the line
                       std::this_thread::sleep_for(std::chrono::seconds(1)); // Sleep for 1 second
         }
         
@@ -148,13 +149,14 @@ public:
             if (display_hours == 0)
             {
                 display_hours = 12; // Handle 12 AM/PM correctly
-                 std::cout << "\r"; // Carriage return to go back to the start of the line
+                std::cout << "\r"; // Carriage return to go back to the start of the line
                 std::cout << std::setw(2) << std::setfill('0') << display_hours << ":"
                 << std::setw(2) << std::setfill('0') << m_minutes << ":"
                 << std::setw(2) << std::setfill('0') << m_secs << ' '
                 << timeOfDaytoStr(time_of_day) << '\n';
 
                 std::cout.flush(); // Ensure the output is written immediately
+                std::cout << "\r"; // Carriage return to go back to the start of the line
                 std::this_thread::sleep_for(std::chrono::seconds(1)); // Sleep for 1 second
         }
             }
