@@ -13,6 +13,7 @@ public:
         m_name = name;
     }
 
+// getter function returns by value Expensive 
     std::string_view getName() const {return m_name;} 
 };
 
