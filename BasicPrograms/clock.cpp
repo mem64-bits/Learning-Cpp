@@ -122,13 +122,35 @@ public:
         m_secs = localTime.tm_sec;
     }
 
-    void displayCurrentTime(TimeFormat format = TimeFormat::hr_24)
+    void displayCurrentTime(TimeFormat time_format = TimeFormat::hr_24)
     {
         while (true)
         {
             getCurrentTime();
             std::cout << "\r"; // Carriage return to go back to the start of the line
-            printTime(format);
+            
+        if (time_format == TimeFormat::hr_24)
+        {
+            std::cout << std::setw(2) << std::setfill('0') << m_hours << ":"
+                      << std::setw(2) << std::setfill('0') << m_minutes << ":"
+                      << std::setw(2) << std::setfill('0') << m_secs << '\n';
+        }
+
+        else if (time_format == TimeFormat::hr_12)
+        {
+            TimeOfDay time_of_day = (m_hours >= 12) ? TimeOfDay::PM : TimeOfDay::AM;
+            int display_hours = m_hours % 12;
+            
+            if (display_hours == 0)
+            {
+                display_hours = 12; // Handle 12 AM/PM correctly
+
+                std::cout << std::setw(2) << std::setfill('0') << display_hours << ":"
+                << std::setw(2) << std::setfill('0') << m_minutes << ":"
+                << std::setw(2) << std::setfill('0') << m_secs << ' '
+                << timeOfDaytoStr(time_of_day) << '\n';
+            }
+        }
             std::cout.flush(); // Ensure the output is written immediately
             std::this_thread::sleep_for(std::chrono::seconds(1)); // Sleep for 1 second
         }
