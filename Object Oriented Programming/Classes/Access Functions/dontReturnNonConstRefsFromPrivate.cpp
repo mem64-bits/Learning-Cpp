@@ -9,11 +9,13 @@ public:
     int& value() { return m_value; } // returns a non-const reference (don't do this)
 };
 
+/* returning a non const ref allows caller to bypass 
+access specifer control and modify a private object*/
+
 int main()
 {
     Foo f{};                // f.m_value is initialized to default value 4
     f.value() = 5;          // The equivalent of m_value = 5
     std::cout << f.value(); // prints 5
-
     return 0;
 }
