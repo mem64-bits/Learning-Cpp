@@ -16,7 +16,7 @@ struct Employee // members are public by default
     void print() const
     {
         std::cout<<"Employee "<<name << 
-        "has first inital " << firstInitial<< '\n';
+        " has first inital " << firstInitial<< '\n';
     }
 
 };
