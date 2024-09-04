@@ -22,12 +22,18 @@ private:
 
 public:
 // makes a constructor function with two initilizers
-    Foo(int x, int y);
+    Foo(int x, int y)
+    {
+        std::cout<<"Foo("<<x<<","<<y
+        <<") constructed\n";
+    }
+
 
     void print() const
     {
-        std::cout<<"Foo("<<m_x<<','<<m_y<<")\n";
+        std::cout<<"Foo(" << m_x << ", " << m_y << ")\n";
     }
+
 };
 
 int main()
