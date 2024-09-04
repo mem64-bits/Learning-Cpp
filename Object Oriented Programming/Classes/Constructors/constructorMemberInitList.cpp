@@ -7,8 +7,14 @@ private:
     int m_y {};
 
 public:
+/*To have a constructor initialize members,
+ we do so using a member initializer list */
+
 // This is the member initialization list
-    Foo(int x, int y): m_x{x}, m_y{y}
+    Foo(int x, int y)
+    : m_x{x}, 
+      m_y{y}
+      
     {
         std::cout << "Foo(" << x << ", " << y 
         << ") constructed\n";
