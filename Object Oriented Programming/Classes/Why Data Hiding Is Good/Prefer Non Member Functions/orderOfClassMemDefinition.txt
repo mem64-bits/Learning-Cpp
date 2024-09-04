@@ -1,0 +1,9 @@
+
+
+
+
+
+Declare public members first,
+protected members next, and private members 
+last. This spotlights the public interface 
+and de-emphasizes implementation details.
