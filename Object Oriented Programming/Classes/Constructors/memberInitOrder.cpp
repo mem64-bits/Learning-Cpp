@@ -26,7 +26,7 @@ or undefined behaviour can happen*/
 
 int main()
 {
-//undefu=ined behaviour
+//undefined behaviour
     Foo foo{6,7};
     foo.print();
     return 0;
