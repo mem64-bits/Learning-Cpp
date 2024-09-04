@@ -12,7 +12,7 @@ private:
 public:
     Foo() // default constructor
     {
-        std::cout<<"Foo constructed"; 
+        std::cout<<"Foo constructed\n"; 
     }
 
     Foo(int x, int y)
