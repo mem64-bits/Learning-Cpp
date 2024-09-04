@@ -1,0 +1,19 @@
+#include <iostream>
+
+class Foo 
+
+/*A default constructor is a constructor that accepts no arguments. Typically,
+ this is a constructor that has been defined with no parameters.*/
+{
+public:
+    Foo() // default constructor
+    {
+        std::cout<<"Foo default Constructor";
+    }
+};
+
+int main()
+{
+    Foo foo{}; // no initilizers default constructor used
+    return 0;
+}
