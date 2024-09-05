@@ -12,6 +12,8 @@ public:
         std::cout<<"Ball("<<m_colour<<", "<<m_radius<<")\n";
     }
 
+
+
 private:
     std::string m_colour {};
     double m_radius {};
@@ -22,6 +24,9 @@ private:
 int main()
 {
     Ball def{};
+    Ball blueTwenty{"blue",20.0};
+
+    return 0;
 
     return 0;
 }
