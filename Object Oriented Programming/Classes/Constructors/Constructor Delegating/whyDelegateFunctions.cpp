@@ -16,7 +16,7 @@ void A()
 {
     // statements that do task A
 }
-
+// we can refactor function B() to reuse the function A()
 void B()
 {
     A();
