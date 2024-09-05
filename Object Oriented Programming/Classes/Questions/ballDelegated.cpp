@@ -9,7 +9,7 @@ public:
         m_radius{radius}
 
     {
-        std::cout<<"Ball("<<m_colour<<", "<<m_radius<<")";
+        std::cout<<"Ball("<<m_colour<<", "<<m_radius<<")\n";
     }
 
 private:
