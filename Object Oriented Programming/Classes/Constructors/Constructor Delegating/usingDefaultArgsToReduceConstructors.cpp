@@ -11,7 +11,7 @@ public:
     Employee(std::string_view name, int id = 0)
     :m_name{name},m_id{id}
     {
-        std::cout<<"Employee "<<m_name<< "Created"<<"\n";
+        std::cout<<"Employee "<<m_name<< " Created"<<"\n";
     }
 };
 
