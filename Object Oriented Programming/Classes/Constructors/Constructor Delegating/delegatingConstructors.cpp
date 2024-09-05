@@ -15,7 +15,6 @@ public:
     Employee(std::string_view, int) constructor*/
     :Employee{name,0} 
     {
-        std::cout<<"Employee "<<m_name<<" Created\n";
     }
 
     Employee(std::string_view name, int id)
