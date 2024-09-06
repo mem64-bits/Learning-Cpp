@@ -1,6 +1,16 @@
 #include <iostream>
 
 
+/*A copy constructor is a constructor that is used to 
+initialize an object with an existing object of the same type. 
+
+After the copy constructor executes, the newly created object 
+should be a copy of the object passed in as the initializer.
+
+
+C++ does this automatically if we don't explicitly make one ourselves
+*/
+
 class Fraction
 {
 private:
