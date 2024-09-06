@@ -22,6 +22,7 @@ public:
         : m_numerator{ fraction.m_numerator }
         , m_denominator{ fraction.m_denominator }
     {
+        // message to know when copy constructor is used
         std::cout << "Copy constructor called\n";
     }
 
