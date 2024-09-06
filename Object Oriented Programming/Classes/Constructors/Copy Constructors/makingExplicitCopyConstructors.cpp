@@ -19,7 +19,7 @@ public:
     : m_numerator{fraction.m_numerator},
       m_denominator{fraction.m_denominator}
     {
-        std::cout<<"Copy Constructor\n";
+        std::cout<<"Copy Constructor called\n";
     }
 
     void print() const
@@ -31,11 +31,11 @@ public:
 
 int main()
 {
-    Fraction f{3,4};
-    Fraction fCopy{f};
+    Fraction f{3,4}; // calls Fraction(int, int)
+    Fraction fCopy{f}; // calls Fraction(const Fraction& fraction)
 
-    f.print();
-    fCopy.print();
+    f.print(); // prints default constructor
+    fCopy.print(); // prints copy
 
     return 0;
 }
