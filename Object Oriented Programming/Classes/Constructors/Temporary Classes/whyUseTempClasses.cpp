@@ -19,7 +19,10 @@ int fast_add(int x, int y)
 int main()
 {
     std::cout<<add(5,3)<<'\n';
-    std::cout<<fast_add(5,3);
+    std::cout<<fast_add(5,3)<<'\n';
     return 0;
 }
+
+/*We can use the same logic for classes 
+and structs*/
 
