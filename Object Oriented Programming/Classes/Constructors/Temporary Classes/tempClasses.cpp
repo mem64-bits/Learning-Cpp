@@ -26,8 +26,20 @@ void print(IntPair p)
 
 int main()
 {
-    IntPair p {3,4};
+
+ l// There are 3 common ways of creating a temporary class
+//------
+
+ // Case 1: Pass variable
+    IntPair p { 3, 4 };
     print(p);
+
+ // Case 2: Construct temporary IntPair and pass to function
+    print(IntPair { 5, 6 } );
+
+// Case 3: Implicitly convert { 7, 8 } to a temporary 
+// Intpair and pass to function
+    print( { 7, 8 } );
     return 0;
 
 }
