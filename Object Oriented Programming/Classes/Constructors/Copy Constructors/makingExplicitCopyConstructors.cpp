@@ -31,7 +31,7 @@ public:
 
 int main()
 {
-    Fraction f{3,4}; // calls Fraction(int, int)
+    Fraction f{3,4}; // calls Fraction(int, int) constructor
     Fraction fCopy{f}; // calls Fraction(const Fraction& fraction)
 
     f.print(); // prints default constructor
