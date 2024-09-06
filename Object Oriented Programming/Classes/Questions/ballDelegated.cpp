@@ -12,6 +12,7 @@ public:
 
     Ball()
     {
+        print();
     }
 
     Ball(std::string_view colour, double radius)
