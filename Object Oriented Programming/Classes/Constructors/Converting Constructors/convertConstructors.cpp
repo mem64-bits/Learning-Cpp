@@ -24,6 +24,6 @@ void printEmployee(Employee e)
 int main()
 {
     using namespace std::literals;
-    printEmployee("Joe"sv);
+    printEmployee("Joe"sv); // converts string literal to std::string_view
     return 0;
 }
