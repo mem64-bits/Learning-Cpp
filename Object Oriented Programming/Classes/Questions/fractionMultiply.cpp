@@ -11,19 +11,8 @@ public:
 int getNumerator() const {return m_numerator;}
 int getDenominator() const {return m_denominator;}
 
-void setNumerator(const int& numerator)
-{
-    m_numerator = numerator;
-}
 
-void setDenominator(const int& denominator) 
-{
-    m_denominator = denominator;
-}
-
-
-
-Fraction(int numerator=0, int denominator=1)
+explicit Fraction(int numerator =0, int denominator=1)
 : m_numerator{numerator}, m_denominator{denominator}
 {
 }
@@ -38,16 +27,14 @@ void printFraction() const
     return Fraction{ m_numerator * f.m_numerator, m_denominator * f.m_denominator };
 }
 
-Fraction getFraction()
+void getFraction()
 {
-    Fraction temp{};
+    
     std::cout << "Enter a value for numerator: ";
-    std::cin >> temp.m_numerator;
+    std::cin >> m_numerator;
     std::cout << "Enter a value for denominator: ";
-    std::cin >> temp.m_denominator;
+    std::cin >> m_denominator;
     std::cout << '\n';
-
-    return temp;
 }
 
 };
