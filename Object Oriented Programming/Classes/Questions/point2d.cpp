@@ -19,11 +19,10 @@ public:
     Point2d(double x, double y)
     : m_x{x}, m_y{y}
     {
-        print();
     }
 
-    Point2d(): 
-    Point2d(0.0,0.0)
+    Point2d()
+    : Point2d(0.0,0.0)
     {
     }
     
