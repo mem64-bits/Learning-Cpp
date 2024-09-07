@@ -10,8 +10,6 @@ public:
         std::cout<<"Ball("<<m_colour<<", "<<m_radius<<")\n";
     }
 
-    
-
     Ball(std::string_view colour, double radius)
     :   m_colour{colour},
         m_radius{radius}
@@ -34,9 +32,6 @@ public:
     {
     }
    
-
-
-
 private:
     std::string m_colour {"black"};
     double m_radius {10};
