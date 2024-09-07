@@ -25,7 +25,8 @@ public:
 
 constexpr double distanceTo(Point2d& p)
     {
-        return std::sqrt((m_x-p.m_x)*(m_x -  p.m_x) + (m_y - p.m_y)*(m_y - p.m_y));
+        return std::sqrt((m_x-p.m_x)*(m_x -  p.m_x) +
+         (m_y - p.m_y)*(m_y - p.m_y));
     }
     
 };
