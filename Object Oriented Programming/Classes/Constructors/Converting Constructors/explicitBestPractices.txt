@@ -1,0 +1,19 @@
+The following should not be made explicit:
+
+    Copy (and move) constructors (as these do not perform conversions).
+
+The following are typically not made explicit:
+
+    Default constructors with no parameters (as these are only used to convert {} to a default object, not something we typically need to restrict).
+    Constructors that only accept multiple arguments (as these are typically not a candidate for conversions anyway).
+
+However, if you prefer, the above can be marked as explicit to prevent implicit conversions with empty and multiple-argument lists.
+
+The following should usually be made explicit:
+
+    Constructors that take a single argument.
+
+There are some occasions when it does make sense to make a single-argument constructor non-explicit. This can be useful when all of the following are true:
+
+    The constructed object is semantically equivalent to the argument value.
+    The conversion is performant.
