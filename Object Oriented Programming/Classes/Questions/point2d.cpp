@@ -21,10 +21,7 @@ public:
     {
     }
 
-    Point2d()
-    : Point2d(0.0,0.0)
-    {
-    }
+    Point2d() = default;
     
 };
 
@@ -34,7 +31,6 @@ public:
     Point2d second{ 3.0, 4.0 };
 
     // Point2d third{ 4.0 }; // should error if uncommented
-
     first.print();
     second.print();
 
