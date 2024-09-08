@@ -7,8 +7,8 @@ having all the member functions defined in the class
 gets complicated and harder to follow, so we can use header files
 to put member functions in outside of their definition.
 
-Classes are excluded from the ODR rule and don't need the inline 
-key word in front of their definitions
+Member functions defined inside of classes are excluded from the ODR 
+rule and don't need the inline key word in front of their definitions
 
 Prefer defining class definitions in a header file
 and member functions outside the class in a cpp file*/
