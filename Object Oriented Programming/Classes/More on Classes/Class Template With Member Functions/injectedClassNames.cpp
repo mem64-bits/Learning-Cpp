@@ -13,8 +13,19 @@ class Pair
 private:
     T m_first{};
     T m_second{};
+    
+public:
+    // When we define a member function inside the class definition,
+    // the template parameter declaration belonging to the class applies
+    Pair(const T& first, const T& second)
+        : m_first{ first }
+        , m_second{ second }
+    {
+    }
 
     bool isEqual(const Pair& pair);
+
+
 };
 
 template <typename T>
