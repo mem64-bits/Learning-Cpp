@@ -10,20 +10,20 @@ private:
     V m_third{};
 
 public:
-    Triad(T first, U second, V third)
+    Triad(const T& first, const U& second, const V& third)
     : m_first{first}
     , m_second{second}
     , m_third{third}
     {
     }
     
-    T first() const{return m_first;}
-    T second() const{return m_second;}
-    T third() const{return m_third;}
+    const T& first() const{return m_first;}
+    const T& second() const{return m_second;}
+    const T& third() const{return m_third;}
 
     void print() const
     {
-        std::cout<<'['<<m_first<<", "<<m_second<<", "<<m_third<<"]\n";
+        std::cout<<'['<<m_first<<", "<<m_second<<", "<<m_third<<"]";
     }
 
 };
