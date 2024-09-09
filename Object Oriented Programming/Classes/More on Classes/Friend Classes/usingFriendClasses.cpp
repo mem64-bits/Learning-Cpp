@@ -1,6 +1,16 @@
 #include <iostream>  
 /*A friend class is a class that can access the private and 
-protected members of another class.*/
+protected members of another class.
+
+First, even though Display is a friend of Storage, Display has no 
+access to the *this pointer of Storage objects 
+(because *this is actually a function parameter).
+
+Second, friendship is not reciprocal. Just because Display is a 
+friend of Storage does not mean Storage is also a friend of Display. 
+
+If you want two classes to be friends of each 
+other, both must declare the other as a friend.*/
 
 #include <iostream>
 
