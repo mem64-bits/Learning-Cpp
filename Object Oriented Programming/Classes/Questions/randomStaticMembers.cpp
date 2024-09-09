@@ -16,4 +16,6 @@ public:
 
 		return std::mt19937{ ss };
     }
+
+    std::mt19937 mt{generate()};
 };
