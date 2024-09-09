@@ -3,7 +3,8 @@
 /* The friend keyword is used to tell the compiler
 that other class or function is now a friend.
 
-This means */
+This means the function has full access to public 
+and private and protected members of the class */
 int main()
 {
 
