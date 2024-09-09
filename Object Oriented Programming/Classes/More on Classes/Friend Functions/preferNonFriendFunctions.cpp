@@ -1,4 +1,6 @@
 #include <iostream>
+/*Using friend functions can lead to more rewriting of 
+code when we change the implementation of a class*/
 
 class Accumulator
 {
