@@ -17,6 +17,13 @@ public:
     {
     }
 
-    
+    T getFirstTraid() const{return m_first;}
+    T getSecondTraid() const{return m_second;}
+    T getThirdTraid() const{return m_third;}
+
+    void print()
+    {
+        std::cout<<'['<<m_first<<", "<<m_second<<", "<<m_third<<"]"
+    }
 
 };
