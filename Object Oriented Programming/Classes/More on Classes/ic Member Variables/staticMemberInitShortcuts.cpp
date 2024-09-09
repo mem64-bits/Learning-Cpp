@@ -20,7 +20,7 @@ need the inline keyword to be defined and initilized directly*/
 int main()
 {
     std::cout<<Whatever::s_value<<'\n';
-    std::cout<<Whatever::s_value<<'\n';
-    std::cout<<Whatever::s_value<<'\n';
+    std::cout<<Whatever::s_counter<<'\n';
+    std::cout<<Whatever::s_height<<'\n';
     return 0;
 }
