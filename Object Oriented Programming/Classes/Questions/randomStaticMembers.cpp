@@ -17,5 +17,9 @@ public:
 		return std::mt19937{ ss };
     }
 
-    std::mt19937 mt{generate()};
+    std::mt19937 getMt() const {return m_mt;}
+
+    
+    private:
+        std::mt19937 m_mt{generate()};
 };
