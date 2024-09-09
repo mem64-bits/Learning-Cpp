@@ -1,7 +1,10 @@
 #include <iostream>
 
 /*In structs and classes static variables are shared 
-by all objects of the class*/
+by all objects of the class
+
+Static variables exist independantly of the class
+and don't*/
 struct Something
 {
     static int s_value; // now static
