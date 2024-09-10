@@ -61,7 +61,7 @@ namespace MonsterGenerator
 {
     Monster generate()
     {
-        return Monster{ Monster::skeleton, "Bones", "*rattle*", 4};
+        return Monster{ Monster::skeleton, getName(0), getRoar(0), 4};
     }
 
     std::string_view getName(int name_selector)
