@@ -35,14 +35,11 @@ constexpr std::string_view getStrFromType(const Type type) const
         case Monster::goblin: return "goblin";
         case Monster::orge: return "orge";
         case Monster::orc: return "orc";
-        
         case Monster::skeleton: return "skeleton";
         case Monster::troll: return "troll";
         case Monster::vampire: return "vampire";
         case Monster::zombie: return "zombie";
-
         default: return "???";
-
     }
 
 
@@ -51,8 +48,7 @@ constexpr std::string_view getStrFromType(const Type type) const
 void print() const 
 {   
     if(m_hitPoints > 1)
-        std::cout<<m_name<<" the "<<getStrFromType(m_type)<<" has "
-        <<m_hitPoints<<" hit points and says "<<m_roar<<'\n';
+        std::cout<<m_name<<" the "<<getStrFromType(m_type)<<" has "<<m_hitPoints<<" hit points and says "<<m_roar<<'\n';
     else
         std::cout<<m_name<<" the "<<getStrFromType(m_type)<<" is dead\n";
 }
