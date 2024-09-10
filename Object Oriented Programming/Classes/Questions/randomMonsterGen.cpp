@@ -50,7 +50,6 @@ public:
                 std::cout<<m_name<<" the "<<getStrFromType()<<" is dead\n";
         }   
 
-
 private:    
     Type m_type{};
     std::string m_name{};
@@ -58,6 +57,13 @@ private:
     int m_hitPoints{};
 };
 
+namespace MonsterGenerator
+{
+    Monster generate()
+    {
+        
+    }
+}
 
 
 
