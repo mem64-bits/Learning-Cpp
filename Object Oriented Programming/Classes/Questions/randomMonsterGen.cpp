@@ -20,7 +20,7 @@ public:
         maxMonsterTypes
     };
 
-    Monster(Type type, std::string_view name, std::string_view roar, int hitPoints)
+    explicit Monster(Type type, std::string_view name, std::string_view roar, int hitPoints)
     : m_type{type}, m_name{name}
     , m_roar{roar}, m_hitPoints{hitPoints}
     {
