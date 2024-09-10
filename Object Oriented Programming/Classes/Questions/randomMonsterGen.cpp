@@ -2,6 +2,10 @@
 #include <random>
 #include <string>
 
+namespace MonsterGenerator
+{
+    
+}
 
 
 
@@ -26,8 +30,6 @@ Monster(Type type, std::string_view name, std::string_view roar, int hitPoints)
 , m_roar{roar}, m_hitPoints{hitPoints}
 {
 }
-
-
 
 constexpr std::string_view getStrFromType() const
 {
@@ -62,6 +64,8 @@ private:
     std::string m_roar{};
     int m_hitPoints{};
 };
+
+
 
 
 int main()
