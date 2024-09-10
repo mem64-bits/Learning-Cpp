@@ -99,12 +99,6 @@ namespace MonsterGenerator
 
 int main()
 {
-    Monster skeleton{ Monster::skeleton, "Bones", "*rattle*", 4 };
-	skeleton.print();
-
-	Monster vampire{ Monster::vampire, "Nibblez", "*hiss*", 0 };
-	vampire.print();
-
     Monster m{ MonsterGenerator::generate() };
     m.print();
     return 0;
