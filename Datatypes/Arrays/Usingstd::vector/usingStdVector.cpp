@@ -7,7 +7,12 @@ int main()
 
 // Uses CTAD C++17 to implicitly get type that vector contains
     std::vector vowels{'a','e','i','o','u'};
+
+    std::cout<<'[';
     for(int chars=0; chars < sizeof(vowels); ++chars)
-    std::cout<<chars<<' ';
+    {
+        std::cout<<vowels[chars]<<", ";
+    }
+    std::cout<<']';
     return 0;
 }
