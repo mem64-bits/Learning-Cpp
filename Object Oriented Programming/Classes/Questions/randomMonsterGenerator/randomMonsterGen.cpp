@@ -91,7 +91,7 @@ namespace MonsterGenerator
 
     Monster generate()
     {
-        return Monster{ Monster::skeleton, getName(0), getRoar(0), 4};
+        return Monster{ Monster::skeleton, getName(Random::get(1,5)), getRoar(Random::get(1,5)), Random::get(1,100)};
     }
 }
 
