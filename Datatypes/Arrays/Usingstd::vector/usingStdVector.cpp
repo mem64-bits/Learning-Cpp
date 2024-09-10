@@ -9,9 +9,9 @@ int main()
     std::vector vowels{'a','e','i','o','u'};
 
     std::cout<<'[';
-    for(int chars=0; chars < sizeof(vowels)/sizeof(char); ++chars)
+    for(int chars=0; chars < sizeof(vowels)/sizeof(int); ++chars)
     {
-        std::cout<<vowels[chars]<<", ";
+        std::cout<<vowels[chars]<<",";
     }
     std::cout<<']';
     return 0;
