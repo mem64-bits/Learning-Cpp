@@ -81,10 +81,10 @@ namespace MonsterGenerator
         {
             case 0: return "*HYAHHH*";
             case 1: return "*URRAGH*";
-            case 2: return "AHHHH";
-            case 3: return "SsSsK";
-            case 4: return "WHOARGGH";
-            case 5: return "FLSKKK";
+            case 2: return "*AHHHH*";
+            case 3: return "*SsSsK*";
+            case 4: return "*WHOARGGH*";
+            case 5: return "*FLSKKK*";
             default: return "???";
         }
     }
