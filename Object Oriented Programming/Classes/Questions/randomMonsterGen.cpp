@@ -27,9 +27,11 @@ Monster(Type type, std::string_view name, std::string_view roar, int hitPoints)
 {
 }
 
-constexpr std::string_view getStrFromType(const Type type) const
+
+
+constexpr std::string_view getStrFromType() const
 {
-    switch(type)
+    switch(m_type)
     {
         case Monster::dragon: return "dragon";
         case Monster::goblin: return "goblin";
@@ -48,9 +50,9 @@ constexpr std::string_view getStrFromType(const Type type) const
 void print() const 
 {   
     if(m_hitPoints > 1)
-        std::cout<<m_name<<" the "<<getStrFromType(m_type)<<" has "<<m_hitPoints<<" hit points and says "<<m_roar<<'\n';
+        std::cout<<m_name<<" the "<<getStrFromType()<<" has "<<m_hitPoints<<" hit points and says "<<m_roar<<'\n';
     else
-        std::cout<<m_name<<" the "<<getStrFromType(m_type)<<" is dead\n";
+        std::cout<<m_name<<" the "<<getStrFromType()<<" is dead\n";
 }
 
 
