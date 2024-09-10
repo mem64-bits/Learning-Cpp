@@ -59,10 +59,7 @@ private:
 
 namespace MonsterGenerator
 {
-    Monster generate()
-    {
-        return Monster{ Monster::skeleton, getName(0), getRoar(0), 4};
-    }
+    
 
     std::string_view getName(int name_selector)
     {
@@ -90,8 +87,11 @@ namespace MonsterGenerator
             case 5: return "FLSKKK";
             default: return "???";
         }
+    }
 
-
+    Monster generate()
+    {
+        return Monster{ Monster::skeleton, getName(0), getRoar(0), 4};
     }
 }
 
