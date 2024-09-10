@@ -1,0 +1,25 @@
+An array is a container data type that stores a sequence of values contiguously 
+(meaning each element is placed in an adjacent memory location, with no gaps). 
+
+Arrays allow fast, direct access to any element. They are conceptually simple and easy to use, 
+making them the first choice when we need to create and work with a set of related values.
+
+C++ contains three primary array types: (C-style) arrays,
+the std::vector container class, and the std::array container class.
+
+(C-style) arrays were inherited from the C language. For backwards compatibility,
+ these arrays are defined as part of the core C++ language (much like the fundamental data types).
+ The C++ standard calls these “arrays”, but in modern C++ these are often called C arrays 
+or C-style arrays in order to differentiate them from the similarly named std::array.
+
+ C-style arrays are also sometimes called “naked arrays”, “fixed-sized arrays”, 
+“fixed arrays”, or “built-in arrays”. We’ll prefer the term “C-style array”, 
+and use “array” when discussing array types in general.
+ 
+To help make arrays safer and easier to use in C++, the std::vector container class was introduced in C++03. 
+std::vector is the most flexible of the three array types, and has a bunch of useful capabilities 
+that the other array types don’t.
+
+Finally, the std::array container class was introduced in C++11 as a direct replacement for C-style arrays.
+It is more limited than std::vector, but can also be more efficient, especially for smaller arrays.
+
