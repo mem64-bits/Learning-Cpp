@@ -9,7 +9,7 @@ the std::vector container class, and the std::array container class.
 
 (C-style) arrays were inherited from the C language. For backwards compatibility,
  these arrays are defined as part of the core C++ language (much like the fundamental data types).
- The C++ standard calls these “arrays”, but in modern C++ these are often called C arrays 
+ The C++ steandard calls these “arrays”, but in modern C++ these are often called C arrays 
 or C-style arrays in order to differentiate them from the similarly named std::array.
 
  C-style arrays are also sometimes called “naked arrays”, “fixed-sized arrays”, 
