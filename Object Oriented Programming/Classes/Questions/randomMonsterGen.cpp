@@ -61,7 +61,37 @@ namespace MonsterGenerator
 {
     Monster generate()
     {
-        
+        return Monster{ Monster::skeleton, "Bones", "*rattle*", 4};
+    }
+
+    std::string_view getName(int name_selector)
+    {
+        switch(name_selector)
+        {
+            case 0: return "Thor";
+            case 1: return "Gobsmasher";
+            case 2: return "The Fury";
+            case 3: return "Big Boss";
+            case 4: return "Rykor";
+            case 5: return "Infernus";
+            default: return "???";
+        }
+    }
+
+        std::string_view getRoar(int roar_selector)
+    {
+        switch(roar_selector)
+        {
+            case 0: return "*HYAHHH*";
+            case 1: return "*URRAGH*";
+            case 2: return "AHHHH";
+            case 3: return "SsSsK";
+            case 4: return "WHOARGGH";
+            case 5: return "FLSKKK";
+            default: return "???";
+        }
+
+
     }
 }
 
@@ -75,5 +105,7 @@ int main()
 	Monster vampire{ Monster::vampire, "Nibblez", "*hiss*", 0 };
 	vampire.print();
 
+    Monster m{ MonsterGenerator::generate() };
+    m.print();
     return 0;
 }
