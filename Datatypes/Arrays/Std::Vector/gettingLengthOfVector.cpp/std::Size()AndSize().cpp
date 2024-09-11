@@ -12,6 +12,9 @@ int main()
 
     /*(C++17) .size() member function is added
     to std namespace*/
+    std::cout<<"\nlength: "<<std::size(prime);
+
+    return 0;
 
 }
 
