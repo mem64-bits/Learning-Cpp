@@ -10,6 +10,10 @@ int main()
     #if 0
     std::cout << prime.at(9); // invalid index (throws exception)
     #endif
-    
+
+    /* Extra info: When the at() member function encounters an 
+    out-of-bounds index, it actually throws an exception of 
+    type std::out_of_range. If the exception is not handled, 
+    the program will be terminated.*/
     return 0;
 }
