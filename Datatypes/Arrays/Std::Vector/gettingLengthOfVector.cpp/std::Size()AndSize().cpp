@@ -5,7 +5,12 @@ int main()
 {
                         /*this region
                         uses size_type 
-                        under the hood*/
+                        under the hood
+                        
+                        size_type stores the
+                        length and indices 
+                        of the std containers*/
+                        
     std::vector prime {2,3,5,7,11};
     //returns length as type size_type
     std::cout<<"length: "<<prime.size();
