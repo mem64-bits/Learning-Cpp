@@ -13,6 +13,12 @@ int main()
 
     int length{static_cast<int>(std::ssize(prime))};
     std::cout<<"\nprime has length "<<length;
-
+    
+    /*Or we could let the compiler determine the
+     type using auto*/
+    std::vector even_nums {2, 4, 6, 8, 10, 12};
+    auto even_length{std::ssize(even_nums)};
+    
+    std::cout<<"\nEven Nums Array size: "<<even_length;
     return 0;
 }
