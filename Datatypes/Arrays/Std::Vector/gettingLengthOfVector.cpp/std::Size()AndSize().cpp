@@ -4,10 +4,14 @@
 int main()
 {
                         /*this region
-                        uses size type 
+                        uses size_type 
                         under the hood*/
     std::vector prime {2,3,5,7,11};
-    //prints length of array as an int
+    //returns length as type size_type
     std::cout<<"length: "<<prime.size();
+
+    /*(C++17) .size() member function is added
+    to std namespace*/
+
 }
 
