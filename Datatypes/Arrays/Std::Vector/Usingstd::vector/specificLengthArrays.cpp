@@ -3,6 +3,7 @@
 int main()
 {
 
+// uses std::allocator under the hood;
 std::vector<int> numbers{0,0,0,0,0,0,0,0,0,0};
 /*Instead of making a long list with temporary values 
 we can do this*/
