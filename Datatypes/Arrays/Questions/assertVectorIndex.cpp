@@ -3,7 +3,7 @@
 
 void printElement(const auto& arr, int index)
 {
-    if(static_cast<int>(std::size(arr)) > index)
+    if(index > static_cast<int>(std::size(arr)))
         std::cout<<"Invalid index\n";
     else
         std::cout<<"The element has value "<<arr[index]<<'\n';
