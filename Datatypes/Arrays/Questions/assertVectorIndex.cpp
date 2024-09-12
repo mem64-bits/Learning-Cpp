@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 
-void printElement(const auto& arr, int index)
+
+template <typename T>
+void printElement(const std::vector<T>& arr, int index)
 {
     if(index > static_cast<int>(std::size(arr)))
         std::cout<<"Invalid index\n";
