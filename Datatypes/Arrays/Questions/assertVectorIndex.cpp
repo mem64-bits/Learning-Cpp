@@ -3,9 +3,9 @@
 
 
 template <typename T>
-void printElement(const std::vector<T>& arr, int index)
+void printElement(const std::vector<T>& arr, const int index)
 {  
-    int arr_len {static_cast<int>(std::size(arr))-1};
+    constexpr int arr_len {static_cast<int>(std::size(arr))-1};
 
     if(index > arr_len  || index < 0)
         std::cout<<"Invalid index\n";
