@@ -5,7 +5,12 @@
 
 template <typename T>
 int findMax(std::vector<T>& arr)
-{
+{   
+    if(arr.size() == 0)
+    {
+        return { };
+    }
+    
     T max {arr[0]};
     for(std::size_t i{0}; i < arr.size(); ++i)
     {   
