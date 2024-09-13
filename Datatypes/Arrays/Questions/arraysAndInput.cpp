@@ -18,7 +18,7 @@ void printArray(std::vector<T>& arr)
 }
 
 template <typename T>
-int searchArray(std::vector<T>& arr, int target_num)
+int searchArray(std::vector<T>& arr, const int target_num)
 {
     for(std::size_t index{0}; index < arr.size(); ++index)
     {
@@ -44,10 +44,22 @@ int getInput()
     return num;
  
 }
+
 int main()
 {
     std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9};
-   int target_num { getInput() };
+   const int target_num { getInput() };
+
     printArray(arr);
+    int arr_location {searchArray(arr,target_num)};
+
+    if(arr_location == NULL)
+        std::cout<<"The number "<<target_num<< "was not found\n";
+    
+
+    else
+        std::cout<<"The number "<<target_num<<" has index "
+        <<arr_location<<'\n';
+        
     return 0;
 }
