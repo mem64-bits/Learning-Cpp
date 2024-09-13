@@ -4,12 +4,7 @@
 #include <cassert>
 #include <sstream>
 
-
-    
-
-
-
-int main()
+void fizzbuzz(int count)
 {
     using namespace std::literals::string_view_literals;
     std::vector<int> divisors {3, 5, 7, 11, 13, 17, 19};
@@ -20,25 +15,30 @@ int main()
     };
 
     assert(divisors.size() == divisor_words.size() && "divisor array size does not match corresponding divisor words list") ;
-    bool divisor_check{};
-      
-    
-    for(int num{1}; num <=150; ++num)
-    { 
-        for(std::size_t index{0}; index < divisors.size(); ++index)
-        {
+    bool divisor_check{ false };
 
-            if(num % divisors[index]  == 0)
+    for(int i{1}; i <=count; ++i)
+    { 
+        for(std::size_t j{0}; j < divisors.size(); ++j)
+        {
+            if(i % divisors[j]  == 0)
             {
-                std::cout<<divisor_words[index]<<'\n';
+                    divisor_check = true;
+                    std::cout<<divisor_words[j];
             }
 
-            if(!(num % divisors[index] == 0))
-                std::cout<<num<<'\n';
-                break;
+            if(!divisor_check)
+              std::cout<<i<<'\n';
+            
+           std::cout<<'\n';
         }
-        
-
     }
+}
+
+
+
+int main()
+{
+    fizzbuzz(150);
     
 }
