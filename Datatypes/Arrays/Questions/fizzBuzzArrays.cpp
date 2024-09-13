@@ -23,6 +23,7 @@ int main()
     
     std::vector<bool>divisor_checks(7);
     std::cout<<std::boolalpha<<divisor_checks[0];
+    std::cout<<divisor_checks.size();
     
 
 
