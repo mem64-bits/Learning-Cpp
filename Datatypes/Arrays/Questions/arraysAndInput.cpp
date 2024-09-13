@@ -26,7 +26,7 @@ int searchArray(std::vector<T>& arr, const int target_num)
             return static_cast<int>(index);
 
         else
-            return {};
+            return -1;
     }
 
     return {};
@@ -55,7 +55,7 @@ int main()
     printArray(arr);
     int arr_location {searchArray(arr,target_num)};
 
-    if(arr_location == NULL)
+    if(arr_location == -1)
         std::cout<<"The number "<<target_num<< "was not found\n";
     
 
