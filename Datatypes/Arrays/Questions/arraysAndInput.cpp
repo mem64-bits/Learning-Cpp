@@ -26,7 +26,7 @@ int searchArray(std::vector<T>& arr, const int target_num)
             return static_cast<int>(index);
 
         else
-            return nullptr;
+            return {};
     }
 }
 
