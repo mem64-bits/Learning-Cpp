@@ -30,6 +30,7 @@ int main()
     {
             if(!(num % divisors[index] == 0))
                 std::cout<<num<<'\n';
+                break;
     }
 
     }
