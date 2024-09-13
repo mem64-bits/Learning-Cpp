@@ -27,12 +27,10 @@ int searchArray(std::vector<T>& arr, const int target_num)
     }
 
       return -1;
-
 }
 
 int getInput()
 {
-
     int num{}; 
     do
     {
@@ -58,13 +56,13 @@ int main()
     printArray(arr);
     int arr_location {searchArray(arr,target_num)};
 
-    if(arr_location == -1)
-        std::cout<<"The number "<<target_num<< "was not found\n";
-    
+    if(arr_location != -1)
 
-    else
         std::cout<<"The number "<<target_num<<" has index "
         <<arr_location<<'\n';
         
+    else
+        std::cout<<"The number "<<target_num<< " was not found\n";
+      
     return 0;
 }
