@@ -20,7 +20,10 @@ void printArray(std::vector<T>& arr)
 template <typename T>
 int searchArray(std::vector<T>& arr, int target)
 {
-    for(std::size_t index{0}; index < arr.size() ++index)
+    for(std::size_t index{0}; index < arr.size(); ++index)
+    {
+        if(arr[index] == target && inde)
+    }
 }
 
 int getInput()
