@@ -18,11 +18,12 @@ void printArray(std::vector<T>& arr)
 }
 
 template <typename T>
-int searchArray(std::vector<T>& arr, int target)
+int searchArray(std::vector<T>& arr, int target_num)
 {
     for(std::size_t index{0}; index < arr.size(); ++index)
     {
-        if(arr[index] == target && inde)
+        if(arr[index] == target_num)
+            return static_cast<int>(index);
     }
 }
 
