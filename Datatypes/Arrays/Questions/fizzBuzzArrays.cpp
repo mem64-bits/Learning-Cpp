@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <cassert>
+#include <sstream>
 
 
     
@@ -20,6 +21,11 @@ int main()
 
     assert(divisors.size() == divisor_words.size() && "divisor array size does not match corresponding divisor words list") ;
     
+    std::vector<bool>divisor_checks(7);
+    std::cout<<std::boolalpha<<divisor_checks[0];
+    
+
+
 
 
 }
