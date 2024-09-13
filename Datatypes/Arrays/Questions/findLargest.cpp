@@ -6,7 +6,7 @@
 template <typename T>
 int findMax(std::vector<T>& arr)
 {
-    
+    for()
 }
 int main()
 {
