@@ -28,7 +28,7 @@ int main()
     { 
         for(std::size_t index{0}; index < divisors.size(); ++index)
     {
-            if(num % divisors[index] )
+            if(!(num % divisors[index] == 0))
                 std::cout<<num<<'\n';
     }
 
