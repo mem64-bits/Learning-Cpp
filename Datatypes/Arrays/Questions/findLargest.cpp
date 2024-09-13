@@ -10,7 +10,7 @@ int findMax(std::vector<T>& arr)
     {
         return { };
     }
-    
+
     T max {arr[0]};
     for(std::size_t i{0}; i < arr.size(); ++i)
     {   
