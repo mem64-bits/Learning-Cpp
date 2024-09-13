@@ -6,11 +6,9 @@
 template <typename T>
 int findMax(std::vector<T>& arr)
 {
-    T max {};
+    T max {arr[0]};
     for(std::size_t i{0}; i < arr.size(); ++i)
     {   
-
-        max = arr[i];
         if(arr[i] > max)
         {
             max = arr[i];
