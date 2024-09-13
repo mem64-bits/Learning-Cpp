@@ -39,7 +39,13 @@ int getInput()
         std::cout<<"Enter number between 1 and 9: ";
         std::cin>>num;
 
+        // if the user entered an invalid character
+        if (!std::cin)
+            std::cin.clear(); // reset any error flags
+
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
     } while (num > 9 || num < 0 );
+    
     return num;
  
 }
