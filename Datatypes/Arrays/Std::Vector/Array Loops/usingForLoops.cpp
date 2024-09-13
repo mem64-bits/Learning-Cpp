@@ -18,4 +18,5 @@ int main()
     // array is converted from unsigned size_t to int
       average /= static_cast<int>(length);
       std::cout<<"The class average is "<<average<< '\n';
-}   
+      return 0;
+}  
