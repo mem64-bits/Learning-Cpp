@@ -24,6 +24,9 @@ int searchArray(std::vector<T>& arr, int target_num)
     {
         if(arr[index] == target_num)
             return static_cast<int>(index);
+
+        else
+            return nullptr;
     }
 }
 
