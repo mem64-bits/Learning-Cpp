@@ -6,8 +6,13 @@
 template <typename T>
 int findMax(std::vector<T>& arr)
 {
-    for()
+    T max {};
+    for(std::size_t i{0}; i < arr.size(); ++i)
+    {
+        max = in
+    }
 }
+
 int main()
 {
     std::vector data1 { 84, 92, 76, 81, 56 };
