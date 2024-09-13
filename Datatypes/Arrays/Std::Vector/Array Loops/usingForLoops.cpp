@@ -12,6 +12,10 @@ int main()
     {
         average =+ testScores[index];
         // adds values of array elements into onre variable
-
     }
+
+    // average is equal to average divided by the length of the array
+    // array is converted from unsigned size_t to int
+      average /= static_cast<int>(length);
+      std::cout<<"The class average is "<<average<< '\n';
 }   
