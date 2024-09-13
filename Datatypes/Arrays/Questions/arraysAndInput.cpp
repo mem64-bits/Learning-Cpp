@@ -28,6 +28,8 @@ int searchArray(std::vector<T>& arr, const int target_num)
         else
             return {};
     }
+
+    return {};
 }
 
 int getInput()
