@@ -27,16 +27,18 @@ int main()
     for(int num{1}; num <=150; ++num)
     { 
         for(std::size_t index{0}; index < divisors.size(); ++index)
-    {
-            if(!(num % divisors[index] == 0))
-                std::cout<<num<<'\n';
-
+        {
 
             if(num % divisors[index]  == 0)
             {
-                std::cout<<divisor_words[0]<<'\n';
+                std::cout<<divisor_words[index]<<'\n';
             }
-    }
+
+            if(!(num % divisors[index] == 0))
+                std::cout<<num<<'\n';
+
+        }
+        
 
     }
     
