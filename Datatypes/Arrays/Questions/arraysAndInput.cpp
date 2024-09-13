@@ -24,12 +24,10 @@ int searchArray(std::vector<T>& arr, const int target_num)
     {
         if(arr[index] == target_num)
             return static_cast<int>(index);
-
-    
-        return -1;
     }
 
-    return {};
+      return -1;
+
 }
 
 int getInput()
@@ -39,10 +37,9 @@ int getInput()
     do
     {
         std::cout<<"Enter number between 1 and 9: ";
-        std::cin.ignore(std::numeric_limits<int>::max());
         std::cin>>num;
 
-    } while (num > 9 || num < 0);
+    } while (num > 9 || num < 0 );
     return num;
  
 }
