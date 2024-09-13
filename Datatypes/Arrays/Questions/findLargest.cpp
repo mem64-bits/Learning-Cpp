@@ -10,17 +10,12 @@ int findMax(std::vector<T>& arr)
     for(std::size_t i{0}; i < arr.size(); ++i)
     {   
 
-        max = arr[i]
-        
-        if(arr[i+1] > max)
+        max = arr[i];
+        if(arr[i] > max)
         {
-            max = arr[i+1];
+            max = arr[i];
         }
-        
-        if(arr[i+1] < max)
-        {
-            max = max;
-        }
+    
     }
     return static_cast<int>(max);
 }
