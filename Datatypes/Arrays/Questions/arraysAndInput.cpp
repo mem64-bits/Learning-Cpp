@@ -17,8 +17,8 @@ void printArray(std::vector<T>& arr)
 
 }
 
-template <typename T, typename U>
-int searchArray(const std::vector<T>& arr,  U val )
+template <typename T>
+int searchArray(const std::vector<T>& arr,  T val )
 {
     for(std::size_t index{0}; index < arr.size(); ++index)
     {
@@ -50,20 +50,20 @@ int getInput()
 
 int main()
 {
-    
-   std::vector arr{ 4.4, 6.6, 7.7, 3.3, 8.8, 2.2, 1.1, 9.9 };
-   auto val { getInput() };
+    std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9};
+   
+   int target_num { getInput() };
 
     printArray(arr);
-    int arr_location {searchArray(arr,val)};
+    int arr_location {searchArray(arr,target_num)};
 
     if(arr_location != -1)
 
-        std::cout<<"The number "<<val<<" has index "
+        std::cout<<"The number "<<target_num<<" has index "
         <<arr_location<<'\n';
         
     else
-        std::cout<<"The number "<<val<< " was not found\n";
+        std::cout<<"The number "<<target_num<< " was not found\n";
       
     return 0;
 }
