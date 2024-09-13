@@ -17,7 +17,7 @@ void printArray(std::vector<T>& arr)
 
 }
 
-void getInput()
+int getInput()
 {
 
     int num{};
@@ -28,14 +28,13 @@ void getInput()
         std::cin>>num;
 
     } while (num > 9 || num < 0);
-
-    
-    
-    
+    return num;
+ 
 }
 int main()
 {
     std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9};
+   int target_num { getInput() };
     printArray(arr);
     return 0;
 }
