@@ -30,25 +30,12 @@ int main()
     {
             if(!(num % divisors[index] == 0))
                 std::cout<<num<<'\n';
-                break;
 
-            if(num % divisors[0] == 0)
-                divisor_checks[0] = true;
 
-            if(num % divisors[1] == 0)
-                divisor_checks[1] = true;
-
-            if(num % divisors[2] == 0)
-                divisor_checks[2] = true;
-
-            if(num % divisors[4] == 0)
-                divisor_checks[4] = true;
-
-            if(num % divisors[5] == 0)
-                divisor_checks[5] = true;
-            
-            if(num % divisors[6] == 0)
-                divisor_checks[6] = true;
+            if(num % divisors[index]  == 0)
+            {
+                std::cout<<divisor_words[0]<<'\n';
+            }
     }
 
     }
