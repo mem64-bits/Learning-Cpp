@@ -18,11 +18,11 @@ void printArray(std::vector<T>& arr)
 }
 
 template <typename T>
-int searchArray(std::vector<T>& arr, const int target_num)
+int searchArray(const std::vector<T>& arr,  T val )
 {
     for(std::size_t index{0}; index < arr.size(); ++index)
     {
-        if(arr[index] == target_num)
+        if(arr[index] == val)
             return static_cast<int>(index);
     }
 
@@ -51,7 +51,8 @@ int getInput()
 int main()
 {
     std::vector arr{ 4, 6, 7, 3, 8, 2, 1, 9};
-   const int target_num { getInput() };
+   
+   int target_num { getInput() };
 
     printArray(arr);
     int arr_location {searchArray(arr,target_num)};
