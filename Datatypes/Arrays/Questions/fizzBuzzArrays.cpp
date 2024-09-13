@@ -24,10 +24,14 @@ int main()
     std::vector<bool>divisor_checks(7);
       
     
-
-    for(std::size_t index{0}; index < divisors.size(); ++index)
+    for(int num{1}; num <=150; ++num)
+    { 
+        for(std::size_t index{0}; index < divisors.size(); ++index)
     {
-        
+            if(num % divisors[index] )
+                std::cout<<num<<'\n';
     }
 
+    }
+    
 }
