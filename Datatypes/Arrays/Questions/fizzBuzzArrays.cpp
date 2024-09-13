@@ -23,8 +23,11 @@ int main()
 
     std::vector<bool>divisor_checks(7);
       
+    
 
-
-
+    for(std::size_t index{0}; index < divisors.size(); ++index)
+    {
+        
+    }
 
 }
