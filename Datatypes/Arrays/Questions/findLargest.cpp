@@ -15,7 +15,7 @@ int findMax(std::vector<T>& arr)
         }
     
     }
-    return static_cast<int>(max);
+    return max;
 }
 
 int main()
