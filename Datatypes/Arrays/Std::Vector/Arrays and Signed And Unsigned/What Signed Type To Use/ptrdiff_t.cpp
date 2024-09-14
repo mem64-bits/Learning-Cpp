@@ -12,18 +12,23 @@ to be used with indexes
 std::ptrdiff_t has a weird name so it is often typedefed*/
 using Index = std::ptrdiff_t;
 
-
-int main()
+template <typename T>
+void printEvenElements(std::vector<T>& arr)
 {
-
-    std::vector arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-// Sample loop using index
     for (Index index{ 0 }; index < static_cast<Index>(arr.size()); ++index)
     {
         if(arr[index] % 2 == 0)
             std::cout<<arr[index]<<' ';
     }
 
+}
+
+int main()
+{
+
+    std::vector arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    // calls function using std::ptrdiff_t
+    printEvenElements(arr);
     return 0;
 
 }
