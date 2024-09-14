@@ -18,9 +18,12 @@ int main()
 
     std::vector arr{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 // Sample loop using index
-for (Index index{ 0 }; index < static_cast<Index>(arr.size()); ++index)
-{
-    if(arr[index] % 2 == 0)
-        std::cout<<arr[index]<<' ';
-}
+    for (Index index{ 0 }; index < static_cast<Index>(arr.size()); ++index)
+    {
+        if(arr[index] % 2 == 0)
+            std::cout<<arr[index]<<' ';
+    }
+
+    return 0;
+
 }
