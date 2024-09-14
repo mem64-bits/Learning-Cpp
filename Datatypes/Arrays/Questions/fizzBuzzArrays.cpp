@@ -1,44 +1,42 @@
-#include <iostream>
-#include <vector>
-#include <string>
+// h/t to reader Waldo for suggesting this quiz
 #include <cassert>
-#include <sstream>
+#include <iostream>
+#include <string_view>
+#include <vector>
 
 void fizzbuzz(int count)
 {
-    using namespace std::literals::string_view_literals;
-    std::vector<int> divisors {3, 5, 7, 11, 13, 17, 19};
+	// We'll make these static so we only have to do initialization once
+	static const std::vector divisors                { 3, 5, 7, 11, 13, 17, 19 };
+	static const std::vector<std::string_view> words { "fizz", "buzz", "pop", "bang", "jazz", "pow", "boom" };
+	assert(std::size(divisors) == std::size(words) && "fizzbuzz: array sizes don't match");
 
-    std::vector<std::string_view> divisor_words {
-        "fizz"sv, "buzz"sv, "pop"sv, "bang"sv,
-        "jazz"sv, "pow"sv, "boom"sv
-    };
+	// Loop through each number between 1 and count (inclusive)
+	for (int i{ 1 }; i <= count; ++i)
+	{
+		bool printed{ false };
 
-    assert(divisors.size() == divisor_words.size() && "divisor array size does not match corresponding divisor words list") ;
-    bool divisor_check{ false };
+		// Check the current number against each possible divisor
+		for (std::size_t j{ 0 }; j < divisors.size(); ++j)
+		{
+			if (i % divisors[j] == 0)
+			{
+				std::cout << words[j];
+				printed = true;
+			}
+		}
 
-    for(int i{1}; i <=count; ++i)
-    { 
-        for(std::size_t j{0}; j < divisors.size(); ++j)
-        {
-            if(i % divisors[j]  == 0)
-            {
-                    divisor_check = true;
-                    std::cout<<divisor_words[j];
-            }
+		// If there were no divisors
+		if (!printed)
+			std::cout << i;
 
-            if(!divisor_check)
-              std::cout<<i<<'\n';
-            
-           std::cout<<'\n';
-        }
-    }
+		std::cout << '\n';
+	}
 }
-
-
 
 int main()
 {
-    fizzbuzz(150);
-    
+	fizzbuzz(150);
+
+	return 0;
 }
