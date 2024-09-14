@@ -10,7 +10,10 @@ void printReverse(const std::vector<T>& arr)
     for loop makes no sense as a unsigned num can't be 
     negative meaning the loop would never end 
     
-    when */
+    also decrementing 0 in an unsigned number 
+    leads to an out of bounds error leading
+    to U.B*/
+    
     for(std::size_t index{arr.size()-1}; index >= 0; --index)
     {
         std::cout<<arr[index]<<' ';
