@@ -1,10 +1,13 @@
 #include <iostream>
 #include <vector>
 
-/*How range based loops work
+/* 
+     How range based loops work
 
-for (element_declaration : array_object)
-   statement
+    for (element_declaration : array_object)
+    statement
+
+    Prefer using range based  loops for iterating through containers
 */
 int main()
 {
@@ -14,19 +17,18 @@ int main()
 
     for(int num:nums)
     {   
-        if(nums[num] % 2 == 0 )
+        if(nums[num] % 2 == 0)
         {    
             std::cout<<nums[num];
-        }
-
-        if(num <= std::ssize(nums)-1)
-        {
             std::cout<<", ";
-        } 
+        
+        }    
 
-        break;
+        if(num == static_cast<int>(std::ssize(nums)) )
+        {
+            std::cout<<nums[num];
+        }
     }
-    
     std::cout<<']';
     return 0;
 }
