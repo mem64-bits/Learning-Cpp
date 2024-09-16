@@ -24,7 +24,7 @@ int main()
         
         }    
 
-        if(num == std::ssize(nums)-1)
+        else if(num == std::ssize(nums)-1)
         {
            std::cout<<nums[num];
         }
