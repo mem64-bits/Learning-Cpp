@@ -24,11 +24,12 @@ int main()
         
         }    
 
-        if(num == static_cast<int>(std::ssize(nums)) )
+        if(num == std::ssize(nums)-1)
         {
-            std::cout<<nums[num];
+           std::cout<<nums[num];
         }
     }
+
     std::cout<<']';
     return 0;
 }
