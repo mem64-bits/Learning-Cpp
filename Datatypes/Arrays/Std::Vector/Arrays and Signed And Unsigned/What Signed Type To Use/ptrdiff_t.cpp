@@ -15,7 +15,8 @@ using Index = std::ptrdiff_t;
 template <typename T>
 void printEvenElements(std::vector<T>& arr)
 {
-    for (Index index{ 0 }; index < static_cast<Index>(arr.size()); ++index)
+    auto length{static_cast<Index>(arr.size());}
+    for (Index index{ 0 }; index < length; ++index)
     {
         if(arr[index] % 2 == 0)
             std::cout<<arr[index]<<' ';
