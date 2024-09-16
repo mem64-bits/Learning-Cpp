@@ -23,6 +23,8 @@ int main()
         {
             std::cout<<", ";
         } 
+
+        break;
     }
     
     std::cout<<']';
