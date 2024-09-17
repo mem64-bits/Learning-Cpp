@@ -75,7 +75,8 @@
 			"scoped_allocator": "cpp",
 			"stdfloat": "cpp",
 			"text_encoding": "cpp",
-			"valarray": "cpp"
+			"valarray": "cpp",
+			"ranges": "cpp"
 		},
 		"gitdoc.enabled": true,
 		"C_Cpp.errorSquiggles": "enabled"
