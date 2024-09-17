@@ -8,6 +8,12 @@
     statement
 
     Prefer using range based  loops for iterating through containers
+
+    Range-based for loops do not provide a direct way to get the 
+    array index of the current element. 
+
+    Range-based for loops only iterate in forwards order. in
+    by default in C++20 theres ways around this.
 */
 int main()
 {
