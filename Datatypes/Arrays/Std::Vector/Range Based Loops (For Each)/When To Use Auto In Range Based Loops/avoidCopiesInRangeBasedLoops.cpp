@@ -12,4 +12,7 @@ int main()
     
     std::cout<<'\n';
 
+
+    /*When iterating through an expensive type like std:string*/
+
 }
