@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 
-template <typename T>
-bool findArrElem(const std::vector<T>& arr, auto key)
+template <typename T, typename U>
+bool findArrElem(const std::vector<T>& arr, U key)
 {
     for(const auto& element : arr)
     {
