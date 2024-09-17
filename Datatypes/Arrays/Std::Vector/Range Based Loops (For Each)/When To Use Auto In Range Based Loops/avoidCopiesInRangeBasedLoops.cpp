@@ -27,4 +27,11 @@ int main()
         std::cout<<word<<' ';
     std::cout<<'\n';
     return 0;
+
+    /*
+        auto when you want to modify copies of the elements.
+        auto& when you want to modify the original elements.
+        const auto& otherwise (when you just need to view the
+         original elements)
+    */
 }
