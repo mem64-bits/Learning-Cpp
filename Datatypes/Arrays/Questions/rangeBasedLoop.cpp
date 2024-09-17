@@ -3,13 +3,15 @@
 #include <vector>
 
 template <typename T>
-bool findArrElem(const std::vector<T>& arr, auto name)
+bool findArrElem(const std::vector<T>& arr, auto key)
 {
     for(const auto& element : arr)
     {
-        if(element == name )
+        if(element == key )
             return true;
     } 
+
+    return {};
 }
 
 std::string_view getName()
@@ -32,7 +34,7 @@ int main()
         std::cout<<'\n'<<name<<" was found\n";
     
     else
-        std::cout<<'\n'<<name<<" was found\n";
+        std::cout<<'\n'<<name<<" was not found\n";
     
 
 
