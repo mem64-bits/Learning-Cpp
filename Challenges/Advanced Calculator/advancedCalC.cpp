@@ -21,9 +21,8 @@ T m_operand{0};
 public:
     Calculator(T operand)
     :m_operand{operand}
-    {
-    }
-
+    {}
+    
     Calculator& add(T num){
         m_operand += num;
         return *this;
@@ -58,11 +57,7 @@ public:
             return Operator::UNKNOWN;
     }
 
-
-
-int main()
-{
-
+int main(){
     std::cout<<"-------------------------\n";
     std::cout<<"*                       *\n";
     std::cout<<"*   (CALCULATOR 1.0v)   *\n";
@@ -72,34 +67,29 @@ int main()
     std::string operand{};
     std::cin>>operand;
 
-    for (int elements:operand)
-    {
+    for (int elements:operand){
         
-        if(getOpFromString(operand) == Operator::ADD)
-        {
+        if(getOpFromString(operand) == Operator::ADD){
             std::cout<<"You used plus\n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::SUB)
-        {
+        if(getOpFromString(operand) == Operator::SUB){
             std::cout<<"You used minus\n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::MULT)
-        {
+        if(getOpFromString(operand) == Operator::MULT){
             std::cout<<"You used multiply \n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::DIV)
-        {
+        if(getOpFromString(operand) == Operator::DIV){
             std::cout<<"You used divide\n";
-            break;
-        
+            break;    
+        }
     }
-    
     return 0;
+    
 }
 
