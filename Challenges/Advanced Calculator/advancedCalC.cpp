@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
-
+#include <vector>
 template <typename T>
 class Calculator{
 private:
 
-enum Operator{
+enum operanderator{
    ADD,
    SUB,
    MULT,
@@ -13,6 +13,7 @@ enum Operator{
 };
 
 T m_operand{0};
+operanderator operand;
 
 
 public:
@@ -50,8 +51,20 @@ public:
 
 int main()
 {
-    Calculator calc{1};
-    calc.add(5).sub(2).print();
+
+    std::cout<<"-------------------------\n";
+    std::cout<<"*                       *\n";
+    std::cout<<"*   (CALCULATOR 1.0v)   *\n";
+    std::cout<<"*                       *\n";
+    std::cout<<"-------------------------\n\n";
+
+    std::string operand{};
+    std::cin>>operand;
+
+
+   
+
+
     return 0;
 }
 
