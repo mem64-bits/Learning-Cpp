@@ -66,13 +66,17 @@ int main(){
 
     std::string operand_as_string{};
     std::cin>>operand_as_string;
+    std::size_t elem_start {0};
+    std::string_view operand_nums {};
 
      
-    for (std::size_t elements=0; elements <= operand_as_string.size(); ++elements){
+    for (std::size_t element=0; element <= operand_as_string.size(); ++element){
         
 
         if(getOpFromString(operand_as_string) == Operator::ADD){
             std::cout<<"You used plus\n";
+            std::string_view operand_nums {operand_as_string.substr(elem_start,element-1)};
+            elem_start = element+1;
             break;
         }
 
@@ -95,6 +99,8 @@ int main(){
             std::cout<<"Invalid operator please use +, -, x or /\n";
             break;
     }
+
+    std::cout<<"Element nums before +: "<<operand_nums;
     return 0;
     
 }
