@@ -61,6 +61,20 @@ int main()
     std::string operand{};
     std::cin>>operand;
 
+    for (int elements:operand)
+    {
+        if(operand == "10")
+            std::cout<<"Ten has been found";
+            break;
+
+        else
+            std::cout<<"Number not found.";
+            break;
+        
+            
+    }
+
+
 
    
 
