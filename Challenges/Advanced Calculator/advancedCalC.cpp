@@ -64,28 +64,29 @@ int main(){
     std::cout<<"*                       *\n";
     std::cout<<"-------------------------\n\n";
 
-    std::string operand{};
-    std::cin>>operand;
+    std::string operand_as_string{};
+    std::cin>>operand_as_string;
 
-    for (int elements:operand){
+     
+    for (std::size_t elements=0; elements <= operand_as_string.size(); ++elements){
         
 
-        if(getOpFromString(operand) == Operator::ADD){
+        if(getOpFromString(operand_as_string) == Operator::ADD){
             std::cout<<"You used plus\n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::SUB){
+        if(getOpFromString(operand_as_string) == Operator::SUB){
             std::cout<<"You used minus\n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::MULT){
+        if(getOpFromString(operand_as_string) == Operator::MULT){
             std::cout<<"You used multiply \n";
             break;
         }
 
-        if(getOpFromString(operand) == Operator::DIV){
+        if(getOpFromString(operand_as_string) == Operator::DIV){
             std::cout<<"You used divide\n";
             break;    
         }
