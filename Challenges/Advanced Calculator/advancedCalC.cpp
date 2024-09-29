@@ -22,7 +22,7 @@ public:
     Calculator(T operand)
     :m_operand{operand}
     {}
-    
+
     Calculator& add(T num){
         m_operand += num;
         return *this;
@@ -68,6 +68,7 @@ int main(){
     std::cin>>operand;
 
     for (int elements:operand){
+        
         
         if(getOpFromString(operand) == Operator::ADD){
             std::cout<<"You used plus\n";
