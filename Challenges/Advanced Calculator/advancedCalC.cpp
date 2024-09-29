@@ -69,7 +69,7 @@ int main(){
 
     for (int elements:operand){
         
-        
+
         if(getOpFromString(operand) == Operator::ADD){
             std::cout<<"You used plus\n";
             break;
@@ -89,6 +89,9 @@ int main(){
             std::cout<<"You used divide\n";
             break;    
         }
+
+        else
+            std::cout<<"Invalid operator please use +, -, x or /\n";
     }
     return 0;
     
