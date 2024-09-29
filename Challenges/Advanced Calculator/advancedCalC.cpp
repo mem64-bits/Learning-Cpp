@@ -63,13 +63,15 @@ int main()
 
     for (int elements:operand)
     {
-        if(operand == "10")
+        if(operand == "10"){
             std::cout<<"Ten has been found";
             break;
+        }
 
-        else
+        else{
             std::cout<<"Number not found.";
             break;
+        }
         
             
     }
