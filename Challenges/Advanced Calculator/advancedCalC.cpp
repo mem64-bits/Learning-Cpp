@@ -16,10 +16,12 @@ T m_operand{0};
 Operator operator{};
 
 public:
-    T add(T num){
+    Calculator& add(T num){
         m_operand += num;
         return *this
     }
+
+    Calculator& sub(T num)
 };
 
 int main()
