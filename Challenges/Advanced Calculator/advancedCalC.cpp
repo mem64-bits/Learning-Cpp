@@ -92,6 +92,7 @@ int main(){
 
         else
             std::cout<<"Invalid operator please use +, -, x or /\n";
+            break;
     }
     return 0;
     
