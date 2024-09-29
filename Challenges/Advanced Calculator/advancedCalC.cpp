@@ -16,7 +16,10 @@ T m_operand{0};
 Operator operator{};
 
 public:
-    
+    T add(T num){
+        m_operand += num;
+        return *this
+    }
 };
 
 int main()
