@@ -13,7 +13,7 @@ enum Operator{
 };
 
 T m_operand{0};
-Operator operator{};
+
 
 public:
 
