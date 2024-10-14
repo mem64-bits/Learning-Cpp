@@ -69,7 +69,7 @@ int main(){
     std::size_t elem_start {0};
     
 
-     
+    
     for (std::size_t element=0; element <= operand_as_string.size(); ++element){
         
         std::string_view operand_nums {};
