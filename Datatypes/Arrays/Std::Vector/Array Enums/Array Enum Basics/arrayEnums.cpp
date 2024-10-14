@@ -3,6 +3,8 @@
 
 namespace Students
 {
+
+    // these enums correspond to the indexes of an array
     enum Names
     {
         kenny, // 0
@@ -25,10 +27,10 @@ int main()
     std::cout << "The class has " << Students::max_students << " students\n";
     
     
-    std::cout<<testScores[Students::stan]<<'\n';
+    std::cout<<testScores[Students::stan]<<'\n';// prints out 76
 
     // Same as printing out testScores[Students::stan]
-    std::cout<<testScores[2]<<'\n';
+    std::cout<<testScores[2]<<'\n';// prints out 76
 
     return 0;
 }
