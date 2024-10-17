@@ -1,5 +1,7 @@
 #include <vector>
 
+/*Since arrays use unsigned types for indexes some interesting errors
+    
 namespace Students{
 
     enum Names{
