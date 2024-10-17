@@ -21,6 +21,6 @@ int main(){
     for(auto i : v){
         std::cout<<i<<' ';
     }
-
+    std::cout<<'\n';
     return 0;
 }
