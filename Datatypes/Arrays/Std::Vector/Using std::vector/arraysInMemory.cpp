@@ -8,9 +8,9 @@ int main()
     std::cout << "An int is " << sizeof(int) << " bytes\n";
 
     // Arrays are always the same distance away from each other in memory
-    std::cout << &(primes[0]) << '\n';
-    std::cout << &(primes[1]) << '\n';
-    std::cout << &(primes[2]) << '\n';
+    std::cout <<"The Memory address of primes[0] is: "<< &(primes[0]) << '\n'; //prints memory address of primes at specified index
+    std::cout <<"The Memory address of primes[1] is: "<< &(primes[1]) << '\n';
+    std::cout <<"The Memory address of primes[2] is: "<< &(primes[2]) << '\n';
 
     return 0;
 }
