@@ -1,6 +1,6 @@
 #include <vector>
 
-/*Since arrays use unsigned types for indexes some interesting errors
+/*Since arrays use unsigned types for indexes some interesting waerrors
 can occur with type conversions as the underlying type of an 
 enum could not not an unsigned types on other platforms
 
@@ -8,6 +8,9 @@ enum could not not an unsigned types on other platforms
 Since the compiler implicitly (automatically) constexpr,
 if we index with unscoped enums, no sign conversion errors will 
 happen
+
+But if we make a non-constexpr variable of an enum type,
+we could get sign conversion 
 */
 namespace Students{
 
