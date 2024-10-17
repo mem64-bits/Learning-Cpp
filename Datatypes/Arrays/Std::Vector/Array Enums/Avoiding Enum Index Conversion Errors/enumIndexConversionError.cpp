@@ -12,7 +12,7 @@ happen
 
 But if we make a non-constexpr variable of an enum type,
 we could get sign conversion errors with on any platform,
-that 
+that uses signed type enums by default
 */
 namespace Students{
 
@@ -30,7 +30,8 @@ namespace Students{
 int main(){
     std::vector testScores {78, 94, 66, 77, 14};
 
-    Students::Names name {Students::stan};
+    // Definnes non constexpr enum variable
+    Students::Names name {Students::stan};// warning: Sign Conversions
 
     testScores[name] = 76;
 }
