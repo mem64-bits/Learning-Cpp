@@ -78,7 +78,7 @@
 			"valarray": "cpp",
 			"ranges": "cpp"
 		},
-		"gitdoc.enabled": true,
+		"gitdoc.enabled": false,
 		"C_Cpp.errorSquiggles": "enabled"
 	}
 }
