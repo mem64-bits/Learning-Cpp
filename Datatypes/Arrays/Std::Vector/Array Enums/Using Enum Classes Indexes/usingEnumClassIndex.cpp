@@ -14,9 +14,7 @@ but that can be hard to read
 Instead we can overload the '+' operator to convert
 the enum to unsigned*/
 
-constexpr auto operator+(StudentNames a) noexcept{
-    return static_cast<std::underlying_type_t<StudentNames>>(a);
-}
+
 
 enum class StudentNames // now an enum class
 {
@@ -27,6 +25,10 @@ enum class StudentNames // now an enum class
     cartman, // 4
     max_students // 5
 };
+
+constexpr auto operator+(StudentNames a) noexcept{
+    return static_cast<std::underlying_type_t<StudentNames>>(a);
+}
 
 int main()
 {
