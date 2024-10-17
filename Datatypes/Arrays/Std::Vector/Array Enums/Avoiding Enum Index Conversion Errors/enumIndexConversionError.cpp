@@ -1,7 +1,8 @@
 #include <vector>
 
 /*Since arrays use unsigned types for indexes some interesting errors
-    
+can occur with type conversions as the underlying type of an 
+enum could not not an unsigned types on other platforms*/
 namespace Students{
 
     enum Names{
