@@ -2,7 +2,13 @@
 
 /*Since arrays use unsigned types for indexes some interesting errors
 can occur with type conversions as the underlying type of an 
-enum could not not an unsigned types on other platforms*/
+enum could not not an unsigned types on other platforms
+
+
+Since the compiler implicitly (automatically) constexpr,
+if we index with unscoped enums, no sign conversion errors will 
+happen
+*/
 namespace Students{
 
     enum Names{
