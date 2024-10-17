@@ -30,7 +30,7 @@ enum class StudentNames // now an enum class
 
 int main()
 {
-    // compile error: no conversion from StudentNames to std::size_t
+    // uses + operator to convert signed enum to unsigned
     std::vector<int> testScores(+StudentNames::max_students);
 
     // compile error: no conversion from StudentNames to std::size_t
