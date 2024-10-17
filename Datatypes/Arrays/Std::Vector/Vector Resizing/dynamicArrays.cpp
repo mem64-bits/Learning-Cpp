@@ -16,7 +16,7 @@ int main(){
     v.resize(5);
 
     // prints size of array
-    std::cout<<"The length is: "<<v.size();
+    std::cout<<"The length is: "<<v.size()<<'\n';
 
     for(auto i : v){
         std::cout<<i<<' ';
