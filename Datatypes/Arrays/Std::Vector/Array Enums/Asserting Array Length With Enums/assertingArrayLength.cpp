@@ -23,5 +23,8 @@ int main()
     // Ensure the number of test scores is the same as the number of students
     assert(std::size(testScores) == max_students);
 
+    /*if array is constexpr use static_assert instead
+    std::vector doesn't support constexpr, but std::array and 
+    C-style arrays do*/
     return 0;
 }
