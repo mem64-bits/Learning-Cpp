@@ -1,7 +1,7 @@
 #include <vector>
 
 namespace Animals{
-    enum Pet{
+    enum Pets{
         chicken,
         dog,
         cat,
@@ -12,6 +12,6 @@ namespace Animals{
 }
 
 int main(){
-
+    std::vector animal_legs
     return 0;
 }
