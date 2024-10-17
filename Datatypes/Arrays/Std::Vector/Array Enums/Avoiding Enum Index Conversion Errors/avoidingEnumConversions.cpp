@@ -2,7 +2,8 @@
 
 namespace Students
 {
-    // we can avoid any sign conversion warnings
+    /*we can avoid any sign conversion warnings by 
+    directly specifying the type of the enum*/
     enum Names : unsigned int // explicitly specifies the underlying type is unsigned int
     {
         kenny, // 0
