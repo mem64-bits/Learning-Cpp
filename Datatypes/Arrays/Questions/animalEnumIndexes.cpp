@@ -12,6 +12,6 @@ namespace Animals{
 }
 
 int main(){
-    std::vector animal_legs
+    std::vector<int>(6)animal_legs{};
     return 0;
 }
