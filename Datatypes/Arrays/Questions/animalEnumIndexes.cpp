@@ -7,11 +7,12 @@ namespace Animals{
         cat,
         elephant,
         duck,
-        snake
+        snake,
+        max_animals
     };
 }
 
 int main(){
-    std::vector<int>(6)animal_legs{};
+    std::vector<int>(6);
     return 0;
 }
