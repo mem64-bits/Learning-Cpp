@@ -10,8 +10,17 @@ int main(){
     // std::vector can be resized by using the resize() function
 
 
-    std::vector v1{0,1,2};
-    std
+    std::vector v{0,1,2};
+    
+    // resize array to 5
+    v.resize(5);
+
+    // prints size of array
+    std::cout<<"The length is: "<<v.size();
+
+    for(auto i : v){
+        std::cout<<i<<' ';
+    }
 
     return 0;
 }
