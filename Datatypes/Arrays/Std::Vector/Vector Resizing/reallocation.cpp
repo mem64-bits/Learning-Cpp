@@ -6,7 +6,7 @@ int main(){
     nums.reserve(10);
 
     for(auto i :nums){
-        for(std::size_t j=0; j<10000000; j++){
+        for(std::size_t j=0; j<10; j++){
                 nums.push_back(j);
                 std::cout<<nums[j]<<'\n';  
             }
