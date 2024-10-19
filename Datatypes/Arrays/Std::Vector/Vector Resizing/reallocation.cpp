@@ -2,7 +2,7 @@
 #include <vector>
 
 int main(){
-    std::vector<int>nums(1);
+    std::vector<int>nums;
     nums.reserve(10);
 
     for(auto i :nums){
