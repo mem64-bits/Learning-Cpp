@@ -1,8 +1,10 @@
 #include <vector>
 #include <iostream>
 
+/*The capacity of an array is how much an array can hold
+The length of an array is how much items an array currently has*/
 
-//prints capacity and length of array
+// prints capacity and length of array
 void printCapLen(std::vector<int>& arr){
     std::cout<<"Capacity: "<<arr.capacity()<<" Length:"
     <<arr.size()<<'\n';
@@ -21,6 +23,8 @@ int main(){
 
 
     even_nums.resize(5); // increases to capacity of vector to 5
+    even_nums.pop_back();
+    
     printCapLen(even_nums);
 
     for(auto j:even_nums)
