@@ -79,6 +79,7 @@
 			"ranges": "cpp"
 		},
 		"gitdoc.enabled": true,
-		"C_Cpp.errorSquiggles": "enabled"
+		"C_Cpp.errorSquiggles": "enabled",
+		"gitdoc.autoPush": "afterDelay"
 	}
 }
