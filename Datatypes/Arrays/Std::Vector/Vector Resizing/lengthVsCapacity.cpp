@@ -13,16 +13,20 @@ int main(){
     printCapLen(even_nums); // the length and capacity of the array is the same in this case
 
     // uses for each loop to print elements in array
-    for(auto i:even_nums){
+    for(auto i:even_nums)
         std::cout<<i<<' ';
-    }
+    std::cout<<'\n';
+    
+
+
 
     even_nums.resize(5); // increases to capacity of vector to 5
     printCapLen(even_nums);
 
-    for(auto j:even_nums){
+    for(auto j:even_nums)
         std::cout<<j<<' ';
-    }
+    std::cout<<'\n';
+    
 
     return 0;
 }
