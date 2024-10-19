@@ -1,20 +1,18 @@
 #include <iostream>
 #include <vector>
 
-int main(){
-    std::vector<int>nums;
-    nums.reserve(10);
+int main() {
+    std::vector<int> nums;
+    nums.reserve(1000000); // Reserve space for 10 elements
 
-    for(auto i :nums){
-        for(std::size_t j=0; j<10; j++){
-                nums.push_back(j);
-                std::cout<<nums[j]<<'\n';  
-            }
-
+    for (std::size_t j = 0; j < 1000000; j++) {
+        nums.push_back(j); // Add element j to the vector
+        std::cout << nums[j] << '\n'; // Print the newly added element
     }
 
-    for(auto k : nums)
-        std::cout<<k<<' ';
-       
+    // Print all elements in the vector
+    for (auto k : nums)
+        std::cout << k << ' ';
+    
     return 0;
 }
