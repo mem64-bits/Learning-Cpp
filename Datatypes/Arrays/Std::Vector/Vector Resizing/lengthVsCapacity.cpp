@@ -1,36 +1,28 @@
-#include <vector>
 #include <iostream>
+#include <vector>
 
-/*The capacity of an array is how much an array can hold
-The length of an array is how much items an array currently has*/
-
-// prints capacity and length of array
-void printCapLen(std::vector<int>& arr){
-    std::cout<<"Capacity: "<<arr.capacity()<<" Length:"
-    <<arr.size()<<'\n';
+void printCapLen(const std::vector<int>& v)
+{
+	std::cout << "Capacity: " << v.capacity() << " Length:"	<< v.size() << '\n';
 }
 
-int main(){
-    std::vector even_nums{2,4,6}; // length is initially 3 
-    printCapLen(even_nums); // the length and capacity of the array is the same in this case
+int main()
+{
+    std::vector v{ 0, 1, 2 }; // length is initially 3
 
-    // uses for each loop to print elements in array
-    for(auto i:even_nums)
-        std::cout<<i<<' ';
-    std::cout<<'\n';
-    
+    printCapLen(v);
 
+    for (auto i : v)
+        std::cout << i << ' ';
+    std::cout << '\n';
 
+    v.resize(5); // resize to 5 elements
 
-    even_nums.resize(5); // increases to capacity of vector to 5
-    even_nums.pop_back();
-    
-    printCapLen(even_nums);
+    printCapLen(v);
 
-    for(auto j:even_nums)
-        std::cout<<j<<' ';
-    std::cout<<'\n';
-    
+    for (auto i : v)
+        std::cout << i << ' ';
+    std::cout << '\n';
 
     return 0;
 }
