@@ -19,11 +19,7 @@ int main(){
         std::cout<<i<<' ';
     std::cout<<'\n';
     
-
-
-
-    even_nums.resize(5); // increases to capacity of vector to 5
-    even_nums.push_back(3);
+    even_nums.resize(4); // increases to capacity of vector to 5
     printCapLen(even_nums);
 
     for(auto j:even_nums)
