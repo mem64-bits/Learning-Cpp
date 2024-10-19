@@ -9,6 +9,7 @@ void printCapLen(std::vector<int>& arr){
 }
 
 int main(){
-    std::vector even_nums{2,4,6,8,10}; length is 
+    std::vector even_nums{2,4,6}; // length is initially 3 
+    
     return 0;
 }
