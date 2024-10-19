@@ -13,7 +13,7 @@ int main(){
     std::vector v{0,1,2}; // length 3
     
     // resize array to 5
-    v.resize(5);
+    v.resize(5);// allocates 5 elements to array
 
     // prints size of array
     std::cout<<"The length is: "<<v.size()<<'\n';
