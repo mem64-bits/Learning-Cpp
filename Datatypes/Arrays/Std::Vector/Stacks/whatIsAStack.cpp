@@ -5,14 +5,14 @@
 container datatype, where elements can be inserted or removed
 in a Last in, first out (L.I.F.O) manner
 
-There are to main concepts to manipulate stacks in
+There are two main operations to manipulate stacks in
 programming 
 
 --------------------------------------------------
 Operation   Behaviour
 --------------------------------------------------
-Push|	    Put new element on top of stack
-Pop      Remove the top element from the stack
+Push	    Put new element on top of stack
+Pop      Remove the top element from the stack (could return removed element)
 
 */
 
