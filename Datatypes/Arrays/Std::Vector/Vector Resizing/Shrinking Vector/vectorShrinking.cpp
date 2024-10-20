@@ -18,7 +18,15 @@ void printCapLen(const std::vector<int>& v){
 
 int main(){
     std::vector<int> v(1000); // allocate room for 1000 elements
+    
+    printCapLen(v);
+    
     v.resize(0); // to resizes to 0 elements
+    printCapLen(v);
+
+// shrinks the capacity of the vector to fit the length
     v.shrink_to_fit();
+    printCapLen(v);
+
     return 0;
 }
