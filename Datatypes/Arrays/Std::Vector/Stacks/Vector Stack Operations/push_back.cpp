@@ -22,7 +22,8 @@ int main(){
     /*the push_back() member function puts in a new element
     /at the top of the stack 
     
-    i*/
+    if there isn't enough space for the new element
+    the vector the vector reallocates */
     
     printStack(stack);
 
