@@ -27,14 +27,17 @@ int main(){
     vector the vector reallocates memory to fit in the new elements
     */
     
-    printStack(stack);
+    printStack(stack); // prints Empty stack
 
 // for loop adds in nums 1-10 to stack
     for(int i=1; i<=10; i++){
-        
         stack.push_back(i);
     }
-
     printStack(stack);
+    std::cout<<'\n';
+    stack.pop_back();
+    printStack(stack);
+
+    //pop_back() 
     return 0;
 }
