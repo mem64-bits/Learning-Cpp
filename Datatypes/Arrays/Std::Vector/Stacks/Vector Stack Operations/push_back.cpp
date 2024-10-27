@@ -10,20 +10,26 @@ void printStack(std::vector<int>& stack){
         std::cout<<element<<' ';
     }
 
-    
+    // \t is a tab character, to help align the text
+	std::cout << "\tCapacity: " << stack.capacity() << "  Length " << stack.size() << "\n";
+
 }
 int main(){
 
     // creates a vector that can hold 10 elements
-    std::vector<int>stack(10);
+    std::vector<int>stack{};
 
     /*the push_back() member function puts in a new element
-    /at the top of the stack*/
+    /at the top of the stack 
     
-    for(int i=1; i<stack.size()-1; i++){
+    i*/
+    
+    printStack(stack);
+
+    for(int i=1; i<10; i++){
         stack.push_back(i);
     }
-    
-    
+
+    printStack(stack);
     return 0;
 }
