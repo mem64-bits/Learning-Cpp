@@ -22,12 +22,16 @@ int main(){
     /*the push_back() member function puts in a new element
     /at the top of the stack 
     
-    if there isn't enough space for the new element
-    the vector the vector reallocates */
+    push_back() and emplace_back() increase the vectors length by 1,
+    if there isn't enough space for the new element, the
+    vector the vector reallocates memory to fit in the new elements
+    */
     
     printStack(stack);
 
-    for(int i=1; i<10; i++){
+// for loop adds in nums 1-10 to stack
+    for(int i=1; i<=10; i++){
+        
         stack.push_back(i);
     }
 
