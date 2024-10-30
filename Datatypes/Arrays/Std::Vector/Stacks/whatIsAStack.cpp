@@ -14,6 +14,11 @@ Operation   Behaviour
 Push	    Put new element on top of stack
 Pop      Remove the top element from the stack (could return removed element)
 
+--------------------------------------------------
+Other Useful Operations
+--------------------------------------------------
+Top        Get the element at the 'top' of the stack
+
 */
 
 int main(){

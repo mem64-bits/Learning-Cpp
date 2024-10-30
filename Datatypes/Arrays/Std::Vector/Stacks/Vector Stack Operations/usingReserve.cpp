@@ -21,7 +21,8 @@ void printStack(const std::vector<int>& stack)
 int main(){
     std::vector<int>stack{};
     printStack(stack);
-    stack.reserve(10);
+    stack.reserve(10); // changes capacity to 10, length remains at 0
+
     printStack(stack);
     return 0;
 }

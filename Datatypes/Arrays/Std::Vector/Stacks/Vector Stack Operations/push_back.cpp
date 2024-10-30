@@ -34,6 +34,9 @@ int main(){
         stack.push_back(i);
     }
     printStack(stack);
+
+    //.back() gets the top element of the array
+    std::cout<<"Top Element: "<<stack.back();
     std::cout<<'\n';
 
     std::cout<<"Popping Elements\n";
