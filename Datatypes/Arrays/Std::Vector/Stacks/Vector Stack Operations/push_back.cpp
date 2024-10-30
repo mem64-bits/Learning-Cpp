@@ -35,9 +35,15 @@ int main(){
     }
     printStack(stack);
     std::cout<<'\n';
-    stack.pop_back();
-    printStack(stack);
 
-    //pop_back() 
+    std::cout<<"Popping Elements\n";
+    //pop_back() removes top element in the stack
+
+    for(int i=0; i<10; i++){
+        stack.pop_back(); // removes elements from array decrements length of array
+        printStack(stack);
+    }
+
+   
     return 0;
 }
