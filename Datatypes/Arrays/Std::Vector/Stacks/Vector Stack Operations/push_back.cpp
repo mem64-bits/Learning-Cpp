@@ -11,7 +11,7 @@ void printStack(std::vector<int>& stack){
     }
 
     // \t is a tab character, to help align the text
-	std::cout << "\tCapacity: " << stack.capacity() << "  Length " << stack.size() << "\n";
+	std::cout << "  Capacity: " << stack.capacity() << "  Length " << stack.size() << "\n";
 
 }
 int main(){
@@ -36,10 +36,10 @@ int main(){
     printStack(stack);
 
     //.back() gets the top element of the array
-    std::cout<<"Top Element: "<<stack.back();
-    std::cout<<'\n';
+    std::cout<<"Top Element: "<<stack.back()<<'\n';
+    
 
-    std::cout<<"Popping Elements\n";
+    std::cout<<"\nPopping Elements\n";
     //pop_back() removes top element in the stack
 
     for(int i=0; i<10; i++){
