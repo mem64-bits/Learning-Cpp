@@ -10,7 +10,7 @@ void printStack(std::vector<int>& stack){
     }
 
     // \t is a tab character, to help align the text
-	std::cout << "\tCapacity: " << stack.capacity() << "  Length " << stack.size() << "\n";
+	std::cout << " Capacity: " << stack.capacity() << "  Length " << stack.size() << "\n";
 
 }
 
