@@ -20,7 +20,16 @@ void printStack(std::vector<int>& stack){
 
 int main(){
 /*Stack Behaviour doesn't work properly when we resize vectors*/
-    std::vector<int>stack(10);
+    std::vector<int>stack(10); // allocates 10 empty elements to stack
     printStack(stack);
+
+
+/*the new elements don't go in the initial space allocated by the vector to 
+and instead places the new elements in storage outside the initial allocation*/
+    for(int i=1; i<=10; i++){
+        stack.push_back(i);
+        printStack(stack);
+    }
+
     return 0;
 }

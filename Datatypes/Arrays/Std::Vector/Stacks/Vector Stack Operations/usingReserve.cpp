@@ -6,6 +6,6 @@
     capacity of the vectot but keep the length of the vector the same
 */
 int main(){
-
+    
     return 0;
 }
