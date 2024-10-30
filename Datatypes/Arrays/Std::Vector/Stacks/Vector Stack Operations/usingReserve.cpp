@@ -19,6 +19,9 @@ void printStack(const std::vector<int>& stack)
 }
 
 int main(){
-
+    std::vector<int>stack{};
+    printStack(stack);
+    stack.reserve(10);
+    printStack(stack);
     return 0;
 }
