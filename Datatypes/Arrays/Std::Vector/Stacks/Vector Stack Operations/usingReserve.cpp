@@ -1,7 +1,9 @@
 #include <vector>
 #include <iostream>
 
-/*push_back doesn't work as expected the vector is resized
+/*
+    we can use the reserve member function to change the 
+    capacity of the vectot but keep the length of the vector the same
 */
 int main(){
 
