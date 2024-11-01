@@ -10,36 +10,52 @@ void printStack(std::vector<int>& stack){
     }
 }
 
+void printAndPopStack(std::vector<int>& stack, int pop_count=0){
+    if(pop_count == 0){
+        stack.pop_back();
+        std::cout<<"Pop "<<"\t(Stack: ";
+        printStack(stack);            
+        std::cout<<")\n";
+    }
+
+    else{
+        stack.pop_back();
+        std::cout<<"Pop "<<pop_count<<"\t(Stack: ";
+        printStack(stack);            
+        std::cout<<")\n";
+    }
+}       
+
+void printAndPushStack(std::vector<int>& stack, int push_num=0){
+    if(push_num == 0){
+        stack.push_back(push_num);
+        std::cout<<"Push "<<" (Stack: ";
+        printStack(stack);
+        std::cout<<")\n";
+    }
+    else{
+        stack.push_back(push_num);
+        std::cout<<"Push "<<push_num<<" (Stack: ";
+        printStack(stack);
+        std::cout<<")\n";
+    }
+    
+}
+
 int main(){ 
 
     std::vector<int> stack {};
-
-    if(stack.empty())
-        std::cout<<"       (Stack: empty)\n";
-
-    for(int i=1; i<=3; i++){
-        stack.push_back(i);
-        std::cout<<"Push "<<i<<" (Stack: ";
-        printStack(stack);
-        std::cout<<")\n";
-    }
-
-    stack.pop_back();
-    std::cout<<"Pop"<<"    (Stack: ";
     printStack(stack);
-    std::cout<<")\n";
+    
+    printAndPushStack(stack,1);
+    printAndPushStack(stack,2);
+    printAndPushStack(stack,3);
+    
+    printAndPopStack(stack);
+    printAndPushStack(stack,4);
 
-    stack.push_back(4);
-    std::cout<<"Push "<<4<<"  (Stack: ";
-    printStack(stack);
-    std::cout<<")\n";
-
-    for(int j=1; j<=3; j++){
-        stack.pop_back();
-        std::cout<<"Pop "<<j<<"\t(Stack: ";
-        printStack(stack);
-        std::cout<<")\n";
-    }
-
+    printAndPopStack(stack,1);
+    printAndPopStack(stack,2);
+    printAndPopStack(stack,3);
     return 0;
 }
