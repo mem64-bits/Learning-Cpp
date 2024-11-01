@@ -11,7 +11,7 @@ enum ItemType{
 };
 
 int main(){
-    std::vector player_items {1,10};
+    std::vector player_items {1,5,10};
     assert(player_items.size() == ItemType::max_items && "Player Items Error: Not properly initilized" );
 
     int total_items{};
