@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void printStack(std::vector<int>& stack){
+constexpr void printStack(const std::vector<int>& stack){
     if(stack.empty())
         std::cout<<"(Stack: Empty)\n";
 
@@ -13,14 +13,14 @@ void printStack(std::vector<int>& stack){
 void printAndPopStack(std::vector<int>& stack, int pop_count=0){
     if(pop_count == 0){
         stack.pop_back();
-        std::cout<<"Pop "<<"\t(Stack: ";
+        std::cout<<"Pop "<<"(Stack: ";
         printStack(stack);            
         std::cout<<")\n";
     }
 
     else{
         stack.pop_back();
-        std::cout<<"Pop "<<pop_count<<"\t(Stack: ";
+        std::cout<<"Pop "<<pop_count<<" (Stack: ";
         printStack(stack);            
         std::cout<<")\n";
     }
@@ -45,6 +45,7 @@ void printAndPushStack(std::vector<int>& stack, int push_num=0){
 int main(){ 
 
     std::vector<int> stack {};
+    std::cout<<'\t';
     printStack(stack);
     
     printAndPushStack(stack,1);
