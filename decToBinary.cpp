@@ -5,6 +5,7 @@ int main(){
     int bin_num{};
     int dec_num {0};
     int exponent {0};
+    bool valid = true;
 
     std::cout<<"Enter in a binary number: ";
     std::cin>>bin_num;
@@ -24,6 +25,7 @@ int main(){
 
         else{
             std::cout<<"Not a valid binary number\n";
+            
             break;
         }
     } 
