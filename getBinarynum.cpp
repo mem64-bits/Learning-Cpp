@@ -28,6 +28,6 @@ int main(){
         }
     } 
 
-    std::cout<<bin_num<<" in binary is: "<<dec_num;
+    std::cout<<dec_num;
     return 0;
 }
