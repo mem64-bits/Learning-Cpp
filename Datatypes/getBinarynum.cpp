@@ -3,9 +3,10 @@
 
 int main(){
     int bin_num{};
-    int dec_num {};
+    int dec_num {0};
     int exponent {0};
 
+    std::cout<<"Enter in a binary number: ";
     std::cin>>bin_num;
 
     while(bin_num > 0){
@@ -25,7 +26,8 @@ int main(){
             std::cout<<"Not a valid binary number\n";
             break;
         }
-        
-    }  
+    } 
+
+    std::cout<< dec_num;
     return 0;
 }
