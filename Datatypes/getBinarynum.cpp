@@ -11,7 +11,7 @@ int main(){
 
     while(bin_num > 0){
         int bin_digit = bin_num % 10;
-        bin_digit /= 10;
+        bin_digit /= 2;
         
         if(bin_digit == 1){
             dec_num += bin_digit * std::pow(2,exponent);
@@ -28,6 +28,6 @@ int main(){
         }
     } 
 
-    std::cout<< dec_num;
+    std::cout<<dec_num;
     return 0;
 }
