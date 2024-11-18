@@ -25,11 +25,13 @@ int main(){
 
         else{
             std::cout<<"Not a valid binary number\n";
-            
+            valid = false;
             break;
         }
     } 
-
-    std::cout<<dec_num;
+    if(valid){
+        std::cout<<dec_num;
+    }
+    
     return 0;
 }
